@@ -7,28 +7,38 @@
         <div class="md:flex justify-between h-48 sm:p-10 p-5 rounded bg-blue-600 dark:bg-gray-800">
           <div class="">
             <h1 class="md:text-6xl text-3xl text-white font-bold"><span class="text-gray-300">Hello</span>, Unclesam!</h1>
-            <p class="hidden md:block text-md text-gray-200 py-4 text-white font-medium">
-              Ready to start your week with some new pitch desk?
+            <p class="text-md text-white font-medium">
+              Have a nice trading week
             </p>
+            <!-- <p class="hidden md:block text-md text-gray-200 py-4 text-white font-medium">
+              Ready to start your week with some new pitch desk?
+            </p> -->
 
-            
-<form class="flex items-center w-full mt-6 mx-auto">   
-    <label for="simple-search" class="sr-only">Search</label>
-    <div class="relative w-full">
-        <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-            <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5v10M3 5a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm0 10a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm12 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0V6a3 3 0 0 0-3-3H9m1.5-2-2 2 2 2"/>
-            </svg>
-        </div>
-        <input type="text" id="simple-search" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search branch name..." required />
-    </div>
-    <button type="submit" class="p-2.5 ms-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-        <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
-        </svg>
-        <span class="sr-only">Search</span>
-    </button>
-</form>
+
+            <form class="flex items-center w-full mt-4 mx-auto">
+              <label for="simple-search" class="sr-only">Search</label>
+              <div class="relative w-full">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                  <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M3 5v10M3 5a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm0 10a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm12 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0V6a3 3 0 0 0-3-3H9m1.5-2-2 2 2 2" />
+                  </svg>
+                </div>
+                <input type="text" id="simple-search"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="Search branch name..." required />
+              </div>
+              <button type="submit"
+                class="p-2.5 ms-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                  viewBox="0 0 20 20">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                </svg>
+                <span class="sr-only">Search</span>
+              </button>
+            </form>
 
           </div>
 
@@ -38,34 +48,106 @@
         </div>
       </div>
 
-     <div class="-mt-10 bg-white relative  my-10 rounded-t-3xl rounded-b-xl pb-8 px-2">
-      <h1 class="text-gray-500 text-lg pt-10 pb-5">Overview</h1>
-      <div class="hidden md:grid grid-cols-3 gap-4 mb-4 mt-0">
-        <div class="flex gap-4 p-5 justify-center items-center h-24 rounded-lg shadow bg-white dark:bg-gray-800">
-          <Icon icon="ph:graduation-cap-light" class="text-blue-500" width="50px" height="50px" />
-          <div class="">
-            <h1 class="text-blue-500 text-3xl">10</h1>
-            <p class="text-lg text-gray-700 dark:text-gray-500">WEEKS COMPLETED</p>
-          </div>
-        </div>
-        <div class="flex gap-4 p-5 justify-center items-center h-24 rounded-lg shadow bg-white dark:bg-gray-800">
-          <Icon icon="circum:timer" class="text-blue-500" width="50px" height="50px" />
-          <div class="">
-            <h1 class="text-blue-500 text-3xl">6</h1>
-            <p class="text-lg text-gray-700 dark:text-gray-500">OVERDUE WEEKS</p>
-          </div>
-        </div>
-        <div class="flex gap-4 p-5 justify-center items-center h-24 rounded-lg shadow bg-white dark:bg-gray-800">
-          <Icon icon="material-symbols-light:task-alt" class="text-blue-500" width="50px" height="50px" />
-          <div class="">
-            <h1 class="text-blue-500 text-3xl">0</h1>
-            <p class="text-lg text-gray-700 dark:text-gray-500">TASKS COMPLETED</p>
-          </div>
-        </div>
-      </div>
+      <div class="-mt-10 bg-white relative  my-10 rounded-t-3xl rounded-b-xl pb-8 px-2">
+        <h1 class="text-gray-900 font-bold text-lg pt-10 pb-5">Overview</h1>
 
-      <OverviewVue />
-     </div>
+        <div class="sm:p-10 p-5 rounded-3xl bg-white border border-gray-200 shadow">
+          <div class="flex justify-between items-center h-auto">
+            <h1 class="md:text-6xl text-xl text-gray-900 font-bold">Progress</h1>
+            <Icon icon="simple-icons:progress" class="text-gray-500 text-xl" />
+
+          </div>
+          <div class="grid grid-cols-2  dark:bg-gray-800">
+
+            <div class="mt-8">
+              <h1 class="md:text-6xl text-8xl text-gray-900 font-bold">77
+              </h1>
+              <!-- <p class="text-md text-white font-medium">
+                Have a nice trading week
+              </p> -->
+              <p class="text-gray-300 text-sm">Lorem, ipsum dolor.</p>
+            </div>
+
+            <div class=" img">
+              <img src="@/assets/img/hero-bg.png" class=" mt-0" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+
+          <div class="md:flex mt-4 justify-between h-48 sm:p-10 p-5 rounded-3xl bg-blue-600 dark:bg-gray-800">
+            <div class="">
+              <div class="flex justify-between items-center h-auto">
+                <h1 class="md:text-6xl text-xl text-white font-bold">Progress</h1>
+                <Icon icon="simple-icons:progress" class="text-white text-xl" />
+
+              </div>
+
+              <h1 class="py-4 text-5xl text-white">77</h1>
+              <p class="text-gray-300 text-sm">Lorem, ipsum dolor.</p>
+
+            </div>
+
+
+
+
+            <!-- <div class="md:block hidden img">
+            <img src="@/assets/img/hero-bg.png" class="w-96 -mt-40" alt="" />
+          </div> -->
+          </div>
+
+          <div class="md:flex mt-4 justify-between h-48 sm:p-10 p-5 rounded-3xl bg-yellow-400 dark:bg-gray-800">
+            <div class="">
+              <div class="flex justify-between items-center h-auto">
+                <h1 class="md:text-6xl text-xl text-white font-bold">Progress</h1>
+                <Icon icon="simple-icons:progress" class="text-white text-xl" />
+
+              </div>
+
+
+              <h1 class="py-4 text-5xl text-white">77</h1>
+              <p class="text-gray-300 text-sm">Lorem, ipsum dolor.</p>
+
+            </div>
+
+
+
+
+            <!-- <div class="md:block hidden img">
+            <img src="@/assets/img/hero-bg.png" class="w-96 -mt-40" alt="" />
+          </div> -->
+          </div>
+
+
+        </div>
+
+        <div class="hidden md:grid grid-cols-3 gap-4 mb-4 mt-0">
+          <div class="flex gap-4 p-5 justify-center items-center h-24 rounded-lg shadow bg-white dark:bg-gray-800">
+            <Icon icon="ph:graduation-cap-light" class="text-blue-500" width="50px" height="50px" />
+            <div class="">
+              <h1 class="text-blue-500 text-3xl">10</h1>
+              <p class="text-lg text-gray-700 dark:text-gray-500">WEEKS COMPLETED</p>
+            </div>
+          </div>
+          <div class="flex gap-4 p-5 justify-center items-center h-24 rounded-lg shadow bg-white dark:bg-gray-800">
+            <Icon icon="circum:timer" class="text-blue-500" width="50px" height="50px" />
+            <div class="">
+              <h1 class="text-blue-500 text-3xl">6</h1>
+              <p class="text-lg text-gray-700 dark:text-gray-500">OVERDUE WEEKS</p>
+            </div>
+          </div>
+          <div class="flex gap-4 p-5 justify-center items-center h-24 rounded-lg shadow bg-white dark:bg-gray-800">
+            <Icon icon="material-symbols-light:task-alt" class="text-blue-500" width="50px" height="50px" />
+            <div class="">
+              <h1 class="text-blue-500 text-3xl">0</h1>
+              <p class="text-lg text-gray-700 dark:text-gray-500">TASKS COMPLETED</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- <OverviewVue /> -->
+      </div>
 
       <div class="bg-white">
         <div class="hidden">
@@ -78,8 +160,7 @@
             <option>Germany</option>
           </select>
         </div>
-        <ul
-          class=" font-medium text-left text-gray-500 mt-0 p shadow flex dark:divide-gray-700 dark:text-gray-400">
+        <ul class=" font-medium text-left text-gray-500 mt-0 p shadow flex dark:divide-gray-700 dark:text-gray-400">
           <li class="w-full">
             <a href="#"
               class="pb-4 inline-block text-lg w-full p-4 pb-0 text-blue-500 bg-white border-t-4 border-blue-500 dark:border-gray-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:bg-gray-700 dark:text-white"
@@ -184,7 +265,7 @@ import OverviewVue from '@/components/Overview.vue'
 
 
 export default {
-  components: { sidebar, Icon, OverviewVue}
+  components: { sidebar, Icon, OverviewVue }
 }
 </script>
 
