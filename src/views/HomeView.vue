@@ -1,0 +1,191 @@
+<template>
+  <main>
+    <sidebar />
+
+    <div class="md:p-4 sm:ml-72 md:mt-24 mt-20 md:mx-5">
+      <div class="grid grid-cols-1 gap-4 mb-4">
+        <div class="md:flex justify-between h-48 sm:p-10 p-5 rounded bg-blue-600 dark:bg-gray-800">
+          <div class="">
+            <h1 class="md:text-6xl text-3xl text-white font-bold"><span class="text-gray-300">Hello</span>, Unclesam!</h1>
+            <p class="hidden md:block text-md text-gray-200 py-4 text-white font-medium">
+              Ready to start your week with some new pitch desk?
+            </p>
+
+            
+<form class="flex items-center w-full mt-6 mx-auto">   
+    <label for="simple-search" class="sr-only">Search</label>
+    <div class="relative w-full">
+        <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+            <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5v10M3 5a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm0 10a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm12 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0V6a3 3 0 0 0-3-3H9m1.5-2-2 2 2 2"/>
+            </svg>
+        </div>
+        <input type="text" id="simple-search" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search branch name..." required />
+    </div>
+    <button type="submit" class="p-2.5 ms-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+        <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+        </svg>
+        <span class="sr-only">Search</span>
+    </button>
+</form>
+
+          </div>
+
+          <div class="md:block hidden img">
+            <img src="@/assets/img/hero-bg.png" class="w-96 -mt-40" alt="" />
+          </div>
+        </div>
+      </div>
+
+     <div class="-mt-10 bg-white relative  my-10 rounded-t-3xl rounded-b-xl pb-8 px-2">
+      <h1 class="text-gray-500 text-lg pt-10 pb-5">Overview</h1>
+      <div class="hidden md:grid grid-cols-3 gap-4 mb-4 mt-0">
+        <div class="flex gap-4 p-5 justify-center items-center h-24 rounded-lg shadow bg-white dark:bg-gray-800">
+          <Icon icon="ph:graduation-cap-light" class="text-blue-500" width="50px" height="50px" />
+          <div class="">
+            <h1 class="text-blue-500 text-3xl">10</h1>
+            <p class="text-lg text-gray-700 dark:text-gray-500">WEEKS COMPLETED</p>
+          </div>
+        </div>
+        <div class="flex gap-4 p-5 justify-center items-center h-24 rounded-lg shadow bg-white dark:bg-gray-800">
+          <Icon icon="circum:timer" class="text-blue-500" width="50px" height="50px" />
+          <div class="">
+            <h1 class="text-blue-500 text-3xl">6</h1>
+            <p class="text-lg text-gray-700 dark:text-gray-500">OVERDUE WEEKS</p>
+          </div>
+        </div>
+        <div class="flex gap-4 p-5 justify-center items-center h-24 rounded-lg shadow bg-white dark:bg-gray-800">
+          <Icon icon="material-symbols-light:task-alt" class="text-blue-500" width="50px" height="50px" />
+          <div class="">
+            <h1 class="text-blue-500 text-3xl">0</h1>
+            <p class="text-lg text-gray-700 dark:text-gray-500">TASKS COMPLETED</p>
+          </div>
+        </div>
+      </div>
+
+      <OverviewVue />
+     </div>
+
+      <div class="bg-white">
+        <div class="hidden">
+          <label for="tabs" class="sr-only">Select your country</label>
+          <select id="tabs"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            <option>Profile</option>
+            <option>Canada</option>
+            <option>France</option>
+            <option>Germany</option>
+          </select>
+        </div>
+        <ul
+          class=" font-medium text-left text-gray-500 mt-0 p shadow flex dark:divide-gray-700 dark:text-gray-400">
+          <li class="w-full">
+            <a href="#"
+              class="pb-4 inline-block text-lg w-full p-4 pb-0 text-blue-500 bg-white border-t-4 border-blue-500 dark:border-gray-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:bg-gray-700 dark:text-white"
+              aria-current="page"><span class="hidden md:block">WEEK</span>REVIEW</a>
+            <p class="hidden text-gray-500 text-sm px-4 pb-4">See what's going on</p>
+          </li>
+          <li class="w-full">
+            <a href="#"
+              class="inline-block text-lg w-full p-4 pb-0 text-blue-500 bg-white dark:border-gray-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:bg-gray-700 dark:text-white"
+              aria-current="page">QUIZZES</a>
+            <p class="hidden text-gray-500 text-sm px-4 pb-4">Previously on last week</p>
+          </li>
+          <li class="w-full">
+            <a href="#"
+              class="inline-block text-lg w-full p-4 pb-0 text-blue-500 bg-white dark:border-gray-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:bg-gray-700 dark:text-white"
+              aria-current="page">TASKS</a>
+            <p class="hidden text-gray-500 text-sm px-4 pb-4">Previously on last week</p>
+          </li>
+        </ul>
+
+        <div class=" grid grid-cols-1 md:grid-cols-3 py-2">
+          <div class="review p-4 pb-2 col-span-2">
+            <div class="w-full py-0 bg-white sm:p-0 max-w-lg dark:bg-gray-800 dark:border-gray-700">
+              <div class="flex items-center justify-between mb-4">
+                <h5 class="text-xl font-medium leading-none text-gray-900 dark:text-white">
+                  PREVIOUSLY ON
+                </h5>
+                <a href="#" class="text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">
+                  View all
+                </a>
+              </div>
+              <div class="flow-root ">
+                <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
+                  <li class="py-4 sm:py-0">
+                    <div class="flex items-center">
+                      <div class="flex-shrink-0">
+                        <img class="w-20 h-20 rounded-full" src="../assets/img/hero.jpeg" alt="Neil image" />
+                      </div>
+                      <div class="flex-1 min-w-0 ms-4">
+                        <p class="text-sm font-semibold text-gray-900 truncate dark:text-white">
+                          Introduction to Forex
+                        </p>
+                        <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nam modi
+                          necessitatibus repellendus numquam!
+                        </p>
+                        <div class="duration py-3">
+                          <div class="flex gap-1">
+                            <Icon icon="icon-park:time" width="20px" height="15px" />
+                            <p class="text-xs text-gray-500 font-medium">Duration: 30m</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="inline-flex gap-1 items-center text-base font-medium text-white text-xs bg-blue-500 md:rounded rounded-full p-2 ml-4 text-gray-900 dark:text-white">
+                        <Icon icon="solar:play-bold" width="14px" height="14px" />
+                        <span class="hidden sm:block">Watch highlight</span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col border rounded-lg shadow p-4 mt-4">
+            <h1 class="text-xl text-blue-500">NEXT ON</h1>
+
+            <div class="flow-root">
+              <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
+                <li class="py-3 sm:py-4">
+                  <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                      <img class="w-20 h-20 rounded-full" src="../assets/img/hero.jpeg" alt="Neil image" />
+                    </div>
+                    <div class="flex-1 min-w-0 ms-4">
+                      <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                        Intro to Tech..
+                      </p>
+                      <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                        Lorem, ipsum dolor.
+                      </p>
+                    </div>
+                    <!-- <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                        $320
+                    </div> -->
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</template>
+
+<script>
+import sidebar from '@/components/Layout/sidebar.vue'
+import { Icon } from '@iconify/vue'
+import OverviewVue from '@/components/Overview.vue'
+
+
+export default {
+  components: { sidebar, Icon, OverviewVue}
+}
+</script>
+
+<style></style>
