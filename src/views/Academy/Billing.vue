@@ -18,20 +18,20 @@
                         class="bg-white rounded-full p-2 text-blue-600" />
                 </div>
             </div>
-            <div class="grid md:grid-cols-3  md:gap-6">
+            <div class="md:grid md:grid-cols-3  md:gap-6">
                 <div class="md:col-span-2">
-                    <div class="grid grid-cols-1 gap-4 mb-4">
-                        <div class="sm:flex sm:justify-between items-center h-48 p-10 rounded bg-blue-500 dark:bg-gray-800">
+                    <div class="grid md:gap-4 mb-4">
+                        <div class="sm:flex sm:justify-between items-center sm:h-48 sm:p-10 p-4 rounded bg-blue-500 dark:bg-gray-800">
                             <div class="">
                                 <h1 class="text-md text-white font-medium flex h-auto items-center gap-2">Available Balance <Icon icon="icon-park-outline:eyes" width="20px" height="20px" /></h1>
-                                <h1 class="text-6xl text-white font-bold py-2">N1000.00</h1>
+                                <h1 class="sm:text-6xl text-5xl text-white font-bold py-2">N1000.00</h1>
                                 <div class="gap-2 inline-flex my-3">
-                                    <button class="bg-white px-2 py-1 5 rounded-md flex items-center h-auto gap-1"> 
+                                    <button class="bg-white px-2 sm:py-1 py-2 rounded-md flex items-center h-auto gap-1"> 
                                         <Icon  icon="majesticons:money-plus-line" width="20px" height="20px" class="text-blue-600" />
                                         <span class="text-blue-600">Add money</span>
                                     </button>
                                     
-                                    <button class="bg-white px-2 py-1 5 rounded-md flex items-center h-auto gap-1"> 
+                                    <button class="bg-white px-2 sm:py-1 py-2 rounded-md flex items-center h-auto gap-1"> 
                                         <Icon icon="uil:money-insert" height="20px" class="text-blue-600" />
                                         <span class="text-blue-600">Withdraw</span>
                                     </button>
@@ -47,30 +47,30 @@
                         </div>
                     </div>
 
-                    <!-- <h1 class="text-gray-500 text-lg py-10 py-5">Overview</h1>
+                    <h1 class="text-gray-500 text-lg py-10 py-5">Overview</h1>
                     <div class="grid grid-cols-2 gap-4 mb-4 mt-0">
                         <div
-                            class="flex gap-4 p-5 justify-start items-center  h-24 rounded-lg shadow bg-white dark:bg-gray-800">
-                            <Icon icon="ic:baseline-paid" class="text-blue-500" width="70px" height="70px" />
-                            <div class="">
-                                <h1 class="text-blue-500 text-4xl">0</h1>
-                                <p class="text-lg text-gray-700 dark:text-gray-500">WEEKS PAID</p>
+                            class="sm:flex gap-4 p-5 justify-start items-center  sm:h-24 rounded-lg shadow bg-white dark:bg-gray-800">
+                            <Icon icon="ic:baseline-paid" class="text-blue-500 mx-auto" width="70px" height="70px" />
+                            <div class="text-center">
+                                <!-- <h1 class="text-blue-500 text-4xl">0</h1> -->
+                                <p class="sm:text-lg text-sm text-gray-700 dark:text-gray-500">WEEKS PAID</p>
                             </div>
                         </div>
                         <div
-                            class="flex gap-4 p-5 justify-start items-center  h-24 rounded-lg shadow bg-white dark:bg-gray-800">
-                            <Icon icon="mdi:receipt-text-pending" class="text-blue-500" width="70px" height="70px" />
-                            <div class="">
-                                <h1 class="text-blue-500 text-4xl">0</h1>
-                                <p class="text-lg text-gray-700 dark:text-gray-500">PENDING FEE</p>
+                            class="md:flex gap-4 p-5 justify-start items-center  sm:h-24 rounded-lg shadow bg-white dark:bg-gray-800">
+                            <Icon icon="mdi:receipt-text-pending" class="text-blue-500 mx-auto" width="70px" height="70px" />
+                            <div class="text-center">
+                                <!-- <h1 class="text-blue-500 text-4xl">0</h1> -->
+                                <p class="sm:text-lg text-sm text-gray-700  dark:text-gray-500">PENDING FEE</p>
                             </div>
                         </div>
 
-                    </div> -->
+                    </div>
 
                     <h1 class="text-gray-500 text-lg py-10 pb-5">Order History</h1>
 
-                    <section class="dark:bg-gray-900 ">
+                    <section class="hidden dark:bg-gray-900 ">
                         <div class="mx-auto max-w-screen-xl px-4 lg:px-0">
                             <!-- Start coding here -->
                             <div class="bg-white dark:bg-gray-800 relative shadow-md sm:rounded-lg overflow-hidden">
