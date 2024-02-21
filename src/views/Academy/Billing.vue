@@ -4,8 +4,8 @@
 
 
 
-        <div class="p-4 sm:ml-72 mt-20 mx-5">
-            <breadcrumb />
+        <div class="p-4 sm:ml-72 mt-20 sm:mx-5">
+            <breadcrumb class="mt-5 sm:mt-0"/>
 
             <div class="flex justify-between h-auto items-center">
                 <div class="py-10">
@@ -18,10 +18,10 @@
                         class="bg-white rounded-full p-2 text-blue-600" />
                 </div>
             </div>
-            <div class="grid md:grid-cols-3  gap-6">
-                <div class="col-span-2">
+            <div class="grid md:grid-cols-3  md:gap-6">
+                <div class="md:col-span-2">
                     <div class="grid grid-cols-1 gap-4 mb-4">
-                        <div class="flex justify-between items-center h-48 p-10 rounded bg-blue-500 dark:bg-gray-800">
+                        <div class="sm:flex sm:justify-between items-center h-48 p-10 rounded bg-blue-500 dark:bg-gray-800">
                             <div class="">
                                 <h1 class="text-md text-white font-medium flex h-auto items-center gap-2">Available Balance <Icon icon="icon-park-outline:eyes" width="20px" height="20px" /></h1>
                                 <h1 class="text-6xl text-white font-bold py-2">N1000.00</h1>
@@ -394,7 +394,7 @@
 
 
 
-                <div class="col fixed right-10 w-1/5">
+                <div class="hidden md:block col fixed right-10 w-1/5">
 
                     <div class="border  rounded-lg w-full shadow bg-blue-600 w-100 p-4 mt-0">
                         <div class="flex gap-2">
