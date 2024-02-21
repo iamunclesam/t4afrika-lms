@@ -50,8 +50,8 @@
 
       <div class="-mt-10 bg-white relative  my-10 rounded-t-3xl rounded-b-xl pb-8 px-2">
        <div class="flex gap-1 py-5 h-auto items-center">
-          <Icon icon="openmoji:overview" />
-          <h1 class="text-gray-500 font-bold text-md">Overview</h1>   
+          <Icon icon="formkit:group" class="text-xl"/>
+          <h1 class="text-gray-500 font-bold text-md">Cohort Overview</h1>   
        </div>
 
 
@@ -74,19 +74,19 @@
             </div>
 
             <div class=" img">
-              <img src="@/assets/img/hero-bg.png" class=" mt-0" alt="" />
+              <img src="@/assets/img/bg-1.png" class=" mt-0" alt="" />
             </div>
           </div>
         </div>
 
         <div class="grid grid-cols-2 gap-4">
 
-          <div class="md:flex mt-4 justify-between h-48 sm:p-10 p-5 rounded-3xl bg-blue-600 dark:bg-gray-800">
+          <div class="md:flex mt-4 justify-between md:h-48 sm:p-10 p-5 rounded-3xl bg-blue-600 dark:bg-gray-800">
             <div class="">
-              <div class="flex justify-between items-center h-auto">
-                <h1 class="md:text-6xl text-lg text-white font-bold">Progress</h1>
-                <Icon icon="simple-icons:progress" class="text-white text-md" />
-
+              <div class="flex justify-between  h-auto">
+                <h1 class="md:text-6xl text-md text-white font-bold">Overdue Weeks</h1>
+                <Icon  icon="lets-icons:clock-fill" class="text-white text-3xl mt-1" />
+               
               </div>
 
               <h1 class="py-4 text-5xl text-white">0</h1>
@@ -102,12 +102,12 @@
           </div> -->
           </div>
 
-          <div class="md:flex mt-4 justify-between h-48 sm:p-10 p-5 rounded-3xl bg-yellow-400 dark:bg-gray-800">
+          <div class="md:flex mt-4 justify-between md:h-48 sm:p-10 p-5 rounded-3xl bg-yellow-400 dark:bg-gray-800">
             <div class="">
-              <div class="flex justify-between items-center h-auto">
-                <h1 class="md:text-6xl text-lg text-white font-bold">Progress</h1>
-                <Icon icon="simple-icons:progress" class="text-white text-md" />
-
+              <div class="flex justify-between h-auto">
+                <h1 class="md:text-6xl text-lg text-white font-bold">Tasks completed</h1>
+                <Icon icon="fluent-mdl2:completed-solid" class="text-white text-3xl mt-1" />
+                
               </div>
 
 
@@ -165,7 +165,7 @@
             <option>Germany</option>
           </select>
         </div>
-        <ul class=" font-medium text-left text-gray-500 mt-0 p shadow flex dark:divide-gray-700 dark:text-gray-400">
+        <ul class=" font-medium text-left text-gray-500 mt-0 flex dark:divide-gray-700 dark:text-gray-400">
           <li class="w-full">
             <a href="#"
               class="pb-4 inline-block text-lg w-full p-4 pb-0 text-blue-500 bg-white border-t-4 border-blue-500 dark:border-gray-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:bg-gray-700 dark:text-white"
@@ -175,7 +175,7 @@
                 <span class="hidden md:block">WEEK</span>REVIEW
               </div>
 
-              <Icon icon="material-symbols:feedback"   class="sm:hidden text-3xl text-center mx-auto"/>
+              <Icon icon="material-symbols:feedback"   class="sm:hidden text-5xl text-center mx-auto border-2 border-gray-100 p-2 rounded-full"/>
 
              
             </a>
@@ -189,7 +189,7 @@
                 QUIZZ
               </div>
 
-              <Icon icon="material-symbols:quiz"  class="sm:hidden text-3xl text-center mx-auto"/>
+              <Icon icon="material-symbols:quiz"  class="sm:hidden text-5xl text-center mx-auto border-2 border-gray-200 p-2 rounded-full"/>
             </a>
             <p class="hidden text-gray-500 text-sm px-4 pb-4">Previously on last week</p>
           </li>
@@ -202,7 +202,7 @@
                 TASK
               </div>
 
-              <Icon icon="oi:task"  class="sm:hidden text-3xl text-center mx-auto"/>
+              <Icon icon="oi:task"  class="sm:hidden text-5xl text-center mx-auto border-2 border-gray-200 p-2 rounded-full"/>
             
             </a>
             <p class="hidden text-gray-500 text-sm px-4 pb-4">Previously on last week</p>
@@ -216,7 +216,7 @@
                <div class="flex h-auto items-center gap-1">
                 <Icon icon="mingcute:time-line" class="text-blue-500"/>
                 <h5 class="text-md font-medium leading-none text-gray-700 dark:text-white">
-                  PREVIOUSLY ON
+                  Previously on
                 </h5>
                </div>
                 <a href="#" class="text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">
@@ -226,11 +226,17 @@
               <div class="flow-root ">
                 <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
                   <li class="py-4 sm:py-0 p-3 rounded-lg border border-gray-100">
+                    <div class="relative">
+                      <div class="absolute top-0 right-4">
+                                                <Icon icon="jam:padlock-open" class="text-blue-500"/>
+                                            </div>           
+                    </div>
                     <div class="flex items-center">
+                      
                       <div class="flex-shrink-0">
                         <img class="w-20 h-20 rounded-full" src="../assets/img/hero.jpeg" alt="Neil image" />
                       </div>
-                      <div class="flex-1 min-w-0 ms-4">
+                      <div class="flex-1 min-w-0 ms-2 mt-2">
                         <p class="text-sm font-semibold text-gray-900 truncate dark:text-white">
                           Introduction to Forex
                         </p>
@@ -238,9 +244,9 @@
                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nam modi
                           necessitatibus repellendus numquam!
                         </p>
-                        <div class="duration py-3">
-                          <div class="flex gap-1">
-                            <Icon icon="icon-park:time" width="20px" height="15px" />
+                        <div class="duration pt-2">
+                          <div class="flex h-auto items-center gap-1">
+                            <Icon icon="memory:time-sand" width="18px" height="15px" class="text-blue-400"/>
                             <p class="text-xs text-gray-500 font-medium">Duration: 30m</p>
                           </div>
                         </div>
