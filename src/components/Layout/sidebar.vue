@@ -155,14 +155,14 @@
               </div>
             </button>
 
-            <button type="button"
+            <router-link to="/academy-billing"
               class="flex justify-between w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
               aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
               <div class="flex">
                 <Icon icon="solar:money-bag-bold" width="20" class="text-blue-500" />
                 <span class="flex-1 ms-3 whitespace-nowrap text-sm">Billing</span>
               </div>
-            </button>
+            </router-link>
 
             <button type="button"
               class="flex justify-between w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
