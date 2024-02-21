@@ -23,7 +23,7 @@
                     <div class="grid md:gap-4 mb-4">
                         <div class="sm:flex sm:justify-between items-center sm:h-48 sm:p-10 p-4 rounded bg-blue-500 dark:bg-gray-800">
                             <div class="">
-                                <h1 class="text-md text-white font-medium flex h-auto items-center gap-2">Available Balance <Icon icon="icon-park-outline:eyes" width="20px" height="20px" /></h1>
+                                <h1 class="text-md text-white font-medium flex h-auto items-center gap-2">Wallet Balance <Icon icon="icon-park-outline:eyes" width="20px" height="20px" /></h1>
                                 <h1 class="sm:text-6xl text-5xl text-white font-bold py-2">N1000.00</h1>
                                 <div class="gap-2 inline-flex my-3">
                                     <button class="bg-white px-2 sm:py-1 py-2 rounded-md flex items-center h-auto gap-1"> 
@@ -50,18 +50,20 @@
                     <h1 class="text-gray-500 text-lg py-10 py-5">Overview</h1>
                     <div class="grid grid-cols-2 gap-4 mb-4 mt-0">
                         <div
-                            class="sm:flex gap-4 p-5 justify-start items-center  sm:h-24 rounded-lg shadow bg-white dark:bg-gray-800">
+                            class="relative sm:flex gap-4 p-5 justify-start items-center  sm:h-24 rounded-lg shadow bg-white dark:bg-gray-800">
+                           
                             <Icon icon="ic:baseline-paid" class="text-blue-500 mx-auto" width="70px" height="70px" />
                             <div class="text-center">
-                                <!-- <h1 class="text-blue-500 text-4xl">0</h1> -->
+                                <h1 class="text-blue-500 sm:text-4xl text-2xl">0</h1>
                                 <p class="sm:text-lg text-sm text-gray-700 dark:text-gray-500">WEEKS PAID</p>
                             </div>
                         </div>
                         <div
-                            class="md:flex gap-4 p-5 justify-start items-center  sm:h-24 rounded-lg shadow bg-white dark:bg-gray-800">
+                            class="relative md:flex gap-4 p-5 justify-start items-center  sm:h-24 rounded-lg shadow bg-white dark:bg-gray-800">
+                          
                             <Icon icon="mdi:receipt-text-pending" class="text-blue-500 mx-auto" width="70px" height="70px" />
                             <div class="text-center">
-                                <!-- <h1 class="text-blue-500 text-4xl">0</h1> -->
+                                <h1 class="text-blue-500 sm:text-4xl text-2xl">0</h1>
                                 <p class="sm:text-lg text-sm text-gray-700  dark:text-gray-500">PENDING FEE</p>
                             </div>
                         </div>
@@ -70,11 +72,11 @@
 
                     <h1 class="text-gray-500 text-lg py-10 pb-5">Order History</h1>
 
-                    <section class="hidden dark:bg-gray-900 ">
-                        <div class="mx-auto max-w-screen-xl px-4 lg:px-0">
+                    <section class="dark:bg-gray-900 ">
+                        <div class="mx-auto max-w-screen-xl lg:px-0">
                             <!-- Start coding here -->
-                            <div class="bg-white dark:bg-gray-800 relative shadow-md sm:rounded-lg overflow-hidden">
-                                <div
+                            <div class=" dark:bg-gray-800 relative md:shadow-md sm:rounded-lg overflow-hidden">
+                                <!-- <div
                                     class="flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0 md:space-x-4 p-4">
                                     <div class="w-full md:w-1/2">
                                         <form class="flex items-center">
@@ -195,7 +197,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="overflow-x-auto">
                                     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                                         <thead
@@ -437,6 +439,8 @@
                 </div>
             </div>
         </div>
+
+        <bottomNavVue />
     </main>
 </template>
 
@@ -444,10 +448,21 @@
 import sidebar from '@/components/Layout/sidebar.vue'
 import { Icon } from '@iconify/vue'
 import breadcrumb from '@/components/Layout/breadcrumb.vue'
+import bottomNavVue from '@/components/Layout/bottomNav.vue'
+
 
 export default {
-    components: { sidebar, Icon, breadcrumb }
+    components: { sidebar, Icon, breadcrumb, bottomNavVue }
 }
 </script>
 
-<style></style>
+<style scoped>
+
+.clip-half {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transform: rotate(135deg);
+}
+
+
+
+</style>
