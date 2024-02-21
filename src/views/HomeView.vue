@@ -4,7 +4,7 @@
 
     <div class="md:p-4 sm:ml-72 md:mt-24 mt-20 md:mx-5">
       <div class="grid grid-cols-1 gap-4 mb-4">
-        <div class="md:flex justify-between py-8 pb-16 sm:p-10 p-5 rounded bg-blue-600 dark:bg-gray-800">
+        <div class="md:flex justify-between  py-10 pb-20 sm:p-10 p-5 rounded bg-blue-600 dark:bg-gray-800">
           <div class="">
             <h1 class="md:text-6xl text-3xl text-white font-bold"><span class="text-gray-300">Hello</span>, Unclesam!</h1>
             <p class="text-md text-white font-medium">
@@ -49,7 +49,12 @@
       </div>
 
       <div class="-mt-10 bg-white relative  my-10 rounded-t-3xl rounded-b-xl pb-8 px-2">
-        <h1 class="text-gray-500 font-bold text-lg pt-10 pb-5">Overview</h1>
+       <div class="flex gap-1 py-5 h-auto items-center">
+          <Icon icon="openmoji:overview" />
+          <h1 class="text-gray-500 font-bold text-md">Overview</h1>   
+       </div>
+
+
 
         <div class="sm:p-10 p-5 rounded-3xl bg-white border border-gray-200 shadow">
           <div class="flex justify-between items-center h-auto">
@@ -164,19 +169,42 @@
           <li class="w-full">
             <a href="#"
               class="pb-4 inline-block text-lg w-full p-4 pb-0 text-blue-500 bg-white border-t-4 border-blue-500 dark:border-gray-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:bg-gray-700 dark:text-white"
-              aria-current="page"><span class="hidden md:block">WEEK</span>REVIEW</a>
+              aria-current="page">
+
+              <div class="hidden md:block">
+                <span class="hidden md:block">WEEK</span>REVIEW
+              </div>
+
+              <Icon icon="material-symbols:feedback"   class="sm:hidden text-3xl text-center mx-auto"/>
+
+             
+            </a>
             <p class="hidden text-gray-500 text-sm px-4 pb-4">See what's going on</p>
           </li>
           <li class="w-full">
             <a href="#"
               class="inline-block text-lg w-full p-4 pb-0 text-blue-500 bg-white dark:border-gray-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:bg-gray-700 dark:text-white"
-              aria-current="page">QUIZZES</a>
+              aria-current="page">
+              <div class="hidden md:block">
+                QUIZZ
+              </div>
+
+              <Icon icon="material-symbols:quiz"  class="sm:hidden text-3xl text-center mx-auto"/>
+            </a>
             <p class="hidden text-gray-500 text-sm px-4 pb-4">Previously on last week</p>
           </li>
           <li class="w-full">
             <a href="#"
               class="inline-block text-lg w-full p-4 pb-0 text-blue-500 bg-white dark:border-gray-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:bg-gray-700 dark:text-white"
-              aria-current="page">TASKS</a>
+              aria-current="page">
+              
+              <div class="hidden md:block">
+                TASK
+              </div>
+
+              <Icon icon="oi:task"  class="sm:hidden text-3xl text-center mx-auto"/>
+            
+            </a>
             <p class="hidden text-gray-500 text-sm px-4 pb-4">Previously on last week</p>
           </li>
         </ul>
@@ -185,16 +213,19 @@
           <div class="review p-4 pb-2 col-span-2">
             <div class="w-full py-0 bg-white sm:p-0 max-w-lg dark:bg-gray-800 dark:border-gray-700">
               <div class="flex items-center justify-between mb-4">
-                <h5 class="text-xl font-medium leading-none text-gray-900 dark:text-white">
+               <div class="flex h-auto items-center gap-1">
+                <Icon icon="mingcute:time-line" class="text-blue-500"/>
+                <h5 class="text-md font-medium leading-none text-gray-700 dark:text-white">
                   PREVIOUSLY ON
                 </h5>
+               </div>
                 <a href="#" class="text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">
                   View all
                 </a>
               </div>
               <div class="flow-root ">
                 <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
-                  <li class="py-4 sm:py-0">
+                  <li class="py-4 sm:py-0 p-3 rounded-lg border border-gray-100">
                     <div class="flex items-center">
                       <div class="flex-shrink-0">
                         <img class="w-20 h-20 rounded-full" src="../assets/img/hero.jpeg" alt="Neil image" />
@@ -214,11 +245,11 @@
                           </div>
                         </div>
                       </div>
-                      <div
+                      <!-- <div
                         class="inline-flex gap-1 items-center text-base font-medium text-white text-xs bg-blue-500 md:rounded rounded-full p-2 ml-4 text-gray-900 dark:text-white">
                         <Icon icon="solar:play-bold" width="14px" height="14px" />
                         <span class="hidden sm:block">Watch highlight</span>
-                      </div>
+                      </div> -->
                     </div>
                   </li>
                 </ul>
@@ -255,6 +286,10 @@
         </div>
       </div>
     </div>
+
+    <div class="">
+      <bottomNavVue />
+    </div>
   </main>
 </template>
 
@@ -262,10 +297,11 @@
 import sidebar from '@/components/Layout/sidebar.vue'
 import { Icon } from '@iconify/vue'
 import OverviewVue from '@/components/Overview.vue'
+import bottomNavVue from '@/components/Layout/bottomNav.vue'
 
 
 export default {
-  components: { sidebar, Icon, OverviewVue }
+  components: { sidebar, Icon, OverviewVue, bottomNavVue }
 }
 </script>
 
