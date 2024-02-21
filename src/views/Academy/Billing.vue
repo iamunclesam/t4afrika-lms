@@ -47,7 +47,7 @@
                         </div>
                     </div>
 
-                    <h1 class="text-gray-500 text-lg py-10 py-5">Overview</h1>
+                    <!-- <h1 class="text-gray-500 text-lg py-10 py-5">Overview</h1>
                     <div class="grid grid-cols-2 gap-4 mb-4 mt-0">
                         <div
                             class="flex gap-4 p-5 justify-start items-center  h-24 rounded-lg shadow bg-white dark:bg-gray-800">
@@ -66,7 +66,7 @@
                             </div>
                         </div>
 
-                    </div>
+                    </div> -->
 
                     <h1 class="text-gray-500 text-lg py-10 pb-5">Order History</h1>
 
