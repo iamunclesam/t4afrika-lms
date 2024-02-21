@@ -4,7 +4,7 @@
 
     <div class="md:p-4 sm:ml-72 md:mt-24 mt-20 md:mx-5">
       <div class="grid grid-cols-1 gap-4 mb-4">
-        <div class="md:flex justify-between h-48 sm:p-10 p-5 rounded bg-blue-600 dark:bg-gray-800">
+        <div class="md:flex justify-between py-8 pb-16 sm:p-10 p-5 rounded bg-blue-600 dark:bg-gray-800">
           <div class="">
             <h1 class="md:text-6xl text-3xl text-white font-bold"><span class="text-gray-300">Hello</span>, Unclesam!</h1>
             <p class="text-md text-white font-medium">
@@ -49,18 +49,18 @@
       </div>
 
       <div class="-mt-10 bg-white relative  my-10 rounded-t-3xl rounded-b-xl pb-8 px-2">
-        <h1 class="text-gray-900 font-bold text-lg pt-10 pb-5">Overview</h1>
+        <h1 class="text-gray-500 font-bold text-lg pt-10 pb-5">Overview</h1>
 
         <div class="sm:p-10 p-5 rounded-3xl bg-white border border-gray-200 shadow">
           <div class="flex justify-between items-center h-auto">
-            <h1 class="md:text-6xl text-xl text-gray-900 font-bold">Progress</h1>
-            <Icon icon="simple-icons:progress" class="text-gray-500 text-xl" />
+            <h1 class="md:text-6xl text-lg text-gray-900 font-bold">Weeks completed</h1>
+            <Icon icon="vaadin:academy-cap" class="text-gray-400" width="30px" height="30px" />
 
           </div>
           <div class="grid grid-cols-2  dark:bg-gray-800">
 
             <div class="mt-8">
-              <h1 class="md:text-6xl text-8xl text-gray-900 font-bold">77
+              <h1 class="md:text-6xl text-8xl text-gray-900 font-bold">10
               </h1>
               <!-- <p class="text-md text-white font-medium">
                 Have a nice trading week
@@ -79,12 +79,12 @@
           <div class="md:flex mt-4 justify-between h-48 sm:p-10 p-5 rounded-3xl bg-blue-600 dark:bg-gray-800">
             <div class="">
               <div class="flex justify-between items-center h-auto">
-                <h1 class="md:text-6xl text-xl text-white font-bold">Progress</h1>
-                <Icon icon="simple-icons:progress" class="text-white text-xl" />
+                <h1 class="md:text-6xl text-lg text-white font-bold">Progress</h1>
+                <Icon icon="simple-icons:progress" class="text-white text-md" />
 
               </div>
 
-              <h1 class="py-4 text-5xl text-white">77</h1>
+              <h1 class="py-4 text-5xl text-white">0</h1>
               <p class="text-gray-300 text-sm">Lorem, ipsum dolor.</p>
 
             </div>
@@ -100,13 +100,13 @@
           <div class="md:flex mt-4 justify-between h-48 sm:p-10 p-5 rounded-3xl bg-yellow-400 dark:bg-gray-800">
             <div class="">
               <div class="flex justify-between items-center h-auto">
-                <h1 class="md:text-6xl text-xl text-white font-bold">Progress</h1>
-                <Icon icon="simple-icons:progress" class="text-white text-xl" />
+                <h1 class="md:text-6xl text-lg text-white font-bold">Progress</h1>
+                <Icon icon="simple-icons:progress" class="text-white text-md" />
 
               </div>
 
 
-              <h1 class="py-4 text-5xl text-white">77</h1>
+              <h1 class="py-4 text-5xl text-white">0</h1>
               <p class="text-gray-300 text-sm">Lorem, ipsum dolor.</p>
 
             </div>
