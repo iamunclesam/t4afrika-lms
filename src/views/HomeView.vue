@@ -73,8 +73,8 @@
               <p class="text-gray-300 text-sm">Lorem, ipsum dolor.</p>
             </div>
 
-            <div class=" img">
-              <img src="@/assets/img/bg-1.png" class=" mt-0" alt="" />
+            <div class="flex h-auto items-center img">
+              <img src="@/assets/img/bg-2.png" class=" mt-0" alt="" />
             </div>
           </div>
         </div>
@@ -105,7 +105,7 @@
           <div class="md:flex mt-4 justify-between md:h-48 sm:p-10 p-5 rounded-3xl bg-yellow-400 dark:bg-gray-800">
             <div class="">
               <div class="flex justify-between h-auto">
-                <h1 class="md:text-6xl text-lg text-white font-bold">Tasks completed</h1>
+                <h1 class="md:text-6xl text-md text-white font-bold">Tasks completed</h1>
                 <Icon icon="fluent-mdl2:completed-solid" class="text-white text-3xl mt-1" />
                 
               </div>
@@ -189,7 +189,7 @@
                 QUIZZ
               </div>
 
-              <Icon icon="material-symbols:quiz"  class="sm:hidden text-5xl text-center mx-auto border-2 border-gray-200 p-2 rounded-full"/>
+              <Icon icon="material-symbols:quiz"  class="sm:hidden text-5xl text-center mx-auto border-2 border-gray-100 p-2 rounded-full"/>
             </a>
             <p class="hidden text-gray-500 text-sm px-4 pb-4">Previously on last week</p>
           </li>
@@ -202,7 +202,7 @@
                 TASK
               </div>
 
-              <Icon icon="oi:task"  class="sm:hidden text-5xl text-center mx-auto border-2 border-gray-200 p-2 rounded-full"/>
+              <Icon icon="oi:task"  class="sm:hidden text-5xl text-center mx-auto border-2 border-gray-100 p-2 rounded-full"/>
             
             </a>
             <p class="hidden text-gray-500 text-sm px-4 pb-4">Previously on last week</p>
