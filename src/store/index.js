@@ -27,7 +27,18 @@ export default createStore({
   },
   actions: {
     async register({ commit }, userDetails) {
-      const {id, firstName, lastName, age, email, password  } = userDetails;
+      const {
+        id, 
+        firstName, 
+        lastName, 
+        age, 
+        email, 
+        password, 
+        wallet: {
+          added: [],
+          withdrawn: []
+        }
+       } = userDetails;
 
       try {
         const userCredential = await createUserWithEmailAndPassword(auth, email, password);
