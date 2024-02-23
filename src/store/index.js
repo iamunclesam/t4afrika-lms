@@ -1,15 +1,16 @@
+/* eslint-disable no-empty-pattern */
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, sendEmailVerification } from "firebase/auth";
-import { collection, addDoc, getDocs, query, where } from 'firebase/firestore';
+import { collection, addDoc } from 'firebase/firestore';
 import { auth, db } from '@/firebase';
 import { createStore } from "vuex";
 import router from "../router";
 import VuexPersistence from "vuex-persist";
-import { toast } from "vue3-toastify";
+
 
 
 const vuexLocal = new VuexPersistence({
   storage: window.localStorage, // You can change this to sessionStorage if needed
-  key: 'movie-fusion', // Change this to a unique key for your app
+  key: 'trade4afrika', // Change this to a unique key for your app
   reducer: (state) => ({
     user: state.user, // Specify the state you want to persist
   }),
@@ -30,7 +31,7 @@ export default createStore({
       const {
     
         email, 
-        username,
+        fullName,
         password, 
         wallet: {
           added: [],
@@ -43,35 +44,36 @@ export default createStore({
         await sendEmailVerification(userCredential.user);
 
         const user = {
-            username,
-            email
+            fullName,
+            email,
+        
         };
 
         const usersCollection = collection(db, 'Users');
         await addDoc(usersCollection, user);
 
         commit('SET_USER', user);
-        // router.push('/verify-email');
+        router.push('/login');
         // Display a success toast
-       toast.success("Sign Up Successfull")
+       alert("Sign Up Successfull")
 
         return user;
       } catch (error) {
         switch (error.code) {
           case 'auth/email-already-in-use':
-            toast.error("Email in Use")
+            // toast.error("Email in Use")
             break
 
           case 'auth/invalid-email':
-            toast.error("Invalid Email")
+            // toast.error("Invalid Email")
             break
 
           case 'auth/operation-not-allowed':
-            toast.error("Operation not allowed")
+            // toast.error("Operation not allowed")
             break
 
           case 'auth/weak-password':
-            toast.error("Weak Password")
+            // toast.error("Weak Password")
             break
 
           default:
@@ -94,16 +96,16 @@ export default createStore({
         commit('SET_USER', user);
         router.push('/')
 
-        toast.success("Sign In Successfull")
+        // toast.success("Sign In Successfull")
         return user;
       } catch (error) {
         switch (error.code) {
           case 'auth/user-not-founded':
-            toast.error("User doesn't exist")
+            // toast.error("User doesn't exist")
             break
 
           case 'auth/wrong-password':
-            toast.error('Wrong password')
+            // toast.error('Wrong password')
             break
           default:
             // alert('Something went wrong')
