@@ -1,19 +1,21 @@
 import './assets/main.css'
-import store from './store'
 
 import { createApp } from 'vue'
 import App from './App.vue'
+import store from './stores'
 import router from './router'
+import './assets/tailwind.css'
 
 import { initFlowbite } from 'flowbite';
-
 
 router.afterEach(() => {
   initFlowbite();
 });
 
-const app = createApp(App)
 
+const app = createApp(App)
 app.use(router)
+
+// app.use(AOS)
 app.use(store)
 app.mount('#app')
