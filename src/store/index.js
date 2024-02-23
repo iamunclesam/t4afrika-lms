@@ -28,11 +28,9 @@ export default createStore({
   actions: {
     async register({ commit }, userDetails) {
       const {
-        id, 
-        firstName, 
-        lastName, 
-        age, 
+    
         email, 
+        username,
         password, 
         wallet: {
           added: [],
@@ -45,11 +43,8 @@ export default createStore({
         await sendEmailVerification(userCredential.user);
 
         const user = {
-            id,
-            firstName,
-            lastName,
-            email,
-            age,
+            username,
+            email
         };
 
         const usersCollection = collection(db, 'Users');
