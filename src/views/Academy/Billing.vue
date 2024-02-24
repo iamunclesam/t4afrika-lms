@@ -5,7 +5,7 @@
 
 
         <div class="p-4 sm:ml-72 mt-20 sm:mx-5">
-            <breadcrumb class="mt-5 sm:mt-0"/>
+            <breadcrumb class="mt-5 sm:mt-5"/>
 
             <div class="flex justify-between h-auto items-center">
                 <div class="py-10">
@@ -30,10 +30,10 @@
                     <h1 class="text-gray-500 text-lg py-10 py-5">Overview</h1>
                     <div class="grid grid-cols-2 gap-4 mb-4 mt-0">
                         <div
-                            class="relative sm:flex gap-4 p-5 justify-start items-center  sm:h-24 rounded-lg shadow bg-white dark:bg-gray-800">
+                            class=" sm:flex gap-4 sm:gap-4 p-5 justify-start items-center sm:h-24 rounded-lg shadow bg-white dark:bg-gray-800">
                            
-                            <Icon icon="ic:baseline-paid" class="text-blue-500 mx-auto" width="70px" height="70px" />
-                            <div class="text-center">
+                            <Icon icon="ic:baseline-paid" class="text-blue-500 mx-auto md:mx-0" width="70px" height="70px" />
+                            <div class="text-center md:text-left">
                                 <h1 class="text-blue-500 sm:text-4xl text-2xl">0</h1>
                                 <p class="sm:text-lg text-sm text-gray-700 dark:text-gray-500">WEEKS PAID</p>
                             </div>
@@ -41,8 +41,8 @@
                         <div
                             class="relative md:flex gap-4 p-5 justify-start items-center  sm:h-24 rounded-lg shadow bg-white dark:bg-gray-800">
                           
-                            <Icon icon="mdi:receipt-text-pending" class="text-blue-500 mx-auto" width="70px" height="70px" />
-                            <div class="text-center">
+                            <Icon icon="mdi:receipt-text-pending" class="text-blue-500 mx-auto md:mx-0" width="70px" height="70px" />
+                            <div class="text-center md:text-left">
                                 <h1 class="text-blue-500 sm:text-4xl text-2xl">0</h1>
                                 <p class="sm:text-lg text-sm text-gray-700  dark:text-gray-500">PENDING FEE</p>
                             </div>
@@ -55,7 +55,7 @@
                     <section class="dark:bg-gray-900 ">
                         <div class="mx-auto max-w-screen-xl lg:px-0">
                             <!-- Start coding here -->
-                            <div class=" dark:bg-gray-800 relative md:shadow-md sm:rounded-lg overflow-hidden">
+                            <div class="bg-white dark:bg-gray-800 relative md:shadow-md sm:rounded-lg overflow-hidden">
                                 <!-- <div
                                     class="flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0 md:space-x-4 p-4">
                                     <div class="w-full md:w-1/2">
@@ -181,7 +181,7 @@
                                 <div class="overflow-x-auto">
                                     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                                         <thead
-                                            class="text-xs text-gray-700 uppercase font-medium bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                                            class="text-xs text-gray-700 uppercase font-medium bg-gray-100 py-4 dark:bg-gray-700 dark:text-gray-400">
                                             <tr>
                                                 <th scope="col" class="px-4 py-3">Amount</th>
 

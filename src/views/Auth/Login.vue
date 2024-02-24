@@ -2,11 +2,11 @@
     <main>
         <div class="login">
             <div class="grid grid-cols-1 md:grid-cols-2">
-                <div class="col h-screen border-r border-gray-300 bg-white  hidden md:block">
+                <div class="col  h-screen border-r border-gray-300 bg-white  ">
 
 
                     <section class=" dark:bg-gray-900">
-                        <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+                        <div class="flex mt-10 flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
                             <a href="#"
                                 class="flex items-center mb-6 text-2xl mt-4 font-medium text-gray-900 dark:text-white">
 
@@ -16,7 +16,7 @@
                                 class="w-full bg-white rounded-lg dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
                                 <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
                                     <h1
-                                        class="text-6xl text-center font-bold leading-tight tracking-tight text-gray-900 md:text-4xl dark:text-white">
+                                        class="text-3xl text-center font-bold leading-tight tracking-tight text-gray-900 md:text-4xl dark:text-white">
                                         Welcome Back
                                     </h1>
                                     <form class="space-y-4 md:space-y-6" action="#">
@@ -57,7 +57,7 @@
                                                         href="#">Terms and Conditions</a></label>
                                             </div>
                                         </div>
-                                        <button type="submit"
+                                        <button @click.prevent="login" type="submit"
                                             class="w-full text-white bg-blue-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Login</button>
                                         <p class="text-sm font-light text-gray-500 dark:text-gray-400">
                                             Already have an account? <a href="#"
@@ -72,14 +72,14 @@
                 </div>
 
                 <div class="col side bg-blue-50">
-                    
+
                     <!-- <div class="relative w-full">
                             <div class="absolute left-4 bottom-4 bg-white border-b-2 border-blue-500 py-4 px-2">
                                 <h1 class="text-xl text-gray-400">Lorem ipsum dolor sit amet.</h1>
                                 <p class="text-md text-gray-400">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, quo!</p>
                             </div>
                     </div> -->
-                    <div class=" flex items-center h-screen justify-center">
+                    <div class="hidden md:block flex items-center h-screen justify-center">
                         <img src="@/assets/img/login-bg.png" class=" object-cover">
                     </div>
 

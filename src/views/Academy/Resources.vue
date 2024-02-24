@@ -95,7 +95,7 @@
 
                             <div class="flow-root">
                                 <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
-                                    <li class="mb-5 py-3 sm:py-3 shadow-md bg-white rounded-md px-3">
+                                    <li @click.prevent="goToLink" class="mb-5 py-3 sm:py-3 shadow-md bg-white rounded-md px-3">
                                         <div class="relative">
                                             <div class="absolute top-0 right-4">
                                                 <Icon icon="jam:padlock-open" class="text-blue-500"/>
@@ -253,7 +253,12 @@ import { Icon } from '@iconify/vue'
 import breadcrumb from '@/components/Layout/breadcrumb.vue'
 
 export default {
-    components: { sidebar, Icon, breadcrumb }
+    components: { sidebar, Icon, breadcrumb },
+    methods: {
+        goToLink() {
+            this.$router.push('/session-details')
+        }
+    }
 }
 </script>
 

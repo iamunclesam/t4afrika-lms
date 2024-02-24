@@ -29,14 +29,10 @@ export default createStore({
   actions: {
     async register({ commit }, userDetails) {
       const {
-    
+        id,
         email, 
         fullName,
         password, 
-        wallet: {
-          added: [],
-          withdrawn: []
-        }
        } = userDetails;
 
       try {
@@ -46,6 +42,13 @@ export default createStore({
         const user = {
             fullName,
             email,
+            id,
+            wallet: {
+              added: [],
+              withdrawn: []
+            },
+            tasks: [],
+            certificates: []
         
         };
 

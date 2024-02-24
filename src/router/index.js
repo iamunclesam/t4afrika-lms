@@ -8,7 +8,8 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component: HomeView,
+      meta: { requiresAuth: true },
     },
     {
       path: '/about',
@@ -19,7 +20,8 @@ const router = createRouter({
     {
       path: '/academy-resources',
       name: 'academy-resources',
-      component: () => import('../views/Academy/Resources.vue')
+      component: () => import('../views/Academy/Resources.vue'),
+       meta: { requiresAuth: true },
     },
 
     {
@@ -31,7 +33,8 @@ const router = createRouter({
     {
       path: '/session-details',
       name: 'details',
-      component: () => import('../views/Academy/SessionDetails.vue')
+      component: () => import('../views/Academy/SessionDetails.vue'),
+       meta: { requiresAuth: true },
     },
 
 
@@ -47,6 +50,12 @@ const router = createRouter({
       path: '/register',
       name: 'register',
       component: () => import('../views/Auth/Register.vue')
+    },
+
+    {
+      path: '/unverified',
+      name: 'unverified',
+      component: () => import('../views/Auth/UnverifiedEmail.vue')
     },
 
   ]
@@ -66,11 +75,11 @@ router.beforeEach((to, from, next) => {
 
         } else {
           // User is authenticated but email is not verified, redirect to a verification page
-          next();
+          next({path: '/unverified'});
         }
       } else {
         // User is not authenticated, redirect to login
-        next();
+        next({path: "/register"});
       }
     });
   } else {

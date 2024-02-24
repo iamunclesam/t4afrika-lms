@@ -1,6 +1,6 @@
 <template>
     <main>
-        <paystack buttonClass="'button-class btn btn-primary'" buttonText="Pay Online" :publicKey="publicKey" :email="email"
+        <paystack buttonClass="'button-class btn btn-primary'" buttonText="Add money" :publicKey="publicKey" :email="email"
             :amount="amount" :reference="reference" :onSuccess="onSuccessfulPayment" :onCanel="onCancelledPayment">
         </paystack>
     </main>
@@ -39,7 +39,7 @@ export default {
 
     data() {
         return {
-            publicKey: 'pk_test_0000',
+            publicKey: 'pk',
             amount: 1000,
             email: 'sam@gmail.com',
             firstname: 'sam',

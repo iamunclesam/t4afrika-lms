@@ -1,6 +1,6 @@
 <template>
     <main>
-        <div class="sm:flex sm:justify-between items-center sm:h-48 sm:p-10 p-4 rounded bg-blue-500 dark:bg-gray-800">
+        <div class="sm:flex sm:justify-between items-center sm:h-48 sm:p-10 sm:px-5 p-4 rounded bg-blue-500 dark:bg-gray-800">
             <div class="">
                 <h1 class="text-md text-white font-medium flex h-auto items-center gap-2">Wallet Balance
                     <Icon icon="icon-park-outline:eyes" width="20px" height="20px" />

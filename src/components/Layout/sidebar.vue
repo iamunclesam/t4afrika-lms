@@ -97,7 +97,7 @@
 
 
     <aside id="logo-sidebar"
-      class="fixed md:top-20 shadow-lg md:ml-4 bg-blue-500 rounded-xl left-0 z-40 w-64 h-screen pt-5 transition-transform -translate-x-full bg-white border mb-20 border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
+      class="fixed top-20 shadow-lg bg-blue-500 rounded-xl left-0 z-40 w-64 h-screen pt-5 transition-transform -translate-x-full bg-white border mb-20 border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
       aria-label="Sidebar">
       <div class="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
         <ul class="space-y-2 font-medium">
@@ -145,7 +145,7 @@
 
 
           <li>
-            <button type="button"
+            <router-link to="/academy-resources"
               class="flex justify-between w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
               aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
               <div class="flex">
@@ -153,7 +153,7 @@
                 
                 <span class="flex-1 ms-3 whitespace-nowrap text-sm">Resources</span>
               </div>
-            </button>
+            </router-link>
 
             <router-link to="/academy-billing"
               class="flex justify-between w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
