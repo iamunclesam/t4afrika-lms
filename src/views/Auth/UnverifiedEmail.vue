@@ -37,7 +37,7 @@
 <script>
 import { auth } from '@/firebase';
 import { sendEmailVerification } from "firebase/auth";
-import { toast } from "vue3-toastify";
+
 
 export default {
     data() {
@@ -53,11 +53,9 @@ export default {
                 await sendEmailVerification(user);
                 this.resendDisabled = true; // Disable the button
                 this.startCountdown(); // Start the countdown timer
-                toast.success('Confirmation email resent. Please check your inbox.');
-            } catch (error) {
+                         } catch (error) {
                 console.error('Error resending confirmation email:', error);
-                toast.error('An error occurred while resending the confirmation email.');
-            }
+                  }
         },
 
         startCountdown() {
