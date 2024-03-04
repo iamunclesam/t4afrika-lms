@@ -27,22 +27,20 @@
 
             <!-- Search bar -->
             <div class="hidden md:block relative md:flex-shrink-0">
-              <h1 class="text-lg ">Dashboard</h1>
-              <p class="date text-sm text-gray-300"><span class="text-blue-500">Monday</span> 08 February 2024</p>
+              <h1 class="text-md text-gray-600">Dashboard</h1>
+              <p class="date text-xs text-gray-300"><span class="text-blue-500">Monday</span> 08 February 2024</p>
             </div>
 
             <div class="flex w-100 items-center ml-auto mr-4 md:mr-10">
               <div class="hidden md:flex items-center ms-3 md:gap-7">
-
-
-                <div class="">
+                <div class="relative">
                   <Icon icon="material-symbols-light:mail-outline" width="26" class="text-gray-700" />
                   <div
                     class="absolute inline-flex items-center justify-center w-3 h-3 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-0.5 -end-0 dark:border-gray-900">
                   </div>
                 </div>
 
-                <div class=" ">
+                <div class="relative">
                   <Icon icon="ph:bell-light" width="24" class=" text-gray-700" />
                   <div
                     class="absolute inline-flex items-center justify-center w-3 h-3 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-1 -end-0 dark:border-gray-900">
@@ -289,8 +287,14 @@
 
 <script>
 import { Icon } from '@iconify/vue';
+import { initFlowbite } from 'flowbite';
+
 export default {
-  components: { Icon }
+  components: { Icon },
+
+  mounted() {
+    initFlowbite()
+  }
 }
 </script>
 

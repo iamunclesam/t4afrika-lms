@@ -5,12 +5,12 @@
 
 
         <div class="p-4 sm:ml-72 mt-20 sm:mx-5">
-            <breadcrumb class="mt-5 sm:mt-5"/>
+            <breadcrumb class="mt-5 sm:mt-5" />
 
             <div class="flex justify-between h-auto items-center">
                 <div class="py-10">
-                    <h1 class="text-gray-900 text-3xl pb-1">Billing</h1>
-                    <p class="text-gray-700">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <h1 class="text-gray-900 font-semibold text-3xl pb-1">Add Funds</h1>
+                    <p class="text-gray-700">Get to deposit money in advance</p>
                 </div>
 
                 <div class="icon shadow rounded-full">
@@ -31,8 +31,9 @@
                     <div class="grid grid-cols-2 gap-4 mb-4 mt-0">
                         <div
                             class=" sm:flex gap-4 sm:gap-4 p-5 justify-start items-center sm:h-24 rounded-lg shadow bg-white dark:bg-gray-800">
-                           
-                            <Icon icon="ic:baseline-paid" class="text-blue-500 mx-auto md:mx-0" width="70px" height="70px" />
+
+                            <Icon icon="ic:baseline-paid" class="text-blue-500 mx-auto md:mx-0" width="70px"
+                                height="70px" />
                             <div class="text-center md:text-left">
                                 <h1 class="text-blue-500 sm:text-4xl text-2xl">0</h1>
                                 <p class="sm:text-lg text-sm text-gray-700 dark:text-gray-500">WEEKS PAID</p>
@@ -40,14 +41,57 @@
                         </div>
                         <div
                             class="relative md:flex gap-4 p-5 justify-start items-center  sm:h-24 rounded-lg shadow bg-white dark:bg-gray-800">
-                          
-                            <Icon icon="mdi:receipt-text-pending" class="text-blue-500 mx-auto md:mx-0" width="70px" height="70px" />
+
+                            <Icon icon="mdi:receipt-text-pending" class="text-blue-500 mx-auto md:mx-0" width="70px"
+                                height="70px" />
                             <div class="text-center md:text-left">
                                 <h1 class="text-blue-500 sm:text-4xl text-2xl">0</h1>
                                 <p class="sm:text-lg text-sm text-gray-700  dark:text-gray-500">PENDING FEE</p>
                             </div>
                         </div>
 
+                    </div>
+
+
+
+
+                    <div class="bg-white rounded border border-gray-200 mt-10">
+                        <h1 class="text-sm p-1 px-2 text-white font-semibold bg-gray-400 mx-0">Add money</h1>
+                        <div class="grid grid-cols md:grid-cols-2">
+                            <div class="col border-r border-gray-200">
+                            <paystack />
+                            </div>
+
+                            <div class="col">
+
+
+                                <ul
+                                    class="w-full h-full text-sm font-medium text-gray-900 bg-white border border-gray-200 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                                    <li
+                                        class="w-full flex justify-between h-auto items-center px-4 py-2 border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+                                       <span>Minimum Deposit:</span>
+                                       <span class="text-gray-700 font-bold">NGN.100.00</span>
+                                    </li>
+                                    <li
+                                        class="w-full flex justify-between h-auto items-center px-4 py-2 border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+                                       <span>Minimum Balance:</span>
+                                       <span class="text-gray-700 font-bold">NGN.500.00</span>
+                                    </li>
+                                    <li
+                                        class="w-full flex justify-between h-auto items-center px-4 py-2 border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+                                       <span>Maximum Deposit:</span>
+                                       <span class="text-gray-700 font-bold">NGN.10,000.00</span>
+                                    </li>
+                                    <li
+                                        class="w-full flex justify-between h-auto items-center px-4 py-2 border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+                                       <span>Maximum Deposit:</span>
+                                       <span class="text-gray-700 font-bold">NGN.20,000.00</span>
+                                    </li>
+                                </ul>
+
+                            </div>
+
+                        </div>
                     </div>
 
                     <h1 class="text-gray-500 text-lg py-10 pb-5">Order History</h1>
@@ -430,21 +474,18 @@ import { Icon } from '@iconify/vue'
 import breadcrumb from '@/components/Layout/breadcrumb.vue'
 import bottomNavVue from '@/components/Layout/bottomNav.vue'
 import indexVue from '@/components/Wallet/index.vue'
+import paystack from '@/components/Wallet/paystack.vue'
 
 
 
 export default {
-    components: { sidebar, Icon, breadcrumb, bottomNavVue, indexVue }
+    components: { sidebar, Icon, breadcrumb, bottomNavVue, indexVue, paystack }
 }
 </script>
 
 <style scoped>
-
 .clip-half {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     transform: rotate(135deg);
 }
-
-
-
 </style>

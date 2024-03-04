@@ -5,7 +5,7 @@
 
 
         <div class="p-4 sm:ml-72 mt-20 mx-5">
-            <breadcrumb />
+            <breadcrumb class="pt-8"/>
 
 
             <section class="my-8 bg-blue-500 dark:bg-gray-900 rounded-lg">

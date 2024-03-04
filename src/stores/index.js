@@ -1,106 +1,102 @@
 /* eslint-disable no-empty-pattern */
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword, sendEmailVerification } from "firebase/auth";
-import { collection, addDoc } from 'firebase/firestore';
-import { auth, db } from '@/firebase';
-import { createStore } from "vuex";
-import router from "../router";
-import VuexPersistence from "vuex-persist";
-
-
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, sendEmailVerification } from 'firebase/auth'
+import { collection, addDoc } from 'firebase/firestore'
+import { auth, db } from '@/firebase'
+import { createStore } from 'vuex'
+import router from '../router'
+import VuexPersistence from 'vuex-persist'
 
 const vuexLocal = new VuexPersistence({
   storage: window.localStorage, // You can change this to sessionStorage if needed
   key: 'trade4afrika', // Change this to a unique key for your app
   reducer: (state) => ({
-    user: state.user, // Specify the state you want to persist
-  }),
-});
+    user: state.user // Specify the state you want to persist
+  })
+})
 
 export default createStore({
   state: {
-    user:null
+    user: null
   },
 
   mutations: {
     SET_USER(state, user) {
-      state.user = user;
-    },
+      state.user = user
+    }
   },
   actions: {
     async register({ commit }, userDetails) {
-      const {
-        id,
-        email, 
-        fullName,
-        password, 
-       } = userDetails;
+      const { id, email, fullName, password } = userDetails
 
       try {
-        const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-        await sendEmailVerification(userCredential.user);
+        const userCredential = await createUserWithEmailAndPassword(auth, email, password)
+        await sendEmailVerification(userCredential.user)
 
         const user = {
-            fullName,
-            email,
-            id,
-            wallet: {
-              added: [],
-              withdrawn: []
-            },
-            tasks: [],
-            certificates: []
-        
-        };
+          id,
+          fullName,
+          email,
+          wallet: {
+            added: [],
+            withdrawn: [],
+            walletAmount: null
+          },
+          tasks: [],
+          certificates: []
+        }
 
-        const usersCollection = collection(db, 'Users');
-        await addDoc(usersCollection, user);
+        const usersCollection = collection(db, 'Users')
+        await addDoc(usersCollection, user)
 
-        commit('SET_USER', user);
-        router.push('/login');
+        commit('SET_USER', user)
+        router.push('/login')
         // Display a success toast
-       alert("Sign Up Successfull")
+        alert('Sign Up Successfull')
 
-        return user;
-      } catch (error) {
+        return user
+      } 
+      catch (error) {
+        console.error('Registration Error:', error);
+      
         switch (error.code) {
           case 'auth/email-already-in-use':
             // toast.error("Email in Use")
-            break
-
+            break;
+      
           case 'auth/invalid-email':
             // toast.error("Invalid Email")
-            break
-
+            break;
+      
           case 'auth/operation-not-allowed':
             // toast.error("Operation not allowed")
-            break
-
+            break;
+      
           case 'auth/weak-password':
             // toast.error("Weak Password")
-            break
-
+            break;
+      
           default:
-            alert('Something went wrong')
+            alert('Something went wrong. Check console for details.');
         }
-
-        return
-        // Handle registration errors
+      
+        return;
       }
+      
     },
 
     async login({ commit }, credentials) {
-      const { email, password } = credentials;
+      const { email, password } = credentials
 
       try {
-        const userCredential = await signInWithEmailAndPassword(auth, email, password);
+        const userCredential = await signInWithEmailAndPassword(auth, email, password)
         const user = {
-          email: userCredential.user.email,
-        };
-        commit('SET_USER', user);
+          email: userCredential.user.email
+        }
+        commit('SET_USER', user)
         router.push('/')
 
         // toast.success("Sign In Successfull")
-        return user;
+        return user
       } catch (error) {
         switch (error.code) {
           case 'auth/user-not-founded':
@@ -111,15 +107,14 @@ export default createStore({
             // toast.error('Wrong password')
             break
           default:
-            // alert('Something went wrong')
+          // alert('Something went wrong')
         }
       }
-    },
-
+    }
   },
   getters: {
-    isAuthenticated: (state) => !!state.user,
+    isAuthenticated: (state) => !!state.user
   },
 
-  plugins: [vuexLocal.plugin],
-});
+  plugins: [vuexLocal.plugin]
+})

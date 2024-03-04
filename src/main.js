@@ -4,8 +4,6 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import store from './stores'
 import router from './router'
-
-
 import { initFlowbite } from 'flowbite';
 
 router.afterEach(() => {

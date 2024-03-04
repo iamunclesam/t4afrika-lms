@@ -5,7 +5,7 @@
 
 
         <div class="p-4 sm:ml-72 mt-20 mx-5">
-            <breadcrumb />
+            <breadcrumb class="pt-8"/>
             <div class="grid md:grid-cols-3  gap-6">
                 <div class="col-span-2">
                     <h1 class="text-gray-500 text-lg pt-10 pb-5">Upcoming Sessions</h1>

@@ -79,7 +79,7 @@ router.beforeEach((to, from, next) => {
         }
       } else {
         // User is not authenticated, redirect to login
-        next({path: "/register"});
+        next({path: "/login"});
       }
     });
   } else {

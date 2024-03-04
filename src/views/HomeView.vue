@@ -2,8 +2,8 @@
   <main>
     <sidebar />
 
-    <div class="md:p-4 sm:ml-72 md:mt-24 mt-20 ">
-      <nav class="flex mb-10" aria-label="Breadcrumb">
+    <div class="md:p-4 sm:ml-72 md:mt-24 mt-20">
+      <nav class="hidden md:flex mb-10" aria-label="Breadcrumb">
         <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
           <li class="inline-flex items-center">
             <a href="#"
@@ -16,22 +16,19 @@
               Home
             </a>
           </li>
-
         </ol>
       </nav>
 
-
       <div class="grid grid-cols-1 gap-4 mb-4">
-        <div class="md:flex justify-between h-96 items-center sm:p-10 p-5 rounded bg-blue-600 dark:bg-gray-800">
+        <div class="md:flex justify-between h-64 items-center sm:p-10 p-5 rounded bg-blue-600 dark:bg-gray-800">
           <div class="">
-            <h1 class="md:text-6xl text-3xl text-white font-bold"><span class="text-gray-300">Hello</span>, Unclesam!</h1>
-            <p class="text-md text-white font-medium">
-              Have a nice trading week
-            </p>
+            <h1 class="md:text-6xl text-3xl text-white font-bold">
+              <span class="text-gray-300">Hello</span>, Unclesam!
+            </h1>
+            <p class="text-md text-white font-medium">Have a nice trading week</p>
             <!-- <p class="hidden md:block text-md text-gray-200 py-4 text-white font-medium">
-              Ready to start your week with some new pitch desk?
-            </p> -->
-
+                  Ready to start your week with some new pitch desk?
+                </p> -->
 
             <form class="flex items-center w-full mt-4 mx-auto">
               <label for="simple-search" class="sr-only">Search</label>
@@ -44,7 +41,7 @@
                   </svg>
                 </div>
                 <input type="text" id="simple-search"
-                  class="bg-gray-50 py-3 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  class="bg-gray-50 py-3 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="Search branch name..." required />
               </div>
               <button type="submit"
@@ -57,69 +54,56 @@
                 <span class="sr-only">Search</span>
               </button>
             </form>
-
           </div>
 
           <div class="md:block hidden img">
-            <img src="@/assets/img/hero-bg.png" class="w-96 mt-0" alt="" />
+            <img src="@/assets/img/hero-bg.png" class="w-96 h-full object-fit -mt-10" alt="" />
           </div>
         </div>
       </div>
 
-      <div class="-mt-10 md:mt-10 bg-white md:bg-transparent relative  my-10 rounded-t-3xl rounded-b-xl pb-8 px-2">
-
+      <div class="-mt-10 md:mt-10 bg-white md:bg-transparent relative my-10 rounded-t-3xl rounded-b-xl pb-8 md:pb-4 px-2">
         <div class="md:hidden">
           <div class="flex gap-1 py-5 h-auto items-center">
             <Icon icon="formkit:group" class="text-xl" />
-            <h1 class="text-gray-500 font-bold text-md">Cohort Overview</h1>
+            <h1 class="text-gray-500 font-semibold text-md">Cohort Overview</h1>
           </div>
-
-
 
           <div class="sm:p-10 p-5 rounded-3xl bg-white border border-gray-200 shadow">
             <div class="flex justify-between items-center h-auto">
               <h1 class="md:text-6xl text-lg text-gray-900 font-bold">Weeks completed</h1>
               <Icon icon="vaadin:academy-cap" class="text-gray-400" width="30px" height="30px" />
-
             </div>
-            <div class="grid grid-cols-2  dark:bg-gray-800">
-
+            <div class="grid grid-cols-2 dark:bg-gray-800">
               <div class="mt-8">
-                <h1 class="md:text-6xl text-8xl text-gray-900 font-bold">10
-                </h1>
+                <h1 class="md:text-6xl text-8xl text-gray-900 font-bold">0</h1>
                 <!-- <p class="text-md text-white font-medium">
-                Have a nice trading week
-              </p> -->
+                    Have a nice trading week
+                  </p> -->
                 <p class="text-gray-300 text-sm">Lorem, ipsum dolor.</p>
               </div>
 
               <div class="flex h-auto items-center img">
-                <img src="@/assets/img/bg-2.png" class=" mt-0" alt="" />
+                <img src="@/assets/img/bg-2.png" class="mt-0" alt="" />
               </div>
             </div>
           </div>
 
           <div class="grid grid-cols-2 gap-4">
-
             <div class="md:flex mt-4 justify-between md:h-48 sm:p-10 p-5 rounded-3xl bg-blue-600 dark:bg-gray-800">
               <div class="">
-                <div class="flex justify-between  h-auto">
+                <div class="flex justify-between h-auto">
                   <h1 class="md:text-6xl text-md text-white font-bold">Overdue Weeks</h1>
                   <Icon icon="lets-icons:clock-fill" class="text-white text-3xl mt-1" />
-
                 </div>
 
-                <h1 class="py-4 text-5xl text-white">0</h1>
+                <h1 class="py-4 text-5xl text-white">6</h1>
                 <p class="text-gray-300 text-sm">Lorem, ipsum dolor.</p>
-
               </div>
 
-
-
-
               <!-- <div class="md:block hidden img">
-            <img src="@/assets/img/hero-bg.png" class="w-96 -mt-40" alt="" />
-          </div> -->
+                <img src="@/assets/img/hero-bg.png" class="w-96 -mt-40" alt="" />
+              </div> -->
             </div>
 
             <div class="md:flex mt-4 justify-between md:h-48 sm:p-10 p-5 rounded-3xl bg-yellow-400 dark:bg-gray-800">
@@ -127,49 +111,41 @@
                 <div class="flex justify-between h-auto">
                   <h1 class="md:text-6xl text-md text-white font-bold">Tasks completed</h1>
                   <Icon icon="fluent-mdl2:completed-solid" class="text-white text-3xl mt-1" />
-
                 </div>
-
 
                 <h1 class="py-4 text-5xl text-white">0</h1>
                 <p class="text-gray-300 text-sm">Lorem, ipsum dolor.</p>
-
               </div>
 
-
-
-
               <!-- <div class="md:block hidden img">
-            <img src="@/assets/img/hero-bg.png" class="w-96 -mt-40" alt="" />
-          </div> -->
+                <img src="@/assets/img/hero-bg.png" class="w-96 -mt-40" alt="" />
+              </div> -->
             </div>
-
-
           </div>
         </div>
 
-        <div class="flex gap-1 py-5 h-auto items-center">
+        <div class="md:flex hidden gap-1 py-5 h-auto items-center">
           <Icon icon="formkit:group" class="text-xl" />
           <h1 class="text-gray-900 font-medium text-md">Cohort Overview</h1>
         </div>
 
-        <div class="hidden md:grid grid-cols-3 gap-4 mb-4 mt-0">
+        <div class="hidden md:grid grid-cols-3 gap-4 mb-4 md:mb-0 mt-0">
           <div class="flex gap-4 p-5 justify-center items-center h-24 rounded-lg shadow bg-white dark:bg-gray-800">
-            <Icon icon="ph:graduation-cap-light" class="text-blue-500" width="50px" height="50px" />
+            <Icon icon="vaadin:academy-cap" class="text-blue-500" width="50px" height="50px" />
             <div class="">
               <h1 class="text-blue-500 text-3xl">10</h1>
               <p class="text-lg text-gray-700 dark:text-gray-500">WEEKS COMPLETED</p>
             </div>
           </div>
           <div class="flex gap-4 p-5 justify-center items-center h-24 rounded-lg shadow bg-white dark:bg-gray-800">
-            <Icon icon="circum:timer" class="text-blue-500" width="50px" height="50px" />
+            <Icon icon="f7:timer-fill"  class="text-blue-500" width="50px" height="50px" />
             <div class="">
-              <h1 class="text-blue-500 text-3xl">6</h1>
+              <h1 class="text-blue-500 text-3xl">0</h1>
               <p class="text-lg text-gray-700 dark:text-gray-500">OVERDUE WEEKS</p>
             </div>
           </div>
           <div class="flex gap-4 p-5 justify-center items-center h-24 rounded-lg shadow bg-white dark:bg-gray-800">
-            <Icon icon="material-symbols-light:task-alt" class="text-blue-500" width="50px" height="50px" />
+            <Icon icon="fluent:cloud-sync-complete-32-filled" class="text-blue-500" width="50px" height="50px" />
             <div class="">
               <h1 class="text-blue-500 text-3xl">0</h1>
               <p class="text-lg text-gray-700 dark:text-gray-500">TASKS COMPLETED</p>
@@ -180,64 +156,13 @@
         <!-- <OverviewVue /> -->
       </div>
 
-      <div class="bg-white">
-        <div class="hidden">
-          <label for="tabs" class="sr-only">Select your country</label>
-          <select id="tabs"
-            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-            <option>Profile</option>
-            <option>Canada</option>
-            <option>France</option>
-            <option>Germany</option>
-          </select>
+
+      <div class="md:flex hidden gap-1 py-5 h-auto items-center">
+          <Icon icon="formkit:group" class="text-xl" />
+          <h1 class="text-gray-900 font-medium text-md">Week Overview</h1>
         </div>
-        <ul class=" font-medium text-left text-gray-500 mt-0 flex dark:divide-gray-700 dark:text-gray-400">
-          <li class="w-full">
-            <a href="#"
-              class="pb-4 inline-block text-lg w-full p-4 pb-0 text-blue-500 bg-white border-t-4 border-blue-500 dark:border-gray-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:bg-gray-700 dark:text-white"
-              aria-current="page">
-
-              <div class="hidden md:flex">
-                WEEK REVIEW
-              </div>
-
-              <Icon icon="material-symbols:feedback"
-                class="sm:hidden text-5xl text-center mx-auto border-2 border-gray-100 p-2 rounded-full" />
-
-
-            </a>
-            <p class="hidden text-gray-500 text-sm px-4 pb-4">See what's going on</p>
-          </li>
-          <li class="w-full">
-            <a href="#"
-              class="inline-block text-lg w-full p-4 pb-0 text-blue-500 bg-white dark:border-gray-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:bg-gray-700 dark:text-white"
-              aria-current="page">
-              <div class="hidden md:block">
-                QUIZZ
-              </div>
-
-              <Icon icon="material-symbols:quiz"
-                class="sm:hidden text-5xl text-center mx-auto border-2 border-gray-100 p-2 rounded-full" />
-            </a>
-            <p class="hidden text-gray-500 text-sm px-4 pb-4">Previously on last week</p>
-          </li>
-          <li class="w-full">
-            <a href="#"
-              class="inline-block text-lg w-full p-4 pb-0 text-blue-500 bg-white dark:border-gray-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:bg-gray-700 dark:text-white"
-              aria-current="page">
-
-              <div class="hidden md:block">
-                TASK
-              </div>
-
-              <Icon icon="oi:task"
-                class="sm:hidden text-5xl text-center mx-auto border-2 border-gray-100 p-2 rounded-full" />
-
-            </a>
-            <p class="hidden text-gray-500 text-sm px-4 pb-4">Previously on last week</p>
-          </li>
-        </ul>
-
+      <div class="bg-white border border-gray-200 rounded shadow">
+        
         <div class="grid grid-cols-1 md:grid-cols-2 py-2 pb-8 gap-4">
           <div class="review p-4 pb-2 col">
             <div class="w-full py-0 bg-white sm:p-0 max-w-lg dark:bg-gray-800 dark:border-gray-700">
@@ -252,16 +177,15 @@
                   View all
                 </a>
               </div>
-              <div class="flow-root ">
+              <div class="flow-root">
                 <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
-                  <li class="py-4 sm:py-0 p-3 rounded-lg border border-gray-100">
+                  <li class="py-4 mb-4 sm:py-0 p-3 rounded-lg border border-gray-100">
                     <div class="relative">
                       <div class="absolute top-2 right-4">
                         <Icon icon="jam:padlock-open" class="text-blue-500" />
                       </div>
                     </div>
                     <div class="flex items-center">
-
                       <div class="flex-shrink-0">
                         <img class="w-20 h-20 rounded-full" src="../assets/img/hero.jpeg" alt="Neil image" />
                       </div>
@@ -281,10 +205,76 @@
                         </div>
                       </div>
                       <!-- <div
-                        class="inline-flex gap-1 items-center text-base font-medium text-white text-xs bg-blue-500 md:rounded rounded-full p-2 ml-4 text-gray-900 dark:text-white">
-                        <Icon icon="solar:play-bold" width="14px" height="14px" />
-                        <span class="hidden sm:block">Watch highlight</span>
-                      </div> -->
+                            class="inline-flex gap-1 items-center text-base font-medium text-white text-xs bg-blue-500 md:rounded rounded-full p-2 ml-4 text-gray-900 dark:text-white">
+                            <Icon icon="solar:play-bold" width="14px" height="14px" />
+                            <span class="hidden sm:block">Watch highlight</span>
+                          </div> -->
+                    </div>
+                  </li>
+
+                  <li class="py-4 mb-4 sm:py-0 p-3 rounded-lg border border-gray-100">
+                    <div class="relative">
+                      <div class="absolute top-2 right-4">
+                        <Icon icon="jam:padlock-open" class="text-blue-500" />
+                      </div>
+                    </div>
+                    <div class="flex items-center">
+                      <div class="flex-shrink-0">
+                        <img class="w-20 h-20 rounded-full" src="../assets/img/hero.jpeg" alt="Neil image" />
+                      </div>
+                      <div class="flex-1 min-w-0 ms-2 mt-2">
+                        <p class="text-sm font-semibold text-gray-900 truncate dark:text-white">
+                          Introduction to Forex
+                        </p>
+                        <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nam modi
+                          necessitatibus repellendus numquam!
+                        </p>
+                        <div class="duration pt-2">
+                          <div class="flex h-auto items-center gap-1">
+                            <Icon icon="memory:time-sand" width="18px" height="15px" class="text-blue-400" />
+                            <p class="text-xs text-gray-500 font-medium">Duration: 30m</p>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- <div
+                            class="inline-flex gap-1 items-center text-base font-medium text-white text-xs bg-blue-500 md:rounded rounded-full p-2 ml-4 text-gray-900 dark:text-white">
+                            <Icon icon="solar:play-bold" width="14px" height="14px" />
+                            <span class="hidden sm:block">Watch highlight</span>
+                          </div> -->
+                    </div>
+                  </li>
+
+                  <li class="py-4 mb-4 sm:py-0 p-3 rounded-lg border border-gray-100">
+                    <div class="relative">
+                      <div class="absolute top-2 right-4">
+                        <Icon icon="jam:padlock-open" class="text-blue-500" />
+                      </div>
+                    </div>
+                    <div class="flex items-center">
+                      <div class="flex-shrink-0">
+                        <img class="w-20 h-20 rounded-full" src="../assets/img/hero.jpeg" alt="Neil image" />
+                      </div>
+                      <div class="flex-1 min-w-0 ms-2 mt-2">
+                        <p class="text-sm font-semibold text-gray-900 truncate dark:text-white">
+                          Introduction to Forex
+                        </p>
+                        <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nam modi
+                          necessitatibus repellendus numquam!
+                        </p>
+                        <div class="duration pt-2">
+                          <div class="flex h-auto items-center gap-1">
+                            <Icon icon="memory:time-sand" width="18px" height="15px" class="text-blue-400" />
+                            <p class="text-xs text-gray-500 font-medium">Duration: 30m</p>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- <div
+                            class="inline-flex gap-1 items-center text-base font-medium text-white text-xs bg-blue-500 md:rounded rounded-full p-2 ml-4 text-gray-900 dark:text-white">
+                            <Icon icon="solar:play-bold" width="14px" height="14px" />
+                            <span class="hidden sm:block">Watch highlight</span>
+                          </div> -->
                     </div>
                   </li>
                 </ul>
@@ -293,18 +283,18 @@
           </div>
 
           <div class="col border rounded-lg shadow p-4 mx-5 mt-4">
-            <h1 class="text-md text-blue-500">NEXT ON</h1>
+            <h1 class="text-md text-center text-black">Next On</h1>
+            <p class="text-gray-300 text-sm py-1 text-center">Get a peek into next week</p>
 
             <div class="flow-root mt-8">
               <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
-                <li class=" sm:py-0 p-3 rounded-lg border border-gray-100">
+                <li class="sm:py-0 p-3 rounded-lg border border-gray-100">
                   <div class="relative">
                     <div class="absolute top-2 right-4">
                       <Icon icon="jam:padlock-open" class="text-blue-500" />
                     </div>
                   </div>
                   <div class="flex items-center">
-
                     <div class="flex-shrink-0">
                       <img class="w-20 h-20 rounded-full" src="../assets/img/hero.jpeg" alt="Neil image" />
                     </div>
@@ -324,30 +314,28 @@
                       </div>
                     </div>
                     <!-- <div
-                        class="inline-flex gap-1 items-center text-base font-medium text-white text-xs bg-blue-500 md:rounded rounded-full p-2 ml-4 text-gray-900 dark:text-white">
-                        <Icon icon="solar:play-bold" width="14px" height="14px" />
-                        <span class="hidden sm:block">Watch highlight</span>
-                      </div> -->
+                            class="inline-flex gap-1 items-center text-base font-medium text-white text-xs bg-blue-500 md:rounded rounded-full p-2 ml-4 text-gray-900 dark:text-white">
+                            <Icon icon="solar:play-bold" width="14px" height="14px" />
+                            <span class="hidden sm:block">Watch highlight</span>
+                          </div> -->
                   </div>
                 </li>
               </ul>
             </div>
           </div>
         </div>
-
-
       </div>
 
-      <div class="bg-white mt-10 py-8">
-        <div class="flex gap-1 py-5 h-auto items-center px-5">
+
+      <div class="flex gap-1 pt-12 py-5 h-auto items-center">
           <Icon icon="formkit:group" class="text-xl" />
-          <h1 class="text-gray-900 font-medium text-md">Chart Overview</h1>
+          <h1 class="text-gray-900 font-medium text-md">Market Overview</h1>
         </div>
+      <div class="bg-white border bordere-gray-200 shadow py-8">
+       
         <ChartVue />
       </div>
     </div>
-
-
 
     <div class="">
       <bottomNavVue />

@@ -27,7 +27,7 @@
 
                 </div>
 
-                <RouterLink class="bg-green-500 text-white text-lg text-center mt-20 py-3 px-4 rounded" to="/signin"><button
+                <RouterLink class="bg-green-500 text-white text-lg text-center mt-20 py-3 px-4 rounded" to="/login"><button
                         class="mt-10">Proceed to Sign In</button></RouterLink>
             </div>
         </div>

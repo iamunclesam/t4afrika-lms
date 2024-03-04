@@ -1,8 +1,32 @@
 <template>
     <main>
-        <paystack buttonClass="'button-class btn btn-primary'" buttonText="Add money" :publicKey="publicKey" :email="email"
-            :amount="amount" :reference="reference" :onSuccess="onSuccessfulPayment" :onCanel="onCancelledPayment">
+
+
+
+
+
+        <form class="p-4 bg-white">
+            <div class="mb-5">
+                <label for="email" class="block mb-2 text-xs font-semibold text-gray-900 dark:text-white">Your
+                    email</label>
+                <input type="email" id="email"
+                    class=" border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 py-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="" v-model="email" required />
+            </div>
+            <div class="mb-0">
+                <label for="password" class="block mb-2 text-xs font-semibold text-gray-900 dark:text-white">Amount
+                    to add:</label>
+                <input type="number" id="password"
+                    class=" border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 py-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" v-model="amount"
+                    required />
+            </div>
+        </form>
+
+        <paystack buttonClass="'button-class bg-blue-500'" class="mb-3 text-white bg-blue-600 mx-4 py-2.5 px-3 text-md"
+                buttonText="Add money" :publicKey="publicKey" :email="email" :amount="amount" :reference="reference"
+                :onSuccess="onSuccessfulPayment" :onCanel="onCancelledPayment">
         </paystack>
+
     </main>
 </template>
 
@@ -20,41 +44,36 @@ export default {
         Icon, paystack,
     },
 
-    props: {
-        firstName: {
-            type: String,
-            required: true
-        },
-
-        lastName: {
-            type: String,
-            required: true
-        },
-
-        userEmail: {
-            type: String,
-            required: true
-        }
-    },
-
     data() {
         return {
-            publicKey: 'pk',
-            amount: 1000,
-            email: 'sam@gmail.com',
+            publicKey: 'pk_test_a5875f86ad8ddaf47cc9046fac01412e2514bd98',
             firstname: 'sam',
             lastname: 'text',
             MainAccount: 0,
+            amount: 10000,
+            email: 'sam@gmail.com'
         }
     },
 
     computed: {
         reference: function () {
-            return nanoid(15);
+            // return nanoid(15);
+
+            let randomRef = "";
+            let characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+            for (let i = 0; i < 15; i++)
+                randomRef += characters.charAt(Math.floor(Math.random() * characters.length));
+
+            return randomRef;
         },
 
         currentUser() {
             return this.getCurrentUserData();
+        },
+
+        convertAmount() {
+            return this.amount * 100
         }
     },
 
@@ -66,9 +85,12 @@ export default {
 
                 if (user) {
                     const querySnapshot = await getDocs(collection(db, 'Users'));
-                    const userData = querySnapshot.docs.find(doc => doc.data().email == user.email)?.data();
-
-                    return userData;
+                    const userDoc = querySnapshot.docs.find(doc => doc.data().email === user.email);
+                    if (userDoc) {
+                        const userDocRef = doc(db, 'Users', userDoc.id);
+                        console.log('User Document Reference ID:', userDocRef.id);
+                        return userDocRef;
+                    }
                 }
             } catch (e) {
                 console.error(e);
@@ -78,25 +100,35 @@ export default {
 
 
         onSuccessfulPayment: async function (response) {
-
             try {
-                const currentUserData = this.currentUser;
+                if (response) {
+                    const currentUserData = await this.currentUser;
 
-                if (currentUserData) {
-                    const userDocRef = doc(db, 'Users', currentUserData.docs[0].id);
+                    // Ensure currentUserData.wallet is defined, defaulting to an empty object
+                    const walletData = currentUserData.wallet ?? { added: [], withdrawn: [] };
 
-                    await updateDoc(userDocRef, {
+                    const transactionReference = `transaction_${Date.now()}`;
+
+                    await updateDoc(currentUserData, {
                         wallet: {
-                            added: arrayUnion({ amount: this.amount, id: 'transaction_id' }) // Replace with your actual values
+                            added: arrayUnion(...walletData.added, { amount: this.amount, id: transactionReference },),
+                            withdrawn: walletData.withdrawn
                         }
                     });
+                    location.reload
+                    console.log(currentUserData);
+
                 }
+                console.log(response);
             } catch (error) {
                 console.error('Error updating wallet:', error);
             }
-
-            console.log(response);
         },
+
+
+
+
+
         onCancelledPayment: function () {
             console.log("Payment cancelled by user");
         },
