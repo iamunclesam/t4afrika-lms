@@ -20,12 +20,12 @@
       </nav>
 
       <div class="grid grid-cols-1 gap-4 mb-4">
-        <div class="md:flex justify-between h-64 items-center sm:p-10 p-5 rounded bg-blue-600 dark:bg-gray-800">
+        <div class="md:flex justify-between h-64 items-center sm:p-10 p-5 rounded bg-blue-700 dark:bg-gray-800">
           <div class="">
             <h1 class="md:text-6xl text-3xl text-white font-bold">
-              <span class="text-gray-300">Hello</span>, Unclesam!
+              <span class="">Hello</span>, Unclesam!
             </h1>
-            <p class="text-md text-white font-medium">Have a nice trading week</p>
+            <p class="text-md text-white font-medium">Welcome Back, have a nice trading week</p>
             <!-- <p class="hidden md:block text-md text-gray-200 py-4 text-white font-medium">
                   Ready to start your week with some new pitch desk?
                 </p> -->
@@ -57,7 +57,7 @@
           </div>
 
           <div class="md:block hidden img">
-            <img src="@/assets/img/hero-bg.png" class="w-96 h-full object-fit -mt-10" alt="" />
+            <img src="@/assets/img/bg-2.png" class="w-96 h-full object-fit -mt-0" alt="" />
           </div>
         </div>
       </div>
@@ -161,11 +161,11 @@
           <Icon icon="formkit:group" class="text-xl" />
           <h1 class="text-gray-900 font-medium text-md">Week Overview</h1>
         </div>
-      <div class="bg-white border border-gray-200 rounded shadow">
+      <div class=" ">
         
         <div class="grid grid-cols-1 md:grid-cols-2 py-2 pb-8 gap-4">
           <div class="review p-4 pb-2 col">
-            <div class="w-full py-0 bg-white sm:p-0 max-w-lg dark:bg-gray-800 dark:border-gray-700">
+            <div class="w-full py-0  sm:p-0 max-w-lg dark:bg-gray-800 dark:border-gray-700">
               <div class="flex items-center justify-between mb-4">
                 <div class="flex h-auto items-center gap-1">
                   <Icon icon="mingcute:time-line" class="text-blue-500" />
@@ -179,7 +179,7 @@
               </div>
               <div class="flow-root">
                 <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
-                  <li class="py-4 mb-4 sm:py-0 p-3 rounded-lg border border-gray-100">
+                  <li class="py-4 mb-4 bg-white sm:py-2 px-2  rounded-lg shadow">
                     <div class="relative">
                       <div class="absolute top-2 right-4">
                         <Icon icon="jam:padlock-open" class="text-blue-500" />
@@ -187,19 +187,20 @@
                     </div>
                     <div class="flex items-center">
                       <div class="flex-shrink-0">
-                        <img class="w-20 h-20 rounded-full" src="../assets/img/hero.jpeg" alt="Neil image" />
+                        <img class="w-16 h-16 rounded-lg object-cover" src="../assets/img/course-bg.jpg" alt="Neil image" />
                       </div>
                       <div class="flex-1 min-w-0 ms-2 mt-2">
                         <p class="text-sm font-semibold text-gray-900 truncate dark:text-white">
                           Introduction to Forex
                         </p>
-                        <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                        <p class="text-xs text-gray-400 truncate dark:text-gray-400">
                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nam modi
                           necessitatibus repellendus numquam!
                         </p>
                         <div class="duration pt-2">
                           <div class="flex h-auto items-center gap-1">
-                            <Icon icon="memory:time-sand" width="18px" height="15px" class="text-blue-400" />
+                       
+                            <Icon icon="ri:time-line" class="text-blue-400 text-xs"/>
                             <p class="text-xs text-gray-500 font-medium">Duration: 30m</p>
                           </div>
                         </div>
@@ -212,7 +213,7 @@
                     </div>
                   </li>
 
-                  <li class="py-4 mb-4 sm:py-0 p-3 rounded-lg border border-gray-100">
+                  <li class="py-4 sm:py-2 bg-white px-2 shadow rounded-lg ">
                     <div class="relative">
                       <div class="absolute top-2 right-4">
                         <Icon icon="jam:padlock-open" class="text-blue-500" />
@@ -220,52 +221,20 @@
                     </div>
                     <div class="flex items-center">
                       <div class="flex-shrink-0">
-                        <img class="w-20 h-20 rounded-full" src="../assets/img/hero.jpeg" alt="Neil image" />
+                        <img class="w-16 h-16 rounded-lg object-cover" src="../assets/img/course-bg.jpg" alt="Neil image" />
                       </div>
                       <div class="flex-1 min-w-0 ms-2 mt-2">
                         <p class="text-sm font-semibold text-gray-900 truncate dark:text-white">
                           Introduction to Forex
                         </p>
-                        <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                        <p class="text-xs text-gray-400 truncate dark:text-gray-400">
                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nam modi
                           necessitatibus repellendus numquam!
                         </p>
                         <div class="duration pt-2">
                           <div class="flex h-auto items-center gap-1">
-                            <Icon icon="memory:time-sand" width="18px" height="15px" class="text-blue-400" />
-                            <p class="text-xs text-gray-500 font-medium">Duration: 30m</p>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- <div
-                            class="inline-flex gap-1 items-center text-base font-medium text-white text-xs bg-blue-500 md:rounded rounded-full p-2 ml-4 text-gray-900 dark:text-white">
-                            <Icon icon="solar:play-bold" width="14px" height="14px" />
-                            <span class="hidden sm:block">Watch highlight</span>
-                          </div> -->
-                    </div>
-                  </li>
-
-                  <li class="py-4 mb-4 sm:py-0 p-3 rounded-lg border border-gray-100">
-                    <div class="relative">
-                      <div class="absolute top-2 right-4">
-                        <Icon icon="jam:padlock-open" class="text-blue-500" />
-                      </div>
-                    </div>
-                    <div class="flex items-center">
-                      <div class="flex-shrink-0">
-                        <img class="w-20 h-20 rounded-full" src="../assets/img/hero.jpeg" alt="Neil image" />
-                      </div>
-                      <div class="flex-1 min-w-0 ms-2 mt-2">
-                        <p class="text-sm font-semibold text-gray-900 truncate dark:text-white">
-                          Introduction to Forex
-                        </p>
-                        <p class="text-sm text-gray-500 truncate dark:text-gray-400">
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nam modi
-                          necessitatibus repellendus numquam!
-                        </p>
-                        <div class="duration pt-2">
-                          <div class="flex h-auto items-center gap-1">
-                            <Icon icon="memory:time-sand" width="18px" height="15px" class="text-blue-400" />
+                       
+                            <Icon icon="ri:time-line" class="text-blue-400 text-xs"/>
                             <p class="text-xs text-gray-500 font-medium">Duration: 30m</p>
                           </div>
                         </div>
@@ -282,44 +251,45 @@
             </div>
           </div>
 
-          <div class="col border rounded-lg shadow p-4 mx-5 mt-4">
+          <div class="col border bg-white rounded-lg shadow p-4 mx-5 mt-4">
             <h1 class="text-md text-center text-black">Next On</h1>
             <p class="text-gray-300 text-sm py-1 text-center">Get a peek into next week</p>
 
             <div class="flow-root mt-8">
               <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
-                <li class="sm:py-0 p-3 rounded-lg border border-gray-100">
-                  <div class="relative">
-                    <div class="absolute top-2 right-4">
-                      <Icon icon="jam:padlock-open" class="text-blue-500" />
-                    </div>
-                  </div>
-                  <div class="flex items-center">
-                    <div class="flex-shrink-0">
-                      <img class="w-20 h-20 rounded-full" src="../assets/img/hero.jpeg" alt="Neil image" />
-                    </div>
-                    <div class="flex-1 min-w-0 ms-2 mt-2">
-                      <p class="text-sm font-semibold text-gray-900 truncate dark:text-white">
-                        Introduction to Forex
-                      </p>
-                      <p class="text-sm text-gray-500 truncate dark:text-gray-400">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nam modi
-                        necessitatibus repellendus numquam!
-                      </p>
-                      <div class="duration pt-2">
-                        <div class="flex h-auto items-center gap-1">
-                          <Icon icon="memory:time-sand" width="18px" height="15px" class="text-blue-400" />
-                          <p class="text-xs text-gray-500 font-medium">Duration: 30m</p>
-                        </div>
+               <li class="py-4 sm:py-2 bg-white px-2 shadow rounded-lg ">
+                    <div class="relative">
+                      <div class="absolute top-2 right-4">
+                        <Icon icon="jam:padlock-open" class="text-blue-500" />
                       </div>
                     </div>
-                    <!-- <div
+                    <div class="flex items-center">
+                      <div class="flex-shrink-0">
+                        <img class="w-16 h-16 rounded-lg object-cover" src="../assets/img/course-bg.jpg" alt="Neil image" />
+                      </div>
+                      <div class="flex-1 min-w-0 ms-2 mt-2">
+                        <p class="text-sm font-semibold text-gray-900 truncate dark:text-white">
+                          Introduction to Forex
+                        </p>
+                        <p class="text-xs text-gray-400 truncate dark:text-gray-400">
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nam modi
+                          necessitatibus repellendus numquam!
+                        </p>
+                        <div class="duration pt-2">
+                          <div class="flex h-auto items-center gap-1">
+                       
+                            <Icon icon="ri:time-line" class="text-blue-400 text-xs"/>
+                            <p class="text-xs text-gray-500 font-medium">Duration: 30m</p>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- <div
                             class="inline-flex gap-1 items-center text-base font-medium text-white text-xs bg-blue-500 md:rounded rounded-full p-2 ml-4 text-gray-900 dark:text-white">
                             <Icon icon="solar:play-bold" width="14px" height="14px" />
                             <span class="hidden sm:block">Watch highlight</span>
                           </div> -->
-                  </div>
-                </li>
+                    </div>
+                  </li>
               </ul>
             </div>
           </div>

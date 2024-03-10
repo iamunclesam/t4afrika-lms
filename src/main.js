@@ -12,8 +12,15 @@ router.afterEach(() => {
 
 
 const app = createApp(App)
-app.use(router)
 
-// app.use(AOS)
-app.use(store)
-app.mount('#app')
+// Dispatch the initAuth action before mounting the app
+store.dispatch('initAuth').then(() => {
+  app.use(router)
+
+  // app.use(AOS)
+  app.use(store)
+  app.mount('#app')
+});
+
+
+

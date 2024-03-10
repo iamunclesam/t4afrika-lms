@@ -31,6 +31,12 @@ const router = createRouter({
     },
 
     {
+      path: '/change-plan',
+      name: 'change-plan',
+      component: () => import('../views/Academy/ChangePlan.vue')
+    },
+
+    {
       path: '/session-details',
       name: 'details',
       component: () => import('../views/Academy/SessionDetails.vue'),
