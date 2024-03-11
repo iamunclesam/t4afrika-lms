@@ -1,5 +1,5 @@
 <template>
-    <Chart />
+    <Chart class="hidden md:block"/>
     <CryptoMarket />
     <Snaps />
     <Screener />

@@ -1,7 +1,7 @@
 <template>
     <main>
         <div
-            class="sm:flex sm:justify-between items-center sm:py-5 sm:p-10 p-5 sm:px-5 rounded bg-blue-500 dark:bg-gray-800">
+            class="sm:flex sm:justify-between items-center sm:py-5 sm:p-10 p-5 sm:px-5 rounded bg-blue-700 dark:bg-gray-800">
             <div class="">
                 <h1 class="text-md text-white font-medium flex h-auto items-center gap-2">Your Wallet Balance
                     <Icon icon="icon-park-outline:eyes" width="20px" v-if="showBal" height="20px"
@@ -15,10 +15,10 @@
                         updatedWalletBalance.toLocaleString('en-us')
                     }}</span></span>
                     <span v-if="showStars == true" class="flex gap-1 py-2">
-                        <Icon icon="fa:asterisk" class="text-md sm:text-5xl" />
-                        <Icon icon="fa:asterisk" class="text-md sm:text-5xl" />
-                        <Icon icon="fa:asterisk" class="text-md sm:text-5xl" />
-                        <Icon icon="fa:asterisk" class="text-md sm:text-5xl" />
+                        <Icon icon="fa:asterisk" class="text-sm sm:text-5xl" />
+                        <Icon icon="fa:asterisk" class="text-sm sm:text-5xl" />
+                        <Icon icon="fa:asterisk" class="text-sm sm:text-5xl" />
+                        <Icon icon="fa:asterisk" class="text-sm sm:text-5xl" />
                     </span>
                 </h1>
 

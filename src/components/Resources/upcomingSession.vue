@@ -2,7 +2,7 @@
    <main>
     <Carousel :items-to-show="1.5" :wrap-around="true">
         <Slide v-for="slide in 3" :key="slide">
-            <div class="carousel__item">
+            <div class="carousel__item mx-3">
                 <div
                     class="flex gap-4 p-5 justify-center items-center h-24 rounded-lg shadow bg-blue-600 dark:bg-gray-800">
 
