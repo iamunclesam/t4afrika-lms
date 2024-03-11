@@ -4,10 +4,10 @@
 
 
 
-        <div class="p-4 sm:ml-72 mt-20 md:mx-5">
+        <div class="p-4 sm:ml-72 mt-20 sm:mx-5">
             <breadcrumb class="pt-8"/>
-            <div class="grid md:grid-cols-3  gap-6">
-                <div class="col-span-2">
+            <div class="md:grid md:grid-cols-3  gap-6">
+                <div class="md:col-span-2">
                     <h1 class="text-gray-500 text-lg pt-10 pb-5">Upcoming Sessions</h1>
                     <div class="hidden md:grid grid-cols-3 gap-4 mb-4 mt-0">
 
@@ -85,7 +85,11 @@
 
                     </div>
 
-                    <upcomingSession />
+                    <div class="sm:hidden">
+                        <upcomingSession />
+                    </div>
+
+                    
 
 
                     <div class="grid md:grid-cols-12">
@@ -156,7 +160,7 @@
 
 
 
-                <div class="md:col hidden fixed right-10">
+                <div class="col md:block hidden fixed right-10">
 
                     <div class="border h-48 rounded-lg shadow bg-white p-4 mt-4">
                         <div class="flex h-auto items-center gap-2">
