@@ -3,7 +3,7 @@
 
 
     <div class="">
-      <nav class="fixed top-0 z-50 w-full md:bg-white bg-blue-700 md:border-b md:border-gray-200 dark:bg-gray-800 dark:border-gray-700 py-2">
+      <nav class="fixed top-0 z-50 w-full md:bg-white bg-purple-700 md:border-b md:border-gray-200 dark:bg-gray-800 dark:border-gray-700 py-2">
         <div class="px-1 py-3 lg:px-5 lg:pl-3">
           <div class="flex items-center justify-between gap-8">
             <div class="flex md:flex-shrink-0 items-center justify-start rtl:justify-end">
@@ -19,10 +19,8 @@
                 </svg>
               </button>
               <a href="/" class="flex ms-2 md:me-24">
-                <span
-                  class="self-center text-2xl md:text-black text-black font-medium sm:text-2xl whitespace-nowrap dark:text-white">Trade4<span
-                    class="md:text-blue-500 text-white">frika</span></span>
-              </a>
+             
+               </a>
             </div>
 
             <!-- Search bar -->
@@ -103,7 +101,7 @@
           <li>
             <router-link to="/"
               class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-blue-700 hover:text-white dark:hover:bg-gray-700 group">
-              <Icon icon="majesticons:home" width="20" class="text-blue-500" />
+              <Icon icon="majesticons:home" width="20" class="text-purple-700" />
               <span class="ms-3 text-sm">Dashboard</span>
             </router-link>
           </li>
@@ -112,7 +110,7 @@
           <li>
             <router-link to="/"
               class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-blue-700 hover:text-white dark:hover:bg-gray-700 group">
-              <Icon icon="icomoon-free:lab" width="20" class="text-blue-500" />
+              <Icon icon="icomoon-free:lab" width="20" class="text-purple-700"/>
               <span class="ms-3 text-sm">Analysis Lab</span>
             </router-link>
           </li>
@@ -147,7 +145,7 @@
               class="flex justify-between w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
               aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
               <div class="flex">
-                <Icon icon="ph:books-fill" width="20" class="text-blue-500" />
+                <Icon icon="ph:books-fill" width="20" class="text-purple-700"/>
                 
                 <span class="flex-1 ms-3 whitespace-nowrap text-sm">Resources</span>
               </div>
@@ -157,7 +155,7 @@
               class="flex justify-between w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
               aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
               <div class="flex">
-                <Icon icon="solar:money-bag-bold" width="20" class="text-blue-500" />
+                <Icon icon="solar:money-bag-bold" width="20" class="text-purple-700" />
                 <span class="flex-1 ms-3 whitespace-nowrap text-sm">Billing</span>
               </div>
             </router-link>
@@ -166,7 +164,7 @@
               class="flex justify-between w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
               aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
               <div class="flex">
-                <Icon icon="vaadin:academy-cap" width="20" class="text-blue-500" />
+                <Icon icon="vaadin:academy-cap" width="20" class="text-purple-700" />
                 <span class="flex-1 ms-3 whitespace-nowrap text-sm">FAQ</span>
               </div>
             </button>
@@ -262,14 +260,14 @@
           <li>
             <a href="#"
               class="flex items-center p-2 text-gray-900 transition duration-75 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group">
-              <Icon icon="material-symbols:account-child" width="20" class="text-blue-500" />
+              <Icon icon="material-symbols:account-child" width="20" class="text-purple-700" />
               <span class="ms-3 text-sm">Manage account</span>
             </a>
           </li>
           <li>
             <a href="#"
               class="flex items-center p-2 text-gray-900 transition duration-75 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group">
-              <Icon icon="icon-park-solid:help" width="20" class="text-blue-500" />
+              <Icon icon="icon-park-solid:help" width="20" class="text-purple-700"/>
               <span class="ms-3 text-sm">Help</span>
             </a>
           </li>

@@ -20,7 +20,7 @@
       </nav>
 
       <div class="grid grid-cols-1 gap-4 mb-4">
-        <div class="md:flex justify-between h-64 items-center sm:p-10 p-5 rounded bg-blue-700 dark:bg-gray-800">
+        <div class="md:flex justify-between h-64 items-center sm:p-10 p-5 rounded bg-purple-700 dark:bg-gray-800">
           <div class="">
             <h1 class="md:text-6xl text-3xl text-white font-bold">
               <span class="">Hello</span>, Unclesam!
@@ -62,7 +62,8 @@
         </div>
       </div>
 
-      <div class="-mt-10 md:mt-10 bg-white md:bg-transparent relative my-10 rounded-t-3xl rounded-b-xl pb-8 md:pb-4 px-2">
+      <div
+        class="-mt-10 md:mt-10 bg-white md:bg-transparent relative my-10 rounded-t-3xl rounded-b-xl pb-8 md:pb-4 px-2">
         <div class="md:hidden">
           <div class="flex gap-1 py-5 h-auto items-center">
             <Icon icon="formkit:group" class="text-xl" />
@@ -131,21 +132,21 @@
 
         <div class="hidden md:grid grid-cols-3 gap-4 mb-4 md:mb-0 mt-0">
           <div class="flex gap-4 p-5 justify-center items-center h-24 rounded-lg shadow bg-white dark:bg-gray-800">
-            <Icon icon="vaadin:academy-cap" class="text-blue-500" width="50px" height="50px" />
+            <Icon icon="vaadin:academy-cap" class="text-purple-700" width="50px" height="50px" />
             <div class="">
               <h1 class="text-blue-500 text-3xl">10</h1>
               <p class="text-lg text-gray-700 dark:text-gray-500">WEEKS COMPLETED</p>
             </div>
           </div>
           <div class="flex gap-4 p-5 justify-center items-center h-24 rounded-lg shadow bg-white dark:bg-gray-800">
-            <Icon icon="f7:timer-fill"  class="text-blue-500" width="50px" height="50px" />
+            <Icon icon="f7:timer-fill" class="text-purple-700" width="50px" height="50px" />
             <div class="">
               <h1 class="text-blue-500 text-3xl">0</h1>
               <p class="text-lg text-gray-700 dark:text-gray-500">OVERDUE WEEKS</p>
             </div>
           </div>
           <div class="flex gap-4 p-5 justify-center items-center h-24 rounded-lg shadow bg-white dark:bg-gray-800">
-            <Icon icon="fluent:cloud-sync-complete-32-filled" class="text-blue-500" width="50px" height="50px" />
+            <Icon icon="fluent:cloud-sync-complete-32-filled" class="text-purple-700" width="50px" height="50px" />
             <div class="">
               <h1 class="text-blue-500 text-3xl">0</h1>
               <p class="text-lg text-gray-700 dark:text-gray-500">TASKS COMPLETED</p>
@@ -158,13 +159,12 @@
 
 
       <div class="md:flex hidden gap-1 py-5 h-auto items-center">
-          <Icon icon="formkit:group" class="text-xl" />
-          <h1 class="text-gray-900 font-medium text-md">Week Overview</h1>
-        </div>
+        <Icon icon="formkit:group" class="text-xl" />
+        <h1 class="text-gray-900 font-medium text-md">Week Overview</h1>
+      </div>
       <div class=" ">
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 py-2 pb-8 gap-4">
-          <div class="review p-4 pb-2 col">
+        <div class="grid grid-cols-1 md:grid-cols-2 px-3 py-2 pb-8 gap-4">
+          <div class="review p-0 pb-2 col">
             <div class="w-full py-0  sm:p-0 max-w-lg dark:bg-gray-800 dark:border-gray-700">
               <div class="flex items-center justify-between mb-4">
                 <div class="flex h-auto items-center gap-1">
@@ -173,13 +173,17 @@
                     Previously on
                   </h5>
                 </div>
+      
+                
                 <a href="#" class="text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">
                   View all
                 </a>
+                
+
               </div>
               <div class="flow-root">
                 <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
-                  <li class="py-4 mb-4 bg-white sm:py-2 px-2  rounded-lg shadow">
+                  <li @click.prevent="goToLink"  class="py-4 mb-4 bg-white sm:py-2 px-2  rounded-lg shadow">
                     <div class="relative">
                       <div class="absolute top-2 right-4">
                         <Icon icon="jam:padlock-open" class="text-blue-500" />
@@ -187,7 +191,8 @@
                     </div>
                     <div class="flex items-center">
                       <div class="flex-shrink-0">
-                        <img class="w-16 h-16 rounded-lg object-cover" src="../assets/img/course-bg.jpg" alt="Neil image" />
+                        <img class="w-16 h-16 rounded-lg object-cover" src="../assets/img/course-bg.jpg"
+                          alt="Neil image" />
                       </div>
                       <div class="flex-1 min-w-0 ms-2 mt-2">
                         <p class="text-sm font-semibold text-gray-900 truncate dark:text-white">
@@ -199,8 +204,8 @@
                         </p>
                         <div class="duration pt-2">
                           <div class="flex h-auto items-center gap-1">
-                       
-                            <Icon icon="ri:time-line" class="text-blue-400 text-xs"/>
+
+                            <Icon icon="ri:time-line" class="text-blue-400 text-xs" />
                             <p class="text-xs text-gray-500 font-medium">Duration: 30m</p>
                           </div>
                         </div>
@@ -213,7 +218,7 @@
                     </div>
                   </li>
 
-                  <li class="py-4 sm:py-2 bg-white px-2 shadow rounded-lg ">
+                  <li @click.prevent="goToLink"  class="py-4 sm:py-2 bg-white px-2 shadow rounded-lg ">
                     <div class="relative">
                       <div class="absolute top-2 right-4">
                         <Icon icon="jam:padlock-open" class="text-blue-500" />
@@ -221,7 +226,8 @@
                     </div>
                     <div class="flex items-center">
                       <div class="flex-shrink-0">
-                        <img class="w-16 h-16 rounded-lg object-cover" src="../assets/img/course-bg.jpg" alt="Neil image" />
+                        <img class="w-16 h-16 rounded-lg object-cover" src="../assets/img/course-bg.jpg"
+                          alt="Neil image" />
                       </div>
                       <div class="flex-1 min-w-0 ms-2 mt-2">
                         <p class="text-sm font-semibold text-gray-900 truncate dark:text-white">
@@ -233,8 +239,8 @@
                         </p>
                         <div class="duration pt-2">
                           <div class="flex h-auto items-center gap-1">
-                       
-                            <Icon icon="ri:time-line" class="text-blue-400 text-xs"/>
+
+                            <Icon icon="ri:time-line" class="text-blue-400 text-xs" />
                             <p class="text-xs text-gray-500 font-medium">Duration: 30m</p>
                           </div>
                         </div>
@@ -257,39 +263,40 @@
 
             <div class="flow-root mt-8">
               <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
-               <li class="py-4 sm:py-2 bg-white px-2 shadow rounded-lg ">
-                    <div class="relative">
-                      <div class="absolute top-2 right-4">
-                        <Icon icon="jam:padlock-open" class="text-blue-500" />
-                      </div>
+                <li class="py-4 sm:py-2 bg-white px-2 shadow rounded-lg ">
+                  <div class="relative">
+                    <div class="absolute top-2 right-4">
+                      <Icon icon="jam:padlock-open" class="text-blue-500" />
                     </div>
-                    <div class="flex items-center">
-                      <div class="flex-shrink-0">
-                        <img class="w-16 h-16 rounded-lg object-cover" src="../assets/img/course-bg.jpg" alt="Neil image" />
-                      </div>
-                      <div class="flex-1 min-w-0 ms-2 mt-2">
-                        <p class="text-sm font-semibold text-gray-900 truncate dark:text-white">
-                          Introduction to Forex
-                        </p>
-                        <p class="text-xs text-gray-400 truncate dark:text-gray-400">
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nam modi
-                          necessitatibus repellendus numquam!
-                        </p>
-                        <div class="duration pt-2">
-                          <div class="flex h-auto items-center gap-1">
-                       
-                            <Icon icon="ri:time-line" class="text-blue-400 text-xs"/>
-                            <p class="text-xs text-gray-500 font-medium">Duration: 30m</p>
-                          </div>
+                  </div>
+                  <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                      <img class="w-16 h-16 rounded-lg object-cover" src="../assets/img/course-bg.jpg"
+                        alt="Neil image" />
+                    </div>
+                    <div class="flex-1 min-w-0 ms-2 mt-2">
+                      <p class="text-sm font-semibold text-gray-900 truncate dark:text-white">
+                        Introduction to Forex
+                      </p>
+                      <p class="text-xs text-gray-400 truncate dark:text-gray-400">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nam modi
+                        necessitatibus repellendus numquam!
+                      </p>
+                      <div class="duration pt-2">
+                        <div class="flex h-auto items-center gap-1">
+
+                          <Icon icon="ri:time-line" class="text-blue-400 text-xs" />
+                          <p class="text-xs text-gray-500 font-medium">Duration: 30m</p>
                         </div>
                       </div>
-                      <!-- <div
+                    </div>
+                    <!-- <div
                             class="inline-flex gap-1 items-center text-base font-medium text-white text-xs bg-blue-500 md:rounded rounded-full p-2 ml-4 text-gray-900 dark:text-white">
                             <Icon icon="solar:play-bold" width="14px" height="14px" />
                             <span class="hidden sm:block">Watch highlight</span>
                           </div> -->
-                    </div>
-                  </li>
+                  </div>
+                </li>
               </ul>
             </div>
           </div>
@@ -298,12 +305,19 @@
 
 
       <div class="flex gap-1 pt-12 py-5 h-auto items-center">
-          <Icon icon="formkit:group" class="text-xl" />
-          <h1 class="text-gray-900 font-medium text-md">Market Overview</h1>
-        </div>
-      <div class="bg-white border bordere-gray-200 shadow py-8">
-       
-        <ChartVue />
+        <Icon icon="formkit:group" class="text-xl" />
+        <h1 class="text-gray-900 font-medium text-md">Market Overview</h1>
+      </div>
+      <div class="bg-white border bordere-gray-200 shadow">
+        <!-- <div class="grid grid-cols-1 md:grid-cols-2">
+            <div class="col">
+              <ChartVue />
+            </div>
+
+            <div class="col">
+              <WidgetOne />
+            </div>
+          </div> -->
       </div>
     </div>
 
@@ -319,10 +333,16 @@ import { Icon } from '@iconify/vue'
 import OverviewVue from '@/components/Overview.vue'
 import bottomNavVue from '@/components/Layout/bottomNav.vue'
 import ChartVue from '@/components/TradingViewWidgets/Chart.vue'
+import WidgetOne from '@/components/TradingViewWidgets/WidgetOne.vue'
 
 export default {
-  // eslint-disable-next-line vue/no-unused-components
-  components: { sidebar, Icon, OverviewVue, bottomNavVue, ChartVue }
+
+  components: { sidebar, Icon, OverviewVue, bottomNavVue, ChartVue, WidgetOne },
+  methods: {
+        goToLink() {
+            this.$router.push('/session-details')
+        }
+    }
 }
 </script>
 

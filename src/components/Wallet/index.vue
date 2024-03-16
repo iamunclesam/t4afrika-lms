@@ -1,7 +1,7 @@
 <template>
     <main>
         <div
-            class="sm:flex sm:justify-between items-center sm:py-5 sm:p-10 p-5 sm:px-5 rounded bg-blue-700 dark:bg-gray-800">
+            class="sm:flex sm:justify-between items-center sm:py-5 sm:p-10 p-5 sm:px-5 rounded bg-purple-700 dark:bg-gray-800">
             <div class="">
                 <h1 class="text-md text-white font-medium flex h-auto items-center gap-2">Your Wallet Balance
                     <Icon icon="icon-park-outline:eyes" width="20px" v-if="showBal" height="20px"
@@ -9,7 +9,7 @@
                     <Icon icon="ion:eye-off" width="20px" height="20px" v-if="hideBal" @click="hideBalance" />
                 </h1>
                 <h1 class="sm:text-7xl text-5xl text-white font-bold flex h-auto items-center gap-1 py-2"
-                    v-if="updatedWalletBalance !== null"><span class="hidden md:block">NGN</span><span
+                    v-if="updatedWalletBalance !== null"><sub class="hidden md:block">&#8358;</sub><span
                         class="md:hidden">&#8358;</span>
                     <span v-if="showStars == false"> <span v-if="updatedWalletBalance !== null">{{
                         updatedWalletBalance.toLocaleString('en-us')

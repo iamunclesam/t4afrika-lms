@@ -1,16 +1,16 @@
 <template>
-    <MarketOverview class="hidden md:block"/>
+    <TechnicalAnalysis class="hidden md:block"/>
    
 </template>
   
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { MarketOverview } from 'vue-tradingview-widgets';
+import { TechnicalAnalysis } from 'vue-tradingview-widgets';
 
 export default defineComponent({
     name: 'App',
     components: {
-        MarketOverview
+        TechnicalAnalysis
         // CryptoMarket,
         // Screener,
         // Snaps,

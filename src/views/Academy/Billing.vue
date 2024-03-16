@@ -32,20 +32,20 @@
                         <div
                             class="sm:flex gap-4 sm:gap-1 md:gap-4 p-5 justify-start items-center sm:h-24 rounded-lg shadow bg-white dark:bg-gray-800">
 
-                            <Icon icon="ic:baseline-paid" class="text-blue-500 hidden sm:block mx-auto md:mx-0" width="70px"
-                                height="70px" />
+                            <Icon icon="ic:baseline-paid" class="text-purple-700  hidden sm:block mx-auto md:mx-0"
+                                width="70px" height="70px" />
                             <div class="text-center md:text-left">
-                                <h1 class="text-blue-500 sm:text-4xl text-6xl">0</h1>
+                                <h1 class="text-purple-700 sm:text-4xl text-6xl">0</h1>
                                 <p class="md:text-lg text-sm text-gray-700 dark:text-gray-500">WEEKS PAID</p>
                             </div>
                         </div>
                         <div
                             class="relative sm:flex gap-4 p-5 justify-start items-center  sm:h-24 rounded-lg shadow bg-white dark:bg-gray-800">
 
-                            <Icon icon="mdi:receipt-text-pending" class="text-blue-500 hidden sm:block mx-auto md:mx-0" width="70px"
-                                height="70px" />
+                            <Icon icon="mdi:receipt-text-pending" class="text-purple-700 hidden sm:block mx-auto md:mx-0"
+                                width="70px" height="70px" />
                             <div class="text-center md:text-left">
-                                <h1 class="text-blue-500 sm:text-4xl text-6xl">0</h1>
+                                <h1 class="text-purple-700  sm:text-4xl text-6xl">0</h1>
                                 <p class="md:text-lg text-sm text-gray-700  dark:text-gray-500">PENDING FEE</p>
                             </div>
                         </div>
@@ -201,18 +201,21 @@
                         <div class="justify-center h-auto items-center ">
                             <h1 class="text-6xl font-bold text-black py-4">N500<span class="text-sm">/wk</span></h1>
                             <h1 class="text-sm text-gray-600">Weekly Subscription</h1>
-                           
+
                             <button class="mt-8 bg-blue-600">
-                                <router-link to="/change-plan" class="border border-white bg-blue-600 text-white text-md py-2.5 px-3 my-8">Change Plan</router-link>
+                                <router-link to="/change-plan"
+                                    class="border border-white bg-blue-600 text-white text-md py-2.5 px-3 my-8">Change
+                                    Plan</router-link>
                             </button>
 
-                            <p class="text-gray-500 text-xs mt-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure facere, vel omnis facilis error consequuntur?</p>
-                         
+                            <p class="text-gray-500 text-xs mt-8">Renewwal of plan is automatically deducted from wallet
+                                balance, fund wallet balance to renew</p>
+
 
                         </div>
 
 
-                        
+
                     </div>
 
 
@@ -261,8 +264,8 @@ import { initFlowbite } from 'flowbite';
 export default {
     components: { sidebar, Icon, breadcrumb, bottomNavVue, indexVue, paystack },
     mounted() {
-    initFlowbite()
-  }
+        initFlowbite()
+    }
 }
 </script>
 

@@ -12,18 +12,18 @@
                     <div class="hidden md:grid grid-cols-3 gap-4 mb-4 mt-0">
 
                         <div
-                            class="flex gap-4 p-5 justify-center items-center h-24 rounded-lg shadow bg-blue-600 dark:bg-gray-800">
+                            class="flex gap-4 p-3 justify-center border border-gray-100 items-center h-20 rounded-lg shadow bg-white dark:bg-gray-800">
 
                             <div class="">
                                 <div class="flex items-center">
                                     <div class="flex-shrink-0">
-                                        <img class="w-16 h-16 rounded-full" src="@/assets/img/hero.jpeg" alt="Neil image">
+                                        <img class="w-16 h-16 rounded-full object-cover" src="@/assets/img/course-bg.jpg" alt="Neil image">
                                     </div>
                                     <div class="flex-1 min-w-0 ms-4">
-                                        <p class="text-sm font-medium text-white truncate dark:text-white">
+                                        <p class="text-xs font-semibold font-medium text-gray-900 truncate dark:text-white">
                                             Intro to Tech..
                                         </p>
-                                        <p class="text-xs text-white truncate dark:text-gray-400">
+                                        <p class="text-xs text-gray-900 truncate dark:text-gray-400">
                                             Lorem, ipsum dolor.
                                         </p>
                                     </div>
@@ -35,18 +35,18 @@
                             </div>
                         </div>
                         <div
-                            class="flex gap-4 p-5 justify-center items-center h-24 rounded-lg shadow bg-blue-600 dark:bg-gray-800">
+                            class="flex gap-4 p-3 justify-center border border-gray-100 items-center h-20 rounded-lg shadow bg-white dark:bg-gray-800">
 
                             <div class="">
                                 <div class="flex items-center">
                                     <div class="flex-shrink-0">
-                                        <img class="w-16 h-16 rounded-full" src="@/assets/img/hero.jpeg" alt="Neil image">
+                                        <img class="w-16 h-16 rounded-full object-cover" src="@/assets/img/course-bg.jpg" alt="Neil image">
                                     </div>
                                     <div class="flex-1 min-w-0 ms-4">
-                                        <p class="text-sm font-medium text-white truncate dark:text-white">
+                                        <p class="text-xs font-semibold font-medium text-gray-900 truncate dark:text-white">
                                             Intro to Tech..
                                         </p>
-                                        <p class="text-xs text-white truncate dark:text-gray-400">
+                                        <p class="text-xs text-gray-900 truncate dark:text-gray-400">
                                             Lorem, ipsum dolor.
                                         </p>
                                     </div>
@@ -57,20 +57,20 @@
 
                             </div>
                         </div>
+
                         <div
-                            class="flex gap-4 p-5 justify-center items-center h-24 rounded-lg shadow bg-blue-600 dark:bg-gray-800">
+                            class="flex gap-4 p-3 justify-center border border-gray-100 items-center h-20 rounded-lg shadow bg-white dark:bg-gray-800">
 
                             <div class="">
-                                
-                                <div class="flex items-center">
+                                <div class="flex items-center"> 
                                     <div class="flex-shrink-0">
-                                        <img class="w-16 h-16 rounded-full" src="@/assets/img/hero.jpeg" alt="Neil image">
+                                        <img class="w-16 h-16 rounded-full object-cover" src="@/assets/img/course-bg.jpg" alt="Neil image">
                                     </div>
                                     <div class="flex-1 min-w-0 ms-4">
-                                        <p class="text-sm font-medium text-white truncate dark:text-white">
+                                        <p class="text-xs font-semibold font-medium text-gray-900 truncate dark:text-white">
                                             Intro to Tech..
                                         </p>
-                                        <p class="text-xs text-white truncate dark:text-gray-400">
+                                        <p class="text-xs text-gray-900 truncate dark:text-gray-400">
                                             Lorem, ipsum dolor.
                                         </p>
                                     </div>
@@ -81,7 +81,6 @@
 
                             </div>
                         </div>
-
 
                     </div>
 
@@ -98,7 +97,7 @@
                             <div class="flex justify-between">
                                 <h1 class="text-gray-500 text-lg pt-10 pb-5">Previous Sessions
                                 </h1>
-                                <h1 class="text-blue-500 text-sm pt-10 pb-5">See all</h1>
+                                <h1 class="text-purple-700 text-sm pt-10 pb-5">See all</h1>
                             </div>
 
                             <div class="flow-root">
@@ -106,12 +105,12 @@
                                     <li @click.prevent="goToLink" class="mb-5 py-3 sm:py-3 shadow-md bg-white rounded-md px-3">
                                         <div class="relative">
                                             <div class="absolute top-0 right-2">
-                                                <Icon icon="jam:padlock-open" class="text-blue-500"/>
+                                                <Icon icon="jam:padlock-open" class="text-purple-700"/>
                                             </div>
                                         </div>
                                         <div class="flex items-center">
                                             <div class="flex-shrink-0">
-                                                <img class="md:w-28 md:h-28 h-20 w-20 rounded-md object-cover" src="@/assets/img/course-bg.jpg"
+                                                <img class="md:w-22 md:h-22 h-20 w-20 rounded-md object-cover" src="@/assets/img/course-bg.jpg"
                                                     alt="Neil image" />
                                             </div>
                                             <div class="flex-1 min-w-0 ms-4">
@@ -125,7 +124,7 @@
                                                 </p>
                                                 <div class="duration py-3 flex justify-between">
                                                     <div class="flex gap-1">
-                                                        <Icon icon="icon-park:time" width="20px" height="15px" />
+                                                        <Icon icon="ri:time-line" class="text-sm text-purple-700"/>     
                                                         <p class="text-xs text-gray-500 font-medium">45m 30s</p>
                                                     </div>
 
@@ -139,9 +138,8 @@
                                                 </div>
                                             </div>
                                             <div
-                                                class="inline-flex gap-1 items-center text-base font-medium text-white text-xs bg-blue-500 rounded-full p-2 md:p-3 ml-4 text-gray-900 dark:text-white">
-                                                <Icon icon="solar:play-bold" class="md:text-2xl text-sm"/>
-
+                                                class="inline-flex gap-1 items-center text-base font-medium text-white text-xs bg-purple-700 rounded-full p-2 md:p-2 ml-4 text-gray-900 dark:text-white">
+                                                <Icon icon="solar:play-bold" class="md:text-xl text-sm"/>
                                             </div>
                                         </div>
                                     </li>
@@ -162,10 +160,10 @@
 
                 <div class="col md:block hidden fixed right-10">
 
-                    <div class="border h-48 rounded-lg shadow bg-white p-4 mt-4">
+                    <div class="border h-48 rounded-lg shadow bg-purple-700 p-4 mt-4">
                         <div class="flex h-auto items-center gap-2">
-                            <Icon icon="ri:live-fill" width="20px" height="20px" class=" text-blue-600" />
-                            <h1 class="text-md text-blue-500 flex">LIVE SESSIONS</h1>
+                            <Icon icon="ri:live-fill" width="20px" height="20px" class=" text-white" />
+                            <h1 class="text-md text-white flex">LIVE SESSIONS</h1>
                         </div>
 
                         <div class="flex justify-center h-full items-center ">
@@ -175,7 +173,7 @@
 
                     <div class="border h-full rounded-lg shadow bg-white p-4 mt-4">
                         <div class="flex gap-2">
-                            <h1 class="text-md text-blue-500 flex">NOTIFICATIONS</h1>
+                            <h1 class="text-md text-purple-700 flex">NOTIFICATIONS</h1>
                         </div>
 
                         <!-- <div class="flex justify-center h-full items-center ">
@@ -229,6 +227,6 @@ export default {
         }
     }
 }
-</script>
+</script>;
 
 <style></style>

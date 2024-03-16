@@ -4,17 +4,17 @@
 
 
 
-        <div class="p-4 sm:ml-72 mt-20 mx-5">
+        <div class="p-4 sm:ml-72 mt-20">
             <breadcrumb class="pt-8"/>
 
 
-            <section class="my-8 bg-blue-500 dark:bg-gray-900 rounded-lg">
+            <section class="my-8 bg-purple-700 dark:bg-gray-900 rounded-lg">
                 <div
                     class="flex h-auto items-center gap-4 py-8 px-8 mx-auto max-w-screen-xl text-left lg:py-16 z-10 relative">
 
-                    <img class="w-48 object-cover rounded-lg" src="@/assets/img/hero.jpeg" alt="Neil image" />
+                    <img class="md:w-48 md:h-48 w-20 h-20 object-cover rounded-lg" src="@/assets/img/course-bg.jpg" alt="Neil image" />
                     <h1
-                        class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl dark:text-white">
+                        class="mb-4 text-xl md:text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl dark:text-white">
                         Lesson 1: Introduction To Forex Trading</h1>
                     <!-- <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-200">Here
                         at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value
@@ -31,7 +31,7 @@
             <div class="grid md:grid-cols-3  gap-6">
 
                 <div class="col-span-2">
-                    <div class="content px-8 rounded-md bg-white py-4">
+                    <div class="content md:px-8 px-4 rounded-md bg-white py-4">
 
 
                         <div class="about mt-8">
@@ -53,30 +53,30 @@
                                 </div>
 
                                 <div class="flex mb-4 gap-3 items-center-h-auto">
-                                    <Icon icon="lets-icons:check-fill" class="text-3xl text-blue-600" />
+                                    <Icon icon="lets-icons:check-fill" class="text-3xl text-purple-600" />
                                     <h1 class="text-gray-500 text-xs">Lorem ipsum dolor sit amet, consectetur adipisicing
                                         elit. Perferendis, enim odit!</h1>
                                 </div>
 
                                 <div class="flex mb-4 gap-3 items-center-h-auto">
-                                    <Icon icon="lets-icons:check-fill" class="text-3xl text-blue-600" />
+                                    <Icon icon="lets-icons:check-fill" class="text-3xl text-purple-600" />
                                     <h1 class="text-gray-500 text-xs">Lorem ipsum dolor sit amet, consectetur adipisicing
                                         elit. Perferendis, enim odit!</h1>
                                 </div>
 
                                 <div class="flex mb-4 gap-3 items-center-h-auto">
-                                    <Icon icon="lets-icons:check-fill" class="text-3xl text-blue-600" />
+                                    <Icon icon="lets-icons:check-fill" class="text-3xl text-purple-600" />
                                     <h1 class="text-gray-500 text-xs">Lorem ipsum dolor sit amet, consectetur adipisicing
                                         elit. Perferendis, enim odit!</h1>
                                 </div>
                                 <div class="flex mb-4 gap-3 items-center-h-auto">
-                                    <Icon icon="lets-icons:check-fill" class="text-3xl text-blue-600" />
+                                    <Icon icon="lets-icons:check-fill" class="text-3xl text-purple-600" />
                                     <h1 class="text-gray-500 text-xs">Lorem ipsum dolor sit amet, consectetur adipisicing
                                         elit. Perferendis, enim odit!</h1>
                                 </div>
 
                                 <div class="flex mb-4 gap-3 items-center-h-auto">
-                                    <Icon icon="lets-icons:check-fill" class="text-3xl text-blue-600" />
+                                    <Icon icon="lets-icons:check-fill" class="text-3xl text-purple-600" />
                                     <h1 class="text-gray-500 text-xs">Lorem ipsum dolor sit amet, consectetur adipisicing
                                         elit. Perferendis, enim odit!</h1>
                                 </div>
@@ -87,16 +87,16 @@
                             <h1 class="text-xl font-semibold text-gray-900 mb-4">Images</h1>
                             <div class="grid md:grid-cols-4 gap-2">
                                 <div class="col">
-                                    <img class="rounded-t-lg w-full" src="@/assets/img/hero.jpeg" alt="" />
+                                    <img class="rounded w-full" src="@/assets/img/course-bg.jpg" alt="" />
                                 </div>
                                 <div class="col">
-                                    <img class="rounded-t-lg w-full" src="@/assets/img/hero.jpeg" alt="" />
+                                    <img class="rounded w-full" src="@/assets/img/course-bg.jpg" alt="" />
                                 </div>
                                 <div class="col">
-                                    <img class="rounded-t-lg w-full" src="@/assets/img/hero.jpeg" alt="" />
+                                    <img class="rounded w-full" src="@/assets/img/course-bg.jpg" alt="" />
                                 </div>
                                 <div class="col">
-                                    <img class="rounded-t-lg w-full" src="@/assets/img/hero.jpeg" alt="" />
+                                    <img class="rounded w-full" src="@/assets/img/course-bg.jpg" alt="" />
                                 </div>
                             </div>
                             <!-- <p class="text-gray-700 text-sm">
@@ -119,7 +119,7 @@
                     <div
                         class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                         <a href="#">
-                            <img class="rounded-t-lg" src="@/assets/img/hero.jpeg" alt="" />
+                            <img class="rounded-t-lg h-64 object-cover" src="@/assets/img/course-bg.jpg" alt="" />
                         </a>
                         <div class="p-5">
                             <!-- <a href="#">
@@ -127,7 +127,7 @@
         </a>
         <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p> -->
                             <a href="#"
-                                class="inline-flex justify-center gap-2 items-center px-3 py-2.5 w-full text-sm font-medium text-right text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                class="inline-flex justify-center gap-2 items-center px-3 py-2.5 w-full text-sm font-medium text-right text-white bg-purple-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                 Star <Icon icon="ph:star"  class="text-white text-xl"/>
                                
                             </a>

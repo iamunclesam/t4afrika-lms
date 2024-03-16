@@ -21,7 +21,7 @@ export default {
 
 <style lang="scss">
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900,700,500);
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&family=Raleway:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&family=Montserrat:wght@500&display=swap');
 
 #app {
 
@@ -29,6 +29,6 @@ export default {
   box-sizing: border-box;
   margin: 0px;
 
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 </style>
