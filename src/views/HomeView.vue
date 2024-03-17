@@ -45,7 +45,7 @@
                   placeholder="Search branch name..." required />
               </div>
               <button type="submit"
-                class="p-3.5 ms-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                class="p-3.5 ms-2 text-sm font-medium text-white bg-purple-900 rounded-lg border border-purple-900 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                 <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                   viewBox="0 0 20 20">
                   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -134,21 +134,21 @@
           <div class="flex gap-4 p-5 justify-center items-center h-24 rounded-lg shadow bg-white dark:bg-gray-800">
             <Icon icon="vaadin:academy-cap" class="text-purple-700" width="50px" height="50px" />
             <div class="">
-              <h1 class="text-blue-500 text-3xl">10</h1>
+              <h1 class="text-purple-700 text-3xl">10</h1>
               <p class="text-lg text-gray-700 dark:text-gray-500">WEEKS COMPLETED</p>
             </div>
           </div>
           <div class="flex gap-4 p-5 justify-center items-center h-24 rounded-lg shadow bg-white dark:bg-gray-800">
             <Icon icon="f7:timer-fill" class="text-purple-700" width="50px" height="50px" />
             <div class="">
-              <h1 class="text-blue-500 text-3xl">0</h1>
+              <h1 class="text-purple-700 text-3xl">0</h1>
               <p class="text-lg text-gray-700 dark:text-gray-500">OVERDUE WEEKS</p>
             </div>
           </div>
           <div class="flex gap-4 p-5 justify-center items-center h-24 rounded-lg shadow bg-white dark:bg-gray-800">
             <Icon icon="fluent:cloud-sync-complete-32-filled" class="text-purple-700" width="50px" height="50px" />
             <div class="">
-              <h1 class="text-blue-500 text-3xl">0</h1>
+              <h1 class="text-purple-700 text-3xl">0</h1>
               <p class="text-lg text-gray-700 dark:text-gray-500">TASKS COMPLETED</p>
             </div>
           </div>
@@ -173,17 +173,17 @@
                     Previously on
                   </h5>
                 </div>
-      
-                
+
+
                 <a href="#" class="text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">
                   View all
                 </a>
-                
+
 
               </div>
               <div class="flow-root">
                 <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
-                  <li @click.prevent="goToLink"  class="py-4 mb-4 bg-white sm:py-2 px-2  rounded-lg shadow">
+                  <li @click.prevent="goToLink" class="py-4 mb-4 bg-white sm:py-2 px-2  rounded-lg shadow">
                     <div class="relative">
                       <div class="absolute top-2 right-4">
                         <Icon icon="jam:padlock-open" class="text-blue-500" />
@@ -218,7 +218,7 @@
                     </div>
                   </li>
 
-                  <li @click.prevent="goToLink"  class="py-4 sm:py-2 bg-white px-2 shadow rounded-lg ">
+                  <li @click.prevent="goToLink" class="py-4 sm:py-2 bg-white px-2 shadow rounded-lg ">
                     <div class="relative">
                       <div class="absolute top-2 right-4">
                         <Icon icon="jam:padlock-open" class="text-blue-500" />
@@ -257,48 +257,60 @@
             </div>
           </div>
 
-          <div class="col border bg-white rounded-lg shadow p-4 mx-5 mt-4">
-            <h1 class="text-md text-center text-black">Next On</h1>
-            <p class="text-gray-300 text-sm py-1 text-center">Get a peek into next week</p>
+          <div class="col border bg-white rounded-lg shadow p-4 md:mx-5 mt-4">
+            <h1 class="text-md text-left text-black">Upcoming</h1>
+            <p class="text-gray-300 text-sm py-1 text-left">Get a peek into next week</p>
 
-            <div class="flow-root mt-8">
-              <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
-                <li class="py-4 sm:py-2 bg-white px-2 shadow rounded-lg ">
-                  <div class="relative">
-                    <div class="absolute top-2 right-4">
-                      <Icon icon="jam:padlock-open" class="text-blue-500" />
-                    </div>
-                  </div>
-                  <div class="flex items-center">
-                    <div class="flex-shrink-0">
-                      <img class="w-16 h-16 rounded-lg object-cover" src="../assets/img/course-bg.jpg"
-                        alt="Neil image" />
-                    </div>
-                    <div class="flex-1 min-w-0 ms-2 mt-2">
-                      <p class="text-sm font-semibold text-gray-900 truncate dark:text-white">
-                        Introduction to Forex
-                      </p>
-                      <p class="text-xs text-gray-400 truncate dark:text-gray-400">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nam modi
-                        necessitatibus repellendus numquam!
-                      </p>
-                      <div class="duration pt-2">
-                        <div class="flex h-auto items-center gap-1">
 
-                          <Icon icon="ri:time-line" class="text-blue-400 text-xs" />
-                          <p class="text-xs text-gray-500 font-medium">Duration: 30m</p>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- <div
-                            class="inline-flex gap-1 items-center text-base font-medium text-white text-xs bg-blue-500 md:rounded rounded-full p-2 ml-4 text-gray-900 dark:text-white">
-                            <Icon icon="solar:play-bold" width="14px" height="14px" />
-                            <span class="hidden sm:block">Watch highlight</span>
-                          </div> -->
-                  </div>
-                </li>
-              </ul>
-            </div>
+            <ol class="relative border-s py-6 border-gray-200 dark:border-gray-700">
+              <li class="mb-10 ms-6">
+                <span
+                  class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                  <svg class="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                  </svg>
+                </span>
+                <h3 class="flex items-center mb-1 text-sm font-semibold text-gray-900 dark:text-white">Flowbite
+                  Application UI v2.0.0 <span
+                    class="bg-blue-100 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 ms-3">Latest</span>
+                </h3>
+                <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Released on
+                  January 13th, 2022</time>
+                <p class="mb-4 text-base text-xs font-normal text-gray-500 dark:text-gray-400">Get access to over 20+ pages
+                  including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing
+                  pages.</p>
+                <a href="#"
+                  class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"><svg
+                    class="w-3.5 h-3.5 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                    viewBox="0 0 20 20">
+                    <path
+                      d="M14.707 7.793a1 1 0 0 0-1.414 0L11 10.086V1.5a1 1 0 0 0-2 0v8.586L6.707 7.793a1 1 0 1 0-1.414 1.414l4 4a1 1 0 0 0 1.416 0l4-4a1 1 0 0 0-.002-1.414Z" />
+                    <path
+                      d="M18 12h-2.55l-2.975 2.975a3.5 3.5 0 0 1-4.95 0L4.55 12H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2Zm-3 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z" />
+                  </svg> Download ZIP</a>
+              </li>
+              <li class="mb-10 ms-6">
+                <span
+                  class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                  <svg class="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                      d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                  </svg>
+                </span>
+                <h3 class="mb-1 text-sm font-semibold text-gray-900 dark:text-white">Flowbite Figma v1.3.0</h3>
+                <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Released on
+                  December 7th, 2021</time>
+                <p class="text-base text-xs font-normal text-gray-500 dark:text-gray-400">All of the pages and components are
+                  first designed in Figma and we keep a parity between the two versions even as we update the project.
+                </p>
+              </li>
+            
+            </ol>
+
+
           </div>
         </div>
       </div>
@@ -309,7 +321,7 @@
         <h1 class="text-gray-900 font-medium text-md">Market Overview</h1>
       </div>
       <div class="bg-white border bordere-gray-200 shadow">
-        <!-- <div class="grid grid-cols-1 md:grid-cols-2">
+        <div class="grid grid-cols-1 md:grid-cols-2">
             <div class="col">
               <ChartVue />
             </div>
@@ -317,7 +329,7 @@
             <div class="col">
               <WidgetOne />
             </div>
-          </div> -->
+          </div>
       </div>
     </div>
 
@@ -339,10 +351,10 @@ export default {
 
   components: { sidebar, Icon, OverviewVue, bottomNavVue, ChartVue, WidgetOne },
   methods: {
-        goToLink() {
-            this.$router.push('/session-details')
-        }
+    goToLink() {
+      this.$router.push('/session-details')
     }
+  }
 }
 </script>
 

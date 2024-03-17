@@ -1,10 +1,10 @@
 <template>
    <main>
-    <Carousel :items-to-show="1.5" :wrap-around="true">
+    <Carousel :items-to-show="2" :wrap-around="true">
         <Slide v-for="slide in 3" :key="slide">
-            <div class="carousel__item mx-3">
+            <div class="carousel__item mx-2">
                 <div
-                    class="flex gap-4 p-5 justify-center items-center h-24 rounded-lg shadow bg-blue-600 dark:bg-gray-800">
+                    class="flex gap-4 p-5 mx-2 justify-center items-center h-24 rounded-lg shadow bg-purple-700 dark:bg-gray-800">
 
                     <div class="">
                         <div class="flex items-center">

@@ -1,8 +1,8 @@
 <template>
   
-<div class="flex">
+<div class="flex h-auto items-center gap-8">
   <div class="icon">
-    <Icon icon="ic:round-arrow-back" @click="goBack"/>
+    <Icon icon="ic:round-arrow-back" class="p-1 rounded-full text-2xl bg-white" @click="goBack"/>
   </div>
 
   <nav class="flex" aria-label="Breadcrumb">
