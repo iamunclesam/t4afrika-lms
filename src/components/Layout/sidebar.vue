@@ -19,7 +19,7 @@
                 </svg>
               </button>
               <a href="/" class="flex ms-2 md:me-24">
-                <h1 class="text-white font-medium text-2xl">Trade<span class="text-yellow-200">4Afrika</span></h1>
+                <h1 class="text-white font-medium text-2xl">Trade<span class="text-yellow-300">4Afrika</span></h1>
                </a>
             </div>
 

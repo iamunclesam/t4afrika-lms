@@ -30,7 +30,7 @@
                   Ready to start your week with some new pitch desk?
                 </p> -->
 
-            <form class="flex items-center w-full mt-4 mx-auto">
+            <form class="flex items-center pb-10 md:pb-0 w-full mt-4 mx-auto">
               <label for="simple-search" class="sr-only">Search</label>
               <div class="relative w-full">
                 <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
@@ -90,8 +90,8 @@
             </div>
           </div>
 
-          <div class="grid grid-cols-2 gap-4">
-            <div class="md:flex mt-4 justify-between md:h-48 sm:p-10 p-5 rounded-3xl bg-purple-600 dark:bg-gray-800">
+          <div class="grid grid-cols-2">
+            <div class="md:flex mt-4 justify-between md:h-48 sm:p-10 p-5 rounded-l-3xl bg-purple-600 dark:bg-gray-800">
               <div class="">
                 <div class="flex justify-between h-auto">
                   <h1 class="md:text-6xl text-md text-white font-bold">Overdue Weeks</h1>
@@ -107,7 +107,7 @@
               </div> -->
             </div>
 
-            <div class="md:flex mt-4 justify-between md:h-48 sm:p-10 p-5 rounded-3xl bg-yellow-400 dark:bg-gray-800">
+            <div class="md:flex mt-4 justify-between md:h-48 sm:p-10 p-5 rounded-r-3xl bg-yellow-300 dark:bg-gray-800">
               <div class="">
                 <div class="flex justify-between h-auto">
                   <h1 class="md:text-6xl text-md text-white font-bold">Tasks completed</h1>
