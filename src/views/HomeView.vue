@@ -84,8 +84,9 @@
                 <p class="text-gray-300 text-sm">Lorem, ipsum dolor.</p>
               </div>
 
-              <div class="flex h-auto items-center img">
-                <img src="@/assets/img/vector.png" class="mt-0" alt="" />
+              <div class="flex h-auto justify-center items-center img">
+                <img src="@/assets/img/hero-bg.png" class="mt-0 w-64 object-contain " alt="" />
+                <!-- <Icon icon="fluent-emoji:sad-but-relieved-face" class="text-8xl"/> -->
               </div>
             </div>
           </div>
