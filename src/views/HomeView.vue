@@ -85,7 +85,7 @@
               </div>
 
               <div class="flex h-auto items-center img">
-                <img src="@/assets/img/bg-2.png" class="mt-0" alt="" />
+                <img src="@/assets/img/vector.png" class="mt-0" alt="" />
               </div>
             </div>
           </div>
@@ -316,6 +316,11 @@
       </div>
 
 
+      <div class="px-3">
+         <TaskList />
+      </div>
+
+
       <div class="flex gap-1 pt-12 py-5 h-auto items-center">
         <Icon icon="formkit:group" class="text-xl" />
         <h1 class="text-gray-900 font-medium text-md">Market Overview</h1>
@@ -346,10 +351,10 @@ import OverviewVue from '@/components/Overview.vue'
 import bottomNavVue from '@/components/Layout/bottomNav.vue'
 import ChartVue from '@/components/TradingViewWidgets/Chart.vue'
 import WidgetOne from '@/components/TradingViewWidgets/WidgetOne.vue'
-
+import TaskList from '../components/Task/TaskList.vue'
 export default {
 
-  components: { sidebar, Icon, OverviewVue, bottomNavVue, ChartVue, WidgetOne },
+  components: { sidebar, Icon, OverviewVue, bottomNavVue, ChartVue, WidgetOne, TaskList },
   methods: {
     goToLink() {
       this.$router.push('/session-details')
