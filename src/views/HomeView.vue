@@ -22,7 +22,7 @@
       <div class="grid grid-cols-1 gap-4 mb-4">
         <div class="md:flex justify-between h-64 items-center sm:p-10 p-5 rounded bg-purple-700 dark:bg-gray-800">
           <div class="">
-            <h1 class="md:text-6xl text-3xl text-white font-bold">
+            <h1 class="md:text-6xl pt-5 text-3xl text-white font-bold">
               <span class="">Hello</span>, Unclesam!
             </h1>
             <p class="text-md text-white font-medium">Welcome Back, have a nice trading week</p>
@@ -91,7 +91,7 @@
           </div>
 
           <div class="grid grid-cols-2 gap-4">
-            <div class="md:flex mt-4 justify-between md:h-48 sm:p-10 p-5 rounded-3xl bg-blue-600 dark:bg-gray-800">
+            <div class="md:flex mt-4 justify-between md:h-48 sm:p-10 p-5 rounded-3xl bg-purple-600 dark:bg-gray-800">
               <div class="">
                 <div class="flex justify-between h-auto">
                   <h1 class="md:text-6xl text-md text-white font-bold">Overdue Weeks</h1>
