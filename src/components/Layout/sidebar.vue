@@ -19,7 +19,7 @@
                 </svg>
               </button>
               <a href="/" class="flex ms-2 md:me-24">
-                <h1 class="text-white font-medium text-2xl">Trade<span class="text-yellow-300">4Afrika</span></h1>
+                <h1 class="text-white sm:text-gray-900 font-medium text-2xl">Trade<span class="text-yellow-300">4Afrika</span></h1>
                </a>
             </div>
 
@@ -110,8 +110,8 @@
           <li>
             <router-link to="/"
               class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-blue-700 hover:text-white dark:hover:bg-gray-700 group">
-              <Icon icon="icomoon-free:lab" width="20" class="text-purple-700"/>
-              <span class="ms-3 text-sm">Analysis Lab</span>
+              <Icon icon="heroicons:user-group-solid" width="20" class="text-purple-700"/>
+              <span class="ms-3 text-sm">Forum</span>
             </router-link>
           </li>
 

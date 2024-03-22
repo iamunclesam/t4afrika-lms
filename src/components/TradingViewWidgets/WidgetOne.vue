@@ -1,5 +1,5 @@
 <template>
-    <TechnicalAnalysis class="hidden md:block"/>
+    <TechnicalAnalysis class="hidden md:block" />
    
 </template>
   
@@ -17,3 +17,15 @@ export default defineComponent({
     },
 });
 </script>
+
+<style>
+    .tv-embed-widget-wrapper__body {
+    background: #fff;
+    border: none !important;
+    border-radius: 3px;
+    box-sizing: border-box;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+</style>
