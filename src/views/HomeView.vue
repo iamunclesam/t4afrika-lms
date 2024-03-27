@@ -20,7 +20,8 @@
       </nav>
 
       <div class="grid grid-cols-1 gap-4 mb-4">
-        <div class="md:flex justify-between h-64 items-center sm:p-10 p-5 rounded bg-purple-700 dark:bg-gray-800">
+        <div
+          class="md:flex justify-between h-64 items-center sm:p-10 sm:pb-16 p-5 rounded bg-purple-700 dark:bg-gray-800">
           <div class="">
             <h1 class="md:text-6xl pt-5 text-3xl text-white font-bold">
               <span class="">Hello</span>, Unclesam!
@@ -132,21 +133,21 @@
         </div>
 
         <div class="hidden md:grid grid-cols-3 gap-4 mb-4 md:mb-0 mt-0">
-          <div class="flex gap-4 p-5 justify-center items-center h-24 rounded-lg shadow bg-white dark:bg-gray-800">
+          <div class="flex gap-4 p-5 justify-center items-center h-24 rounded-lg shadow border border-purple-100 bg-white dark:bg-gray-800">
             <Icon icon="vaadin:academy-cap" class="text-purple-700" width="50px" height="50px" />
             <div class="">
               <h1 class="text-purple-700 text-3xl">10</h1>
               <p class="text-lg text-gray-700 dark:text-gray-500">WEEKS COMPLETED</p>
             </div>
           </div>
-          <div class="flex gap-4 p-5 justify-center items-center h-24 rounded-lg shadow bg-white dark:bg-gray-800">
+          <div class="flex gap-4 p-5 justify-center items-center h-24 rounded-lg shadow bg-white border border-purple-100 dark:bg-gray-800">
             <Icon icon="f7:timer-fill" class="text-purple-700" width="50px" height="50px" />
             <div class="">
               <h1 class="text-purple-700 text-3xl">0</h1>
               <p class="text-lg text-gray-700 dark:text-gray-500">OVERDUE WEEKS</p>
             </div>
           </div>
-          <div class="flex gap-4 p-5 justify-center items-center h-24 rounded-lg shadow bg-white dark:bg-gray-800">
+          <div class="flex gap-4 p-5 justify-center items-center h-24 rounded-lg shadow bg-white border border-purple-100 dark:bg-gray-800">
             <Icon icon="fluent:cloud-sync-complete-32-filled" class="text-purple-700" width="50px" height="50px" />
             <div class="">
               <h1 class="text-purple-700 text-3xl">0</h1>
@@ -308,13 +309,14 @@
                       d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
                   </svg>
                 </span>
-                <h3 class="flex items-center mb-1 text-sm font-semibold text-gray-900 dark:text-white">Welcome to Technical Analysis<span
+                <h3 class="flex items-center mb-1 text-sm font-semibold text-gray-900 dark:text-white">Welcome to
+                  Technical Analysis<span
                     class="bg-purple-100 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 ms-3">Latest</span>
                 </h3>
                 <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Coming on
                   April 13th, 2024</time>
                 <p class="mb-4 text-base text-xs font-normal text-gray-500 dark:text-gray-400">Get access to over 20+
-                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Est suscipit beatae sunt asperiores</p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Est suscipit beatae sunt asperiores</p>
                 <a href="#"
                   class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"><svg
                     class="w-3.5 h-3.5 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
@@ -325,7 +327,7 @@
                       d="M18 12h-2.55l-2.975 2.975a3.5 3.5 0 0 1-4.95 0L4.55 12H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2Zm-3 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z" />
                   </svg> Preview</a>
               </li>
-             
+
 
             </ol>
 
@@ -335,7 +337,7 @@
       </div>
 
 
-      
+
       <div class="bg-white border mb-48 bordere-gray-200 shadow">
         <div class="grid grid-cols-1 md:grid-cols-2">
           <div class="col">

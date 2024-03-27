@@ -43,6 +43,22 @@ const router = createRouter({
        meta: { requiresAuth: true },
     },
 
+    {
+      path: '/task-details',
+      name: 'task',
+      component: () => import('../views/Academy/TaskDetails.vue'),
+       meta: { requiresAuth: true },
+    },
+
+    {
+      path: '/forum',
+      name: 'forum',
+      component: () => import('../views/Forum/index.vue'),
+       meta: { requiresAuth: true },
+    },
+
+    
+
 
     // AUTHENTICATION ROUTES
 

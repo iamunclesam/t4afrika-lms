@@ -1,7 +1,5 @@
 <template>
   <main>
-
-
     <div class="">
       <nav class="fixed top-0 z-50 w-full md:bg-white bg-purple-700 md:border-b md:border-gray-200 dark:bg-gray-800 dark:border-gray-700 py-2">
         <div class="px-1 py-3 lg:px-5 lg:pl-3">
