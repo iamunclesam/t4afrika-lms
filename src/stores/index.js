@@ -3,17 +3,17 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   sendEmailVerification,
-  onAuthStateChanged,
+  onAuthStateChanged
 } from 'firebase/auth'
 import {
   collection,
   addDoc,
+  updateDoc,
+  doc,
+  arrayUnion,
   where,
   query,
-  updateDoc,
-  getDocs,
-  doc,
-  arrayUnion
+  getDocs
 } from 'firebase/firestore'
 import { auth, db } from '@/firebase'
 import { createStore } from 'vuex'
@@ -41,16 +41,17 @@ export default createStore({
       state.user = user
     },
     SET_LOADING(state, isLoading) {
-      state.loading = isLoading;
+      state.loading = isLoading
     },
 
-    updateWalletData(state, newData) {
-      state.walletData = newData
+    SET_WALLET_BALANCE(state, balance) {
+      state.walletBalance = balance
     },
 
-    updateWalletBalance(state, newBalance) {
-      state.walletBalance = newBalance
-    }
+    SET_WALLET_DATA(state, walletData) {
+      state.walletData = walletData;
+    },
+    
   },
   actions: {
     async register({ commit }, userDetails) {
@@ -129,157 +130,134 @@ export default createStore({
             // toast.error('Wrong password')
             break
           default:
-            // alert('Something went wrong')
+          // alert('Something went wrong')
         }
       }
     },
 
-    async updateWallet({ commit, state }, { amount, transactionReference }) {
-      const isTransactionExist =
-        Array.isArray(state.walletData) &&
-        state.walletData.some((transaction) => transaction.id === transactionReference)
-  
-      if (!isTransactionExist) {
-        const updatedWalletData = [
-          ...state.walletData,
-          { amountAdded: amount, id: transactionReference }
-        ]
-  
-        commit('updateWalletData', updatedWalletData)
-  
-        // Check if walletData is an array before attempting to use reduce
-        if (Array.isArray(updatedWalletData)) {
-          // Calculate the updated wallet balance
-          const updatedWalletBalance = await this.dispatch(
-            'calculateWalletBalance',
-            updatedWalletData
-          )
-  
-          // Update the wallet balance in the Vuex store
-          commit('updateWalletBalance', updatedWalletBalance)
-  
-          // You can also update the wallet balance in Firestore here if needed
-          console.log('Before updateWalletBalanceInFirestore', updatedWalletData)
-          await this.dispatch('updateWalletBalanceInFirestore', updatedWalletData)
-          console.log('After updateWalletBalanceInFirestore')
-  
-          // Fetch the updated wallet balance after the update
-          await this.dispatch('calculateWalletBalance')
-        } else {
-          console.error('Error: updatedWalletData is not an array')
-        }
-      }
-    },
-
-    async updateWalletBalanceInFirestore({ commit, state }, walletData) {
+    async updateWallet({ commit }, { amount, transactionReference, paystackResponse }) {
       try {
-        const updatedWalletBalance = await new Promise((resolve, reject) => {
-          const unsubscribe = onAuthStateChanged(auth, async (user) => {
-            if (user) {
-              try {
-                const userQuery = query(collection(db, 'Users'), where('email', '==', user.email));
-                const querySnapshot = await getDocs(userQuery);
-    
-                if (!querySnapshot.empty) {
-                  const userDocRef = doc(db, 'Users', querySnapshot.docs[0].id);
-    
-                  const currentWalletBalance = querySnapshot.docs[0]?.data()?.walletBalance ?? 0;
-    
-                  const updatedBalance =
-                    currentWalletBalance + (await this.dispatch('calculateWalletBalance', walletData));
-                  const addedMoney = await this.dispatch('calculateWalletBalance', walletData);
-    
-                  await updateDoc(userDocRef, {
-                    wallet: arrayUnion({ amountAdded: addedMoney }),
-                    walletBalance: updatedBalance,
-                  });
-    
-                  console.log('Wallet balance in Firestore updated successfully', updatedBalance);
-    
-                  commit('updateWalletBalance', updatedBalance);
-    
-                  unsubscribe(); // Unsubscribe from onAuthStateChanged after the update
-                  resolve(updatedBalance); // Resolve the promise with updatedWalletBalance
-                } else {
-                  console.error('Error: User document not found');
-                  reject('Error: User document not found');
-                }
-              } catch (error) {
-                console.error('Error updating wallet balance in Firestore:', error);
-                reject(error);
-              }
-            } else {
-              console.error('Error: User not authenticated');
-              reject('Error: User not authenticated');
-            }
-          });
-        });
-    
-        return updatedWalletBalance;
+        const user = auth.currentUser
+
+        if (!user) {
+          throw new Error('User not authenticated')
+        }
+
+        const userEmail = user.email
+        const userQuery = query(collection(db, 'Users'), where('email', '==', userEmail))
+        const querySnapshot = await getDocs(userQuery)
+
+        if (querySnapshot.empty) {
+          throw new Error('User document not found')
+        }
+
+        const userDoc = querySnapshot.docs[0].ref
+        const userData = querySnapshot.docs[0].data()
+
+        const updatedWalletBalance = userData.walletBalance + amount
+
+        await updateDoc(userDoc, {
+          wallet: arrayUnion({ amountAdded: amount, transactionReference, paystackResponse }),
+          walletBalance: updatedWalletBalance
+        })
+
+        commit('SET_WALLET_BALANCE', updatedWalletBalance)
+        // Display success message or handle success scenario
       } catch (error) {
-        console.error('Error setting up onAuthStateChanged:', error);
-        throw error;
+        console.error('Error updating wallet:', error)
+        // Handle error messages here
       }
     },
-    
-    async calculateWalletBalance({ commit }, walletData) {
-     try {
-      if (walletData) {
-        const walletAmounts = await walletData.map((transaction) => transaction.amountAdded || 0)
-        console.log(walletAmounts.reduce((total, amount) => total + amount, 0));
-        return walletAmounts.reduce((total, amount) => total + amount, 0)
-      } 
 
-      else {
-        console.error()
-        return 0 // or handle it in another way based on your use case
+    async fetchWalletBalance({ commit }) {
+      try {
+        const user = auth.currentUser
+
+        if (!user) {
+          throw new Error('User not authenticated')
+        }
+
+        const userEmail = user.email
+        const userQuery = query(collection(db, 'Users'), where('email', '==', userEmail))
+        const querySnapshot = await getDocs(userQuery)
+
+        if (querySnapshot.empty) {
+          throw new Error('User document not found')
+        }
+
+        const userData = querySnapshot.docs[0].data()
+        const walletBalance = userData.walletBalance
+
+        commit('SET_WALLET_BALANCE', walletBalance)
+        return walletBalance
+      } catch (error) {
+        console.error('Error fetching wallet balance:', error)
+        // Handle error messages here
+        return null // Or handle it based on your use case
       }
-     }
-
-     catch(e) {
-       console.log('Error:', e);
-     }
-
-
     },
+
+    async fetchWalletData({ commit }) {
+      try {
+        const user = auth.currentUser;
+
+        if (!user) {
+          throw new Error('User not authenticated');
+        }
+
+        const userEmail = user.email;
+        const userQuery = query(collection(db, 'Users'), where('email', '==', userEmail));
+        const querySnapshot = await getDocs(userQuery);
+
+        if (querySnapshot.empty) {
+          throw new Error('User document not found');
+        }
+
+        const userData = querySnapshot.docs[0].data();
+        const walletData = userData.wallet || [];
+
+        commit('SET_WALLET_DATA', walletData);
+        return walletData;
+      } catch (error) {
+        console.error('Error fetching wallet data:', error);
+        // Handle error messages here
+        return null; // Or handle it based on your use case
+      }
+    },
+
 
     async initAuth({ commit }) {
       try {
         // Set loading state to true to indicate that authentication state is being checked
-        commit('SET_LOADING', true);
-    
+        commit('SET_LOADING', true)
+
         onAuthStateChanged(auth, (user) => {
           if (user) {
-            console.log('User authenticated:', user);
+            console.log('User authenticated:', user)
             commit('SET_USER', {
-              email: user.email,
+              email: user.email
               // Add other user properties as needed
-            });
+            })
           } else {
-            console.log('User not authenticated');
-            commit('SET_USER', null);
+            console.log('User not authenticated')
+            commit('SET_USER', null)
           }
-    
+
           // Set loading state to false once authentication state is resolved
-          commit('SET_LOADING', false);
-        });
+          commit('SET_LOADING', false)
+        })
       } catch (error) {
-        console.error('Error initializing authentication state:', error);
-        commit('SET_LOADING', false);
+        console.error('Error initializing authentication state:', error)
+        commit('SET_LOADING', false)
       }
-    },
-    
-  
-
+    }
   },
-
 
   getters: {
     isAuthenticated: (state) => !!state.user,
     getWalletData: (state) => state.walletData,
-    getWalletBalance: (state) => state.walletBalance,
+    getWalletBalance: (state) => state.walletBalance
   },
 
-  plugins: [vuexLocal.plugin],
- 
+  plugins: [vuexLocal.plugin]
 })

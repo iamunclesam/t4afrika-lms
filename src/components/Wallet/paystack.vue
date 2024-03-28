@@ -22,8 +22,8 @@
             </div>
         </form>
 
-        <paystack buttonClass="'button-class bg-blue-500'" class="mb-3 text-white bg-blue-600 mx-4 py-2.5 px-3 text-md"
-            buttonText="Add money" :publicKey="publicKey" :email="email" :amount="amount" :reference="reference"
+        <paystack buttonClass="'button-class bg-blue-500'" class="mb-3 text-white bg-purple-600 mx-4 py-2.5 px-3 text-md"
+            buttonText="Add money" :publicKey="publicKey" :email="email" :amount="convertAmount" :reference="reference"
             :onSuccess="onSuccessfulPayment" :onCanel="onCancelledPayment">
         </paystack>
 
@@ -75,6 +75,7 @@ export default {
         convertAmount() {
             return this.amount * 100
         }
+
     },
 
     methods: {
@@ -102,24 +103,20 @@ export default {
             try {
                 if (response) {
                     // Dispatch the action to update the wallet data
-                    await this.$store.dispatch('updateWallet', { amount: this.amount, transactionReference: response.reference });
+                    await this.$store.dispatch('updateWallet', { amount: this.amount, transactionReference: response.reference, paystackResponse: response });
                     
                 }
                 console.log(response);
-                location.reload()
+                // location.reload()
             } catch (error) {
                 console.error('Error updating wallet:', error);
             }
         },
 
-
-
-
-
         onCancelledPayment: function () {
             
             console.log("Payment cancelled by user");
-            location.reload
+            // location.reload
         },
     },
 };
