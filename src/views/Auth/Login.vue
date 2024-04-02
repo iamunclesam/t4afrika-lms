@@ -15,12 +15,12 @@
                             </a>
                             <div
                                 class="w-full bg-white rounded-lg dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
-                                <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+                                <div class="space-y-4 md:space-y-6 sm:p-8">
                                     <h1
                                         class="text-3xl text-center font-bold leading-tight tracking-tight text-gray-900 md:text-4xl dark:text-white">
                                         Welcome Back
                                     </h1>
-                                    <form class="space-y-4 md:space-y-6" action="#">
+                                    <form class=" md:space-y-6" action="#">
                                         <div>
                                             <label for="email"
                                                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your
@@ -57,7 +57,7 @@
                                             </div>
                                         </div>
                                         <button @click.prevent="login" type="submit"
-                                            class="w-full text-white bg-blue-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+                                            class="w-full text-white bg-purple-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
 
                                             <span v-if="!loading">Login</span>
                                             <span v-else class="flex h-auto items-center gap-1 justify-center">
@@ -90,9 +90,9 @@
                     </section>
                 </div>
 
-                <div class="col side bg-blue-50">
+                <div class="col side bg-purple-600">
                     <div class="hidden md:flex items-center h-screen justify-center">
-                        <img src="@/assets/img/login-bg.png" class=" object-cover">
+                        <!-- <img src="@/assets/img/login-bg.png" class=" object-cover"> -->
                     </div>
 
                 </div>

@@ -17,7 +17,7 @@
                             <div class="">
                                 <div class="flex items-center">
                                     <div class="flex-shrink-0">
-                                        <img class="w-16 h-16 rounded-full object-cover" src="@/assets/img/course-bg.jpg" alt="Neil image">
+                                        <img class="w-12 h-12 rounded-full object-cover" src="@/assets/img/course-bg.jpg" alt="Neil image">
                                     </div>
                                     <div class="flex-1 min-w-0 ms-4">
                                         <p class="text-xs font-semibold font-medium text-gray-900 truncate dark:text-white">
@@ -40,7 +40,7 @@
                             <div class="">
                                 <div class="flex items-center">
                                     <div class="flex-shrink-0">
-                                        <img class="w-16 h-16 rounded-full object-cover" src="@/assets/img/course-bg.jpg" alt="Neil image">
+                                        <img class="w-12 h-12 rounded-full object-cover" src="@/assets/img/course-bg.jpg" alt="Neil image">
                                     </div>
                                     <div class="flex-1 min-w-0 ms-4">
                                         <p class="text-xs font-semibold font-medium text-gray-900 truncate dark:text-white">
@@ -64,7 +64,7 @@
                             <div class="">
                                 <div class="flex items-center"> 
                                     <div class="flex-shrink-0">
-                                        <img class="w-16 h-16 rounded-full object-cover" src="@/assets/img/course-bg.jpg" alt="Neil image">
+                                        <img class="w-12 h-12 rounded-full object-cover" src="@/assets/img/course-bg.jpg" alt="Neil image">
                                     </div>
                                     <div class="flex-1 min-w-0 ms-4">
                                         <p class="text-xs font-semibold font-medium text-gray-900 truncate dark:text-white">

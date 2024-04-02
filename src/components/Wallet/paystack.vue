@@ -11,7 +11,7 @@
                     email</label>
                 <input type="email" id="email"
                     class=" border border-gray-300 text-gray-900 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 py-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="" v-model="email" required />
+                    placeholder="" v-model="getEmail" required />
             </div>
             <div class="mb-0">
                 <label for="password" class="block mb-2 text-xs font-semibold text-gray-900 dark:text-white">Amount
@@ -50,8 +50,9 @@ export default {
             firstname: 'sam',
             lastname: 'text',
             MainAccount: 0,
-            amount: 10000,
-            email: 'sam@gmail.com'
+            amount: 500,
+            email: '',
+            currentPlan: []
         }
     },
 
@@ -74,11 +75,22 @@ export default {
 
         convertAmount() {
             return this.amount * 100
-        }
+        },
+
+        getEmail() {
+            const userEmail = auth.currentUser;
+            return userEmail.email
+        },
+       
 
     },
 
+    mounted() {
+        this.getCurrentUserData()
+    },
+
     methods: {
+
 
         async getCurrentUserData() {
             try {
@@ -87,11 +99,16 @@ export default {
                 if (user) {
                     const querySnapshot = await getDocs(collection(db, 'Users'));
                     const userDoc = querySnapshot.docs.find(doc => doc.data().email === user.email);
-                    if (userDoc) {
-                        const userDocRef = doc(db, 'Users', userDoc.id);
-                        console.log('User Document Reference ID:', userDocRef.id);
-                        return userDocRef;
-                    }
+                    // if (userDoc) {
+                    //     const userDocRef = doc(db, 'Users', userDoc.id);
+                    //     console.log('User Document Reference ID:', userDocRef.id);
+                    //     return userDocRef;
+                    // }
+
+                    this.email = userDoc.data().email
+                    this.currentPlan = userDoc.data().subscriptionPlan
+
+                    console.log(userDoc.data());
                 }
             } catch (e) {
                 console.error(e);
@@ -99,7 +116,26 @@ export default {
         },
 
 
+
+
+
+
         onSuccessfulPayment: async function (response) {
+            try {
+                if (response) {
+                    // Dispatch the action to update the wallet data
+                    await this.$store.dispatch('updateWallet', { amount: this.amount, transactionReference: response.reference, paystackResponse: response.status });
+                    
+                }
+                console.log(response);
+                location.reload()
+            } catch (error) {
+                console.error('Error updating wallet:', error);
+            }
+        },
+
+        onCancelledPayment: async function (response) {
+
             try {
                 if (response) {
                     // Dispatch the action to update the wallet data
@@ -107,13 +143,10 @@ export default {
                     
                 }
                 console.log(response);
-                // location.reload()
+                location.reload()
             } catch (error) {
                 console.error('Error updating wallet:', error);
             }
-        },
-
-        onCancelledPayment: function () {
             
             console.log("Payment cancelled by user");
             // location.reload

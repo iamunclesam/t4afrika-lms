@@ -80,6 +80,12 @@ const router = createRouter({
       component: () => import('../views/Auth/UnverifiedEmail.vue')
     },
 
+    {
+      path: '/verify-email',
+      name: 'verify',
+      component: () => import('../views/Auth/VerifyEmail.vue')
+    },
+
   ]
 })
 

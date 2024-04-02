@@ -160,10 +160,10 @@
       </div>
 
 
-      <div class="md:flex hidden gap-1 py-5 h-auto items-center">
+      <!-- <div class="md:flex hidden gap-1 py-5 h-auto items-center">
         <Icon icon="formkit:group" class="text-xl" />
         <h1 class="text-gray-900 font-medium text-md">Week Overview</h1>
-      </div>
+      </div> -->
       <div class=" ">
         <div class="grid grid-cols-1 md:grid-cols-2 px-3 py-2 pb-8 gap-4">
           <div class="review p-0 pb-2 col">

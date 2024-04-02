@@ -24,8 +24,8 @@
                                     <th scope="row"
                                         class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                         N{{transaction.amountAdded }}</th>
-                                    <td class="px-4 py-3">123ABCD001XYZ</td>
-                                    <td class="px-4 py-3 text-green-400">Success</td>
+                                    <td class="px-4 py-3">{{transaction.transactionReference}}</td>
+                                    <td class="px-4 py-3 text-green-400">{{transaction.paystackResponse}}</td>
 
 
                                 </tr>
