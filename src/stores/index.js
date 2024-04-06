@@ -19,6 +19,7 @@ import { auth, db } from '@/firebase'
 import { createStore } from 'vuex'
 import router from '../router'
 import VuexPersistence from 'vuex-persist'
+import { useToast } from 'vue-toastify';
 
 const vuexLocal = new VuexPersistence({
   storage: window.localStorage, // You can change this to sessionStorage if needed
@@ -316,6 +317,7 @@ export default createStore({
         }
 
         console.log('Subscription plan updated successfully')
+        useToast().success({ body: 'Hello world', canTimeout: true });
 
         commit('CHANGE_PLAN', { planId, amount }) // Commit the mutation
 
