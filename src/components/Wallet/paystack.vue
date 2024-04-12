@@ -1,5 +1,3 @@
-<!-- eslint-disable vue/multi-word-component-names -->
-
 <template>
     <main>
         <form class="p-4 bg-white">
