@@ -64,7 +64,7 @@
 
 
 
-                        <!-- <div class="bg-white rounded border border-gray-200 mt-10">
+                        <div class="bg-white rounded border border-gray-200 mt-10">
                             <h1 class="text-sm p-1 px-2 text-white font-semibold bg-gray-400 mx-0">Add money</h1>
                             <div class="grid grid-cols-1 md:grid-cols-2">
                                 <div class="col border-r border-gray-200">
@@ -101,7 +101,7 @@
                                 </div>
 
                             </div>
-                        </div> -->
+                        </div>
 
                         <history />
                     </div>
