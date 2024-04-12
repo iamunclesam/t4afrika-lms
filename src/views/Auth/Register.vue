@@ -133,9 +133,6 @@ export default {
       publicKey: 'pk_test_a5875f86ad8ddaf47cc9046fac01412e2514bd98',
       amount: 50000,
       paymentEmail: 'sam@gmail.com',
-      stepOne: false,
-      stepTwo: false,
-      stepThree: false,
       selectedPlan: null,
       subscriptionPlans: [],
       plans: [

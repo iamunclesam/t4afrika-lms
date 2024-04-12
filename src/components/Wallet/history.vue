@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <template>
     <main>
         <h1 class="text-gray-500 text-lg py-10 pb-5">Order History</h1>

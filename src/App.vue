@@ -7,7 +7,7 @@ import { initFlowbite } from 'flowbite';
 
 export default {
   mounted() {
-      initFlowbite();
+    initFlowbite();
   }
 }
 

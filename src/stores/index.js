@@ -9,7 +9,6 @@ import {
   collection,
   addDoc,
   updateDoc,
-  doc,
   arrayUnion,
   where,
   query,
@@ -65,7 +64,7 @@ export default createStore({
   },
   actions: {
     async register({ commit }, userDetails) {
-      const { id, email, fullName, password, subscriptionPlan } = userDetails
+      const { id, email, fullName, password, subscriptionPlan, subscriptionPlanHistory } = userDetails
 
       try {
         const userCredential = await createUserWithEmailAndPassword(auth, email, password)
@@ -77,9 +76,9 @@ export default createStore({
           email,
           password, // Ensure this is hashed in a real application
           subscriptionPlan, // Add subscription plan to the user object
+          subscriptionPlanHistory ,
           wallet: [],
           walletBalance: 0,
-          tasks: [],
           certificates: [],
           createdAt: new Date(),
           updatedAt: new Date()

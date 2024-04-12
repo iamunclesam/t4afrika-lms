@@ -1,17 +1,8 @@
 <template>
     <main>
         <sidebar />
-
-
-
         <div class="p-4 sm:ml-72 mt-20">
             <breadcrumb class="pt-8" />
-
-
-
-
-
-
             <div class="video-frame my-6">
                 <h1
                     class="pb-8 text-xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-3xl dark:text-white">
@@ -20,9 +11,6 @@
                 <iframe class="w-full h-96 rounded-lg" src="https://www.youtube.com/embed/tgbNymZ7vqY">
                 </iframe>
             </div>
-
-
-
 
             <h1 class="text-lg text-gray-500 mb-6">Session Overview</h1>
             <div class="grid md:grid-cols-3  gap-6">

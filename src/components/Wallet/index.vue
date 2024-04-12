@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <template>
     <main>
         <div
@@ -52,12 +53,7 @@
 
 <script>
 import { Icon } from '@iconify/vue'
-import paystack from "vue3-paystack";
-import paystackVue from './paystack.vue';
 import { initFlowbite } from 'flowbite';
-import { collection, updateDoc, getDocs, } from 'firebase/firestore';
-import { auth, db } from '@/firebase';
-import { mapGetters, mapActions } from 'vuex';
 
 export default {
     data() {
@@ -73,7 +69,7 @@ export default {
     },
 
     components: {
-        Icon, paystack, paystackVue
+        Icon, 
     },
 
     async mounted() {

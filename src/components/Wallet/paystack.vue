@@ -1,10 +1,7 @@
+<!-- eslint-disable vue/multi-word-component-names -->
+
 <template>
     <main>
-
-
-
-
-
         <form class="p-4 bg-white">
             <div class="mb-5">
                 <label for="email" class="block mb-2 text-xs font-semibold text-gray-900 dark:text-white">Your
@@ -22,9 +19,10 @@
             </div>
         </form>
 
-        <paystack buttonClass="'button-class bg-blue-500'" class="mb-3 text-white bg-purple-600 mx-4 py-2.5 px-3 text-md"
-            buttonText="Add money" :publicKey="publicKey" :email="email" :amount="convertAmount" :reference="reference"
-            :onSuccess="onSuccessfulPayment" :onCanel="onCancelledPayment">
+        <paystack buttonClass="'button-class bg-blue-500'"
+            class="mb-3 text-white bg-purple-600 mx-4 py-2.5 px-3 text-md" buttonText="Add money" :publicKey="publicKey"
+            :email="email" :amount="convertAmount" :reference="reference" :onSuccess="onSuccessfulPayment"
+            :onCanel="onCancelledPayment">
         </paystack>
 
     </main>
@@ -33,8 +31,8 @@
 <script>
 import { Icon } from '@iconify/vue'
 import paystack from "vue3-paystack";
-import { nanoid } from "nanoid";
-import { collection, updateDoc, getDocs, doc, arrayUnion, increment } from 'firebase/firestore';
+// import { nanoid } from "nanoid";
+import { collection, getDocs } from 'firebase/firestore';
 import { auth, db } from '@/firebase';
 
 
@@ -81,7 +79,7 @@ export default {
             const userEmail = auth.currentUser;
             return userEmail.email
         },
-       
+
 
     },
 
@@ -125,7 +123,7 @@ export default {
                 if (response) {
                     // Dispatch the action to update the wallet data
                     await this.$store.dispatch('updateWallet', { amount: this.amount, transactionReference: response.reference, paystackResponse: response.status });
-                    
+
                 }
                 console.log(response);
                 location.reload()
@@ -140,14 +138,14 @@ export default {
                 if (response) {
                     // Dispatch the action to update the wallet data
                     await this.$store.dispatch('updateWallet', { amount: this.amount, transactionReference: response.reference, paystackResponse: response });
-                    
+
                 }
                 console.log(response);
                 location.reload()
             } catch (error) {
                 console.error('Error updating wallet:', error);
             }
-            
+
             console.log("Payment cancelled by user");
             // location.reload
         },

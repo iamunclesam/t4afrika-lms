@@ -2,12 +2,18 @@
 
     <div class="head" ref="container">
         <div class="first">
-            <sidebar />
-
-
+            <!--    Sidebar  -->
+            <div class="sidebar">
+                <sidebar />
+            </div>
 
             <div class="p-4 sm:ml-72 mt-20 sm:mx-5">
-                <breadcrumb class="mt-5 sm:mt-5" />
+                <!--Breadcrumb-->
+                <div class="breadcrumbs">
+                    <div class="navigation">
+                        <breadcrumb class="pt-8" />
+                    </div>
+                </div>
 
                 <div class="flex justify-between h-auto items-center">
                     <div class="py-10">
@@ -102,15 +108,15 @@
 
 
 
-                    <div class="hidden md:block col fixed mx-auto right-10 w-1/4">
+                    <div class=" md:block col md:ixed mx-auto right-10 w-1/4">
 
                         <div v-if="currentPlan" class="border  rounded-lg w-full shadow bg-white h-80 w-100 p-4 mt-0">
                             <div class="flex justify-between gap-2">
                                 <!-- <Icon icon="ri:live-fill" width="20px" height="20px" class="mt-1 text-blue-600" /> -->
-                                <h1 class="text-md font-semibold text-black flex">YOUR PLAN</h1>
+                                <h1 class="text-sm font-semibold text-black flex">YOUR PLAN</h1>
 
                                 <div class="flex bg-purple-600 p-1 px-2 text-white rounded text-sm gap-2"
-                                    v-if="countdown.days >= 0">
+                                    v-if="currentPlan.isPaid = true">
                                     <p>{{ countdown.days }}D</p>
                                     <p>{{ countdown.days }}H</p>
                                     <p>{{ countdown.minutes }}M</p>
@@ -134,7 +140,18 @@
                                     </table> -->
                                 </div>
                                 <div v-else>
-                                    <p>Subscription has expired.</p>
+                                    <p class="text-xs text-red-600 flex items-center gap-1"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                            viewBox="0 0 512 512">
+                                            <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="32"
+                                                d="M85.57 446.25h340.86a32 32 0 0 0 28.17-47.17L284.18 82.58c-12.09-22.44-44.27-22.44-56.36 0L57.4 399.08a32 32 0 0 0 28.17 47.17" />
+                                            <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="32"
+                                                d="m250.26 195.39l5.74 122l5.73-121.95a5.74 5.74 0 0 0-5.79-6h0a5.74 5.74 0 0 0-5.68 5.95" />
+                                            <path fill="currentColor"
+                                                d="M256 397.25a20 20 0 1 1 20-20a20 20 0 0 1-20 20" />
+                                        </svg> <span>Subscription has expired.</span></p>
                                 </div>
                             </div>
 
