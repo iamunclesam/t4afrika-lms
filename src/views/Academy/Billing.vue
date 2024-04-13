@@ -108,7 +108,7 @@
 
 
 
-                    <div class="w-full md:block col md:ixed mx-auto right-10 md:w-1/4">
+                    <div class="w-full md:block col md:fixed mx-auto right-10 md:w-1/4">
 
                         <div v-if="currentPlan" class="border  rounded-lg w-full shadow bg-white h-80 w-100 p-4 mt-0">
                             <div class="flex justify-between gap-2">
@@ -219,8 +219,7 @@ export default {
 
     mounted() {
         initFlowbite(),
-            this.getCurrentUserData()
-
+        this.getCurrentUserData()
     },
 
     computed: {
@@ -228,10 +227,12 @@ export default {
             return new Date(this.endDate).getTime();
         }
     },
+
     async created() {
         await this.getCurrentUserData();
         this.startCountdown();
     },
+
     methods: {
 
         async getCurrentUserData() {

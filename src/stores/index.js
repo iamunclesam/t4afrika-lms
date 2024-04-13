@@ -174,6 +174,8 @@ export default createStore({
             resolve(updatedWalletBalance)
           })
         })
+
+        return newBalance
       } catch (error) {
         console.error('Error updating wallet:', error)
       }
@@ -242,7 +244,7 @@ export default createStore({
       }
     },
 
-    // Inside your Vuex store actions
+ 
     async changePlan({ commit }, { planId, amount, transactionReference, paystackResponse }) {
       try {
         const user = auth.currentUser
@@ -321,30 +323,30 @@ export default createStore({
         commit('CHANGE_PLAN', { planId, amount }) // Commit the mutation
 
         // Calculate the number of weeks paid
-        const now = new Date()
-        const startDate = new Date(subscriptionPlan.startDate)
-        const intervalsPassed = Math.floor(
-          (now.getTime() - startDate.getTime()) / (7 * 24 * 60 * 60 * 1000)
-        )
-        let numberOfWeeksPaid = 0
+        // const now = new Date()
+        // const startDate = new Date(subscriptionPlan.startDate)
+        // const intervalsPassed = Math.floor(
+        //   (now.getTime() - startDate.getTime()) / (7 * 24 * 60 * 60 * 1000)
+        // )
+        // let numberOfWeeksPaid = 0
 
-        for (let i = 0; i <= intervalsPassed; i++) {
-          const currentDate = new Date(startDate.getTime() + i * 7 * 24 * 60 * 60 * 1000)
-          const isActive = subscriptionPlanHistory.some((renewal) => {
-            const renewalStartDate = new Date(renewal.startDate)
-            const renewalEndDate = new Date(renewal.endDate)
-            return (
-              currentDate >= renewalStartDate && currentDate <= renewalEndDate && renewal.isPaid
-            )
-          })
+        // for (let i = 0; i <= intervalsPassed; i++) {
+        //   const currentDate = new Date(startDate.getTime() + i * 7 * 24 * 60 * 60 * 1000)
+        //   const isActive = subscriptionPlanHistory.some((renewal) => {
+        //     const renewalStartDate = new Date(renewal.startDate)
+        //     const renewalEndDate = new Date(renewal.endDate)
+        //     return (
+        //       currentDate >= renewalStartDate && currentDate <= renewalEndDate && renewal.isPaid
+        //     )
+        //   })
 
-          if (isActive) {
-            numberOfWeeksPaid++
-          }
-        }
+        //   if (isActive) {
+        //     numberOfWeeksPaid++
+        //   }
+        // }
 
-        console.log('Number of weeks paid:', numberOfWeeksPaid)
-        commit('SET_NUMBER_OF_WEEKS_PAID', numberOfWeeksPaid) // Commit the mutation for number of weeks paid
+        // console.log('Number of weeks paid:', numberOfWeeksPaid)
+        // commit('SET_NUMBER_OF_WEEKS_PAID', numberOfWeeksPaid) // Commit the mutation for number of weeks paid
       } catch (error) {
         console.error('Error renewing plan:', error)
       }
