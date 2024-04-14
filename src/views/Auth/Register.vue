@@ -29,31 +29,31 @@
                   <div class="w-full">
                     <label for="fullname" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Full
                       Name</label>
-                    <input type="text" name="fullname" id="fullname"
+                    <input type="text"  id="fullname"
                       class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                      placeholder="John Doe" v-model="fullName" required="">
+                      placeholder="John Doe" v-model="fullName" required>
                   </div>
                   <div class="w-full">
                     <label for="email"
                       class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
-                    <input type="email" name="email" id="email"
+                    <input type="email" id="email"
                       class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                      placeholder="johnDoe@gmail.com" v-model="email" required="">
+                      placeholder="johnDoe@gmail.com" v-model="email" required>
                   </div>
 
                   <div class="w-full">
                     <label for="phone"
                       class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Phone</label>
-                    <input type="Phone" name="phone" id="phone"
+                    <input type="Phone"  id="phone"
                       class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                      placeholder="+234 901 3456 789" v-model="phone" required="">
+                      placeholder="+234 901 3456 789" v-model="phone" required>
                   </div>
                   <div class="w-full">
                     <label for="password"
                       class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Passowrd</label>
-                    <input type="password" name="password" id="password"
+                    <input type="password"  id="password"
                       class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                      placeholder="*****" v-model="password" required="">
+                      placeholder="*****" v-model="password" required>
                   </div>
                 </div>
 
@@ -68,7 +68,7 @@
                     <label for="plan" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select
                       Plan</label>
                     <select v-model="selectedPlan"
-                      class="bg-purple-600 border border-gray-300 text-white text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                      class="bg-purple-600 border border-gray-300 text-white text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
                       <option v-for="plan in plans" :key="plan.id" :value="plan.value">{{ plan.value }}</option>
                     </select>
                   </div>
@@ -76,15 +76,15 @@
                     <label for="paymentemail"
                       class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Payment
                       Email</label>
-                    <input type="email" name="paymentemail" id="paymentemail"
+                    <input type="email" id="paymentemail"
                       class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                      placeholder="johnDoe@gmail.com" required="">
+                      placeholder="johnDoe@gmail.com" required>
                   </div>
 
 
 
                   <div class="flex items-center">
-                    <input id="link-checkbox" type="checkbox" value=""
+                    <input id="link-checkbox" type="checkbox"
                       class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                     <label for="link-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">I agree
                       with the <a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">terms and
