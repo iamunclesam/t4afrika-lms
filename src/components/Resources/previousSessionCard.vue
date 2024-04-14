@@ -16,8 +16,7 @@
                 </p>
                 <p class="text-xs w-28 text-gray-500 truncate dark:text-gray-400">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nam
-                    modi
-                    necessitatibus repellendus numquam!
+                    modi necessitatibus repellendus numquam!
                 </p>
                 <div class="duration py-3 flex justify-between">
                     <div class="flex gap-1">

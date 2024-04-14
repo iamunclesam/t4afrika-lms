@@ -238,7 +238,7 @@ export default {
         async getCurrentUserData() {
             try {
                 // Introduce a delay of 1 second before fetching user data
-                await new Promise(resolve => setTimeout(resolve, 1000));
+                await new Promise(resolve => setTimeout(resolve, 2000));
 
                 const user = auth.currentUser;
 
