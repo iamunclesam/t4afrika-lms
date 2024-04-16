@@ -2,6 +2,7 @@
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  signOut,
   sendEmailVerification,
   onAuthStateChanged
 } from 'firebase/auth'
@@ -18,7 +19,7 @@ import { auth, db } from '@/firebase'
 import { createStore } from 'vuex'
 import router from '../router'
 import VuexPersistence from 'vuex-persist'
-import { useToast } from 'vue-toastify';
+import { toast } from 'vue3-toastify'
 
 const vuexLocal = new VuexPersistence({
   storage: window.localStorage, // You can change this to sessionStorage if needed
@@ -64,7 +65,26 @@ export default createStore({
   },
   actions: {
     async register({ commit }, userDetails) {
-      const { id, email, fullName, password, subscriptionPlan, subscriptionPlanHistory } = userDetails
+      const {
+        username,
+        email,
+        firstName,
+        lastName,
+        password,
+        subscriptionPlan,
+        subscriptionPlanHistory
+      } = userDetails
+
+      // Define characters for the ID
+      const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+      const idLength = 15 // Adjust the length of the ID as needed
+
+      let id = ''
+      // Generate the ID
+      for (let i = 0; i < idLength; i++) {
+        const randomIndex = Math.floor(Math.random() * characters.length)
+        id += characters.charAt(randomIndex)
+      }
 
       try {
         const userCredential = await createUserWithEmailAndPassword(auth, email, password)
@@ -72,11 +92,13 @@ export default createStore({
 
         const user = {
           id,
-          fullName,
+          username,
+          firstName,
+          lastName,
           email,
           password, // Ensure this is hashed in a real application
-          subscriptionPlan, // Add subscription plan to the user object
-          subscriptionPlanHistory ,
+          subscriptionPlan:{}, // Add subscription plan to the user object
+          subscriptionPlanHistory: [],
           wallet: [],
           walletBalance: 0,
           certificates: [],
@@ -89,12 +111,25 @@ export default createStore({
         await addDoc(usersCollection, user)
 
         commit('SET_USER', user)
-        router.push('/verify-email')
-        alert('Sign Up Successful')
+        router.push('/login')
+
+        toast('Hello! Wow so easy!', {
+          theme: 'auto',
+          type: 'success',
+          transition: 'slide',
+          dangerouslyHTMLString: true
+        })
 
         return user
       } catch (error) {
         console.error('Registration Error:', error)
+        toast('Registration error', {
+          theme: 'auto',
+          type: 'warning',
+          transition: 'slide',
+          dangerouslyHTMLString: true
+        })
+
         // Handle error
         return null
       }
@@ -142,33 +177,41 @@ export default createStore({
       }
     },
 
+    async logOut({ commit }) {
+      try {
+        await signOut(auth)
+        commit('SET_USER', null)
+      } catch (error) {
+        console.error('Error Logging Out:', error)
+      }
+    },
+
     async updateWallet({ commit }, { amount, transactionReference, paystackResponse }) {
       try {
         const newBalance = await new Promise((resolve, reject) => {
           const unsubscribe = onAuthStateChanged(auth, async (user) => {
-    
             if (!user) {
               throw new Error('User not authenticated')
             }
-    
+
             const userEmail = user.email
             const userQuery = query(collection(db, 'Users'), where('email', '==', userEmail))
             const querySnapshot = await getDocs(userQuery)
-    
+
             if (querySnapshot.empty) {
               throw new Error('User document not found')
             }
-    
+
             const userDoc = querySnapshot.docs[0].ref
             const userData = querySnapshot.docs[0].data()
-    
+
             const updatedWalletBalance = userData.walletBalance + amount
-    
+
             await updateDoc(userDoc, {
               wallet: arrayUnion({ amountAdded: amount, transactionReference, paystackResponse }),
               walletBalance: updatedWalletBalance
             })
-    
+
             commit('SET_WALLET_BALANCE', updatedWalletBalance)
             unsubscribe() // Unsubscribe from onAuthStateChanged after the update
             resolve(updatedWalletBalance)
@@ -180,7 +223,6 @@ export default createStore({
         console.error('Error updating wallet:', error)
       }
     },
-    
 
     async fetchWalletBalance({ commit }) {
       try {
@@ -190,32 +232,31 @@ export default createStore({
               reject(new Error('User not authenticated'))
               return
             }
-    
+
             const userEmail = user.email
             const userQuery = query(collection(db, 'Users'), where('email', '==', userEmail))
             const querySnapshot = await getDocs(userQuery)
-    
+
             if (querySnapshot.empty) {
               reject(new Error('User document not found'))
               return
             }
-    
+
             const userData = querySnapshot.docs[0].data()
             const walletBalance = userData.walletBalance
-    
+
             commit('SET_WALLET_BALANCE', walletBalance)
             unsubscribe() // Unsubscribe from onAuthStateChanged after fetching the balance
             resolve(walletBalance)
           })
         })
-    
+
         return newBalance
       } catch (error) {
         console.error('Error fetching wallet balance:', error)
         return null
       }
     },
-    
 
     async fetchWalletData({ commit }) {
       try {
@@ -244,7 +285,6 @@ export default createStore({
       }
     },
 
- 
     async changePlan({ commit }, { planId, amount, transactionReference, paystackResponse }) {
       try {
         const user = auth.currentUser
@@ -318,7 +358,7 @@ export default createStore({
         }
 
         console.log('Subscription plan updated successfully')
-        useToast().success({ body: 'Hello world', canTimeout: true });
+        useToast().success({ body: 'Hello world', canTimeout: true })
 
         commit('CHANGE_PLAN', { planId, amount }) // Commit the mutation
 

@@ -75,6 +75,12 @@ const router = createRouter({
     },
 
     {
+      path: '/complete-registration',
+      name: 'complete-register',
+      component: () => import('../views/Auth/ConfirmPayment.vue')
+    },
+
+    {
       path: '/unverified',
       name: 'unverified',
       component: () => import('../views/Auth/UnverifiedEmail.vue')

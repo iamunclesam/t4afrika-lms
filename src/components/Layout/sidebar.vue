@@ -270,6 +270,14 @@
             </a>
           </li>
 
+          <li>
+            <a @click="handleLogout"
+              class="flex items-center p-2 text-gray-900 transition duration-75 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group">
+              <Icon icon="icon-park-solid:help" width="20" class="text-purple-700"/>
+              <span class="ms-3 text-sm">Sign Out</span>
+            </a>
+          </li>
+
         </ul>
       </div>
     </aside>
@@ -290,6 +298,20 @@ export default {
 
   mounted() {
     initFlowbite()
+  },
+
+  methods: {
+    async handleLogout() {
+      try {
+        await this.$store.dispatch('logOut');
+        this.$router.push('/login')
+      }
+
+      catch(error) {
+        console.error('Error Logging out:', error)
+
+      }
+    }
   }
 }
 </script>

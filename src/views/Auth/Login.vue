@@ -75,6 +75,7 @@
                                                     </svg>
                                                     <span class="sr-only">Loading...</span>
                                                 </div>
+                                                Loading...
                                             </span>
                                         </button>
                                         <p class="text-sm font-light text-gray-500 dark:text-gray-400">

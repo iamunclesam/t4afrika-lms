@@ -7,6 +7,7 @@ import router from './router'
 
 import { initFlowbite } from 'flowbite';
 
+
 router.afterEach(() => {
   initFlowbite();
 });
