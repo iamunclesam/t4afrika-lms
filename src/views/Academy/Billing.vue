@@ -15,20 +15,21 @@
                     </div>
                 </div>
 
-                <div class="flex justify-between h-auto items-center">
-                    <div class="py-10">
-                        <h1 class="text-gray-900 font-semibold text-3xl pb-1">Add Funds</h1>
-                        <p class="text-gray-700">Get to deposit money in advance</p>
-                    </div>
 
-                    <div class="icon shadow rounded-full">
-                        <Icon icon="gridicons:plans" width="60px" height="60px"
-                            class="bg-white rounded-full p-2 text-purple-600" />
-                    </div>
-                </div>
                 <div class="md:grid md:grid-cols-3  md:gap-32">
                     <div class="md:col-span-2 ">
                         <div class="grid md:gap-4 mb-4">
+                            <div class="flex justify-between  h-auto items-center">
+                                <div class="py-10">
+                                    <h1 class="text-gray-900 font-semibold text-3xl pb-1">Add Funds</h1>
+                                    <p class="text-gray-700">Get to deposit money in advance</p>
+                                </div>
+
+                                <!-- <div class="icon shadow rounded-full">
+                                    <Icon icon="gridicons:plans" width="60px" height="60px"
+                                        class="bg-white rounded-full p-2 text-purple-600" />
+                                </div> -->
+                            </div>
 
                             <!--     Wallet Section       -->
                             <indexVue />
@@ -54,7 +55,7 @@
                                     class="text-purple-700 hidden sm:block mx-auto md:mx-0" width="70px"
                                     height="70px" />
                                 <div class="text-center md:text-left">
-                                    <h1 class="text-purple-700  sm:text-4xl text-6xl">0</h1>
+                                    <h1 class="text-purple-700  sm:text-4xl text-6xl">&#8358;0</h1>
                                     <p class="md:text-lg text-sm text-gray-700  dark:text-gray-500">PENDING FEE</p>
                                 </div>
                             </div>
@@ -108,9 +109,9 @@
 
 
 
-                    <div class="w-full md:block col md:fixed mx-auto right-10 md:w-1/4">
+                    <div class="w-full md:block col md:fixed mx-auto top-722 right-10 md:w-1/4">
 
-                        <div v-if="currentPlan" class="border  rounded-lg w-full shadow bg-white h-80 w-100 p-4 mt-0">
+                        <div v-if="currentPlan" class="border  rounded-lg w-full shadow bg-white  w-100 p-4 mt-0">
                             <div class="flex justify-between gap-2">
                                 <!-- <Icon icon="ri:live-fill" width="20px" height="20px" class="mt-1 text-blue-600" /> -->
                                 <h1 class="text-sm font-semibold text-black flex">YOUR PLAN</h1>
@@ -171,6 +172,8 @@
                                     from wallet
                                     balance, fund wallet balance to renew</p>
 
+                                    <p class="py-4 text-xs text-purple-600">Subscription plan for Trade4frika Cohort 1.0</p>
+
 
                             </div>
 
@@ -219,7 +222,7 @@ export default {
 
     mounted() {
         initFlowbite(),
-        this.getCurrentUserData()
+            this.getCurrentUserData()
     },
 
     computed: {

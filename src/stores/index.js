@@ -97,7 +97,7 @@ export default createStore({
           lastName,
           email,
           password, // Ensure this is hashed in a real application
-          subscriptionPlan:{}, // Add subscription plan to the user object
+          subscriptionPlan: {}, // Add subscription plan to the user object
           subscriptionPlanHistory: [],
           wallet: [],
           walletBalance: 0,
@@ -183,6 +183,23 @@ export default createStore({
         commit('SET_USER', null)
       } catch (error) {
         console.error('Error Logging Out:', error)
+      }
+    },
+
+    async fetchUserDetails({ commit }) {
+      const currentUser = auth.currentUser
+      try {
+        const userEmail = currentUser.email
+        const userQuery = query(collection(db, 'Users'), where('email', '==', userEmail))
+        const querySnapshot = await getDocs(userQuery)
+
+        if (querySnapshot.empty) {
+          throw new Error('User document not found')
+        }
+        const userData = querySnapshot.docs[0].data()
+        commit('SET_USER', userData)
+      } catch (error) {
+        console.log(error)
       }
     },
 

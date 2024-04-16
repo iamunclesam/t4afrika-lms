@@ -24,7 +24,7 @@
           class="md:flex justify-between h-64 items-center sm:p-10 sm:pb-16 p-5 rounded bg-purple-700 dark:bg-gray-800">
           <div class="">
             <h1 class="md:text-6xl pt-5 text-3xl text-white font-bold">
-              <span class="">Hello</span>, Unclesam!
+              <span class="">Hello</span>, {{ user.username }}!
             </h1>
             <p class="text-md text-white font-medium">Welcome Back, have a nice trading week</p>
             <!-- <p class="hidden md:block text-md text-gray-200 py-4 text-white font-medium">
@@ -374,6 +374,25 @@ export default {
     goToLink() {
       this.$router.push('/session-details')
     }
+  },
+
+  computed: {
+    user() {
+      return this.$store.state.user; // Access user state from Vuex store
+    }
+  },
+
+  mounted() {
+    // Dispatch the fetchUserDetails action when the component is mounted
+    this.$store.dispatch('fetchUserDetails')
+      .then(() => {
+        // Handle success if needed
+        console.log('User details fetched successfully');
+      })
+      .catch((error) => {
+        // Handle error if needed
+        console.error('Error fetching user details:', error);
+      });
   }
 }
 </script>

@@ -11,14 +11,17 @@
             <!--Breadcrumb-->
             <div class="breadcrumbs">
                 <div class="navigation">
-                    <breadcrumb class="pt-8" />
+                    <breadcrumb class="pt-4" />
                 </div>
             </div>
+
+            <h1 class="text-5xl text-extrabold pt-4 text-dark-700">Cohort 2.0</h1>
+
             <div class="md:grid md:grid-cols-3  gap-6">
                 <div class="md:col-span-2">
 
                     <!--Upcoming session Section-->
-                    <h1 class="text-gray-500 text-lg pt-10 pb-5">Upcoming Sessions</h1>
+                    <h1 class="text-gray-700 text-lg pt-10 pb-5">Upcoming Sessions</h1>
                     <div class="upcoming-session">
                         <upcomingSession />
                     </div>
@@ -27,13 +30,13 @@
                         <div class="col-span-12">
                             <div class="flex justify-between">
                                 <!--Previous Session Section -->
-                                <h1 class="text-gray-500 text-lg pt-10 pb-5">Previous Sessions
+                                <h1 class="text-gray-700 text-lg pt-10 pb-5">New Sessions
                                 </h1>
                                 <h1 class="text-purple-700 text-sm pt-10 pb-5">See all</h1>
                             </div>
 
                             <div class="flow-root">
-                                <div class="previous-session">
+                                <div class="previous-session" @click.prevent="goToLink">
                                     <previousSessionVue />
                                 </div>
                             </div>
@@ -76,8 +79,11 @@ import previousSessionVue from '@/components/Resources/previousSession.vue'
 
 export default {
     components: { sidebar, Icon, breadcrumb, upcomingSession, previousSessionVue },
-
-
+    methods: {
+    goToLink() {
+      this.$router.push('/session-details')
+    }
+  },
 }
 </script>;
 

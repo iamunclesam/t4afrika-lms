@@ -145,7 +145,7 @@
               <div class="flex">
                 <Icon icon="ph:books-fill" width="20" class="text-purple-700"/>
                 
-                <span class="flex-1 ms-3 whitespace-nowrap text-sm">Resources</span>
+                <span class="flex-1 ms-3 whitespace-nowrap text-sm">Cohort</span>
               </div>
             </router-link>
 
