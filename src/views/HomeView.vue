@@ -98,7 +98,7 @@
                 <p class="text-gray-300 text-sm">Lorem, ipsum dolor.</p>
               </div>
 
-              <div class="flex h-auto justify-center items-center img">
+              <div class="flex w-full justify-center items-center img">
                 <img src="@/assets/img/hero-2.png" class="mt-0 w-64 object-contain" alt="" />
                 <!-- <Icon icon="fluent-emoji:sad-but-relieved-face" class="text-8xl"/> -->
               </div>
@@ -198,20 +198,20 @@
               <div class="flow-root">
                 <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
                   <li @click.prevent="goToLink" class="py-4 mb-4 bg-white sm:py-2 px-2 rounded-lg border shadow">
-                    <div class="flex gap-4 p-3">
+                    <div class="flex md:gap-4 md:p-3">
                       <div class="flex-shrink-0">
-                        <img class="w-28 h-28 rounded-lg object-cover" src="../assets/img/course-bg.jpg"
+                        <img class="md:w-28 md:h-28 h-16 w-16 rounded-lg object-cover" src="../assets/img/course-bg.jpg"
                           alt="Neil image" />
                       </div>
                       <div class="flex-1 min-w-0 ms-2">
-                        <div class="text-2xl flex justify-between font-semibold text-gray-900 truncate dark:text-white">
+                        <div class="md:text-2xl text-md truncate flex justify-between font-semibold text-gray-900 truncate dark:text-white">
                           Introduction to Forex
                           <div class="flex items-center gap-1 top-2 right-4">
                             <Icon icon="ep:collection-tag" />
                             <Icon icon="charm:menu-kebab" />
                           </div>
                         </div>
-                        <p class="text-xs text-gray-400 line-clamp-2 dark:text-gray-400 mt-1">
+                        <p class="text-xs text-gray-400 truncate md:line-clamp-2 dark:text-gray-400 mt-1">
                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nam modi
                           necessitatibus repellendus numquam!
                         </p>
@@ -222,7 +222,7 @@
                           </div>
                         </div>
 
-                        <div class="mt-2">
+                        <div class="mt-2 hidden md:flex">
                           <span
                             class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">Default</span>
                           <span

@@ -14,7 +14,7 @@
                 <p class="text-sm font-semibold text-gray-900 truncate dark:text-white">
                     Introduction to Forex Trading - WK-2
                 </p>
-                <p class="text-xs w-84 pr-20 text-gray-500  dark:text-gray-400">
+                <p class="text-xs md:w-84 w-32 truncate md:line-clamp-2 pr-20 text-gray-500  dark:text-gray-400">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nam
                     
                 </p>
