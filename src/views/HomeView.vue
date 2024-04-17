@@ -23,8 +23,21 @@
         <div
           class="md:flex justify-between h-64 items-center sm:p-10 sm:pb-16 p-5 rounded bg-purple-700 dark:bg-gray-800">
           <div class="">
-            <h1 class="md:text-6xl pt-5 text-3xl text-white font-bold">
-              <span class="">Hello</span>, {{ user.username }}!
+            <h1 class="md:text-6xl flex gap-2 items-center pt-5 text-3xl text-white font-bold">
+              <span class="">Hello,</span>
+              <div v-if="user.username">{{ user.username }}!</div>
+              <div v-else><svg aria-hidden="true"
+                  class="w-10 h-10 text-gray-200 animate-spin dark:text-gray-600 fill-purple-600" viewBox="0 0 100 101"
+                  fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                    fill="currentColor" />
+                  <path
+                    d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                    fill="currentFill" />
+                </svg>
+                <span class="sr-only">Loading...</span>
+              </div>
             </h1>
             <p class="text-md text-white font-medium">Welcome Back, have a nice trading week</p>
             <!-- <p class="hidden md:block text-md text-gray-200 py-4 text-white font-medium">
@@ -58,7 +71,7 @@
           </div>
 
           <div class="md:block hidden img">
-            <img src="@/assets/img/bg-2.png" class="w-96 h-full object-fit -mt-0" alt="" />
+            <img src="@/assets/img/hero-2.png" class="w-full object-fit -mt-0" alt="" />
           </div>
         </div>
       </div>
@@ -86,7 +99,7 @@
               </div>
 
               <div class="flex h-auto justify-center items-center img">
-                <img src="@/assets/img/hero-bg.png" class="mt-0 w-64 object-contain " alt="" />
+                <img src="@/assets/img/hero-2.png" class="mt-0 w-64 object-contain" alt="" />
                 <!-- <Icon icon="fluent-emoji:sad-but-relieved-face" class="text-8xl"/> -->
               </div>
             </div>
@@ -128,26 +141,29 @@
         </div>
 
         <div class="md:flex hidden gap-1 py-5 h-auto items-center">
-          <Icon icon="formkit:group" class="text-xl" />
-          <h1 class="text-gray-900 font-medium text-md">Cohort Overview</h1>
+          <Icon icon="fluent-mdl2:insights" class="text-xl font-bold"/>
+          <h1 class="text-gray-900 font-medium text-md mt-1">Cohort Overview</h1>
         </div>
 
         <div class="hidden md:grid grid-cols-3 gap-4 mb-4 md:mb-0 mt-0">
-          <div class="flex gap-4 p-5 justify-center items-center h-24 rounded-lg shadow border border-purple-100 bg-white dark:bg-gray-800">
+          <div
+            class="flex gap-4 p-5 justify-center items-center h-24 rounded-lg shadow border border-purple-100 bg-white dark:bg-gray-800">
             <Icon icon="vaadin:academy-cap" class="text-purple-700" width="50px" height="50px" />
             <div class="">
               <h1 class="text-purple-700 text-3xl">10</h1>
               <p class="text-lg text-gray-700 dark:text-gray-500">WEEKS COMPLETED</p>
             </div>
           </div>
-          <div class="flex gap-4 p-5 justify-center items-center h-24 rounded-lg shadow bg-white border border-purple-100 dark:bg-gray-800">
+          <div
+            class="flex gap-4 p-5 justify-center items-center h-24 rounded-lg shadow bg-white border border-purple-100 dark:bg-gray-800">
             <Icon icon="f7:timer-fill" class="text-purple-700" width="50px" height="50px" />
             <div class="">
               <h1 class="text-purple-700 text-3xl">0</h1>
               <p class="text-lg text-gray-700 dark:text-gray-500">OVERDUE WEEKS</p>
             </div>
           </div>
-          <div class="flex gap-4 p-5 justify-center items-center h-24 rounded-lg shadow bg-white border border-purple-100 dark:bg-gray-800">
+          <div
+            class="flex gap-4 p-5 justify-center items-center h-24 rounded-lg shadow bg-white border border-purple-100 dark:bg-gray-800">
             <Icon icon="fluent:cloud-sync-complete-32-filled" class="text-purple-700" width="50px" height="50px" />
             <div class="">
               <h1 class="text-purple-700 text-3xl">0</h1>
@@ -159,187 +175,81 @@
         <!-- <OverviewVue /> -->
       </div>
 
-
       <!-- <div class="md:flex hidden gap-1 py-5 h-auto items-center">
         <Icon icon="formkit:group" class="text-xl" />
         <h1 class="text-gray-900 font-medium text-md">Week Overview</h1>
       </div> -->
       <div class=" ">
-        <div class="grid grid-cols-1 md:grid-cols-2 px-3 py-2 pb-8 gap-4">
-          <div class="review p-0 pb-2 col">
-            <div class="w-full py-0  sm:p-0 max-w-lg dark:bg-gray-800 dark:border-gray-700">
+        <div class="grid grid-cols-1 md:grid-cols-3 px-3 py-2 pb-8 gap-8">
+          <div class="review p-0 pb-2 col-span-2">
+            <div class="w-full py-0 sm:p-0 dark:bg-gray-800 dark:border-gray-700">
               <div class="flex items-center justify-between mb-4">
                 <div class="flex h-auto items-center gap-1">
-                  <Icon icon="mingcute:time-line" class="text-blue-500" />
+                  <Icon icon="mingcute:time-line" class="text-purple-600" />
                   <h5 class="text-md font-medium leading-none text-gray-700 dark:text-white">
                     Previously on
                   </h5>
                 </div>
 
-
-                <a href="#" class="text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">
+                <a href="#" class="text-sm font-medium text-purple-600 hover:underline dark:text-blue-500">
                   View all
                 </a>
-
-
               </div>
               <div class="flow-root">
                 <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
-                  <li @click.prevent="goToLink" class="py-4 mb-4 bg-white sm:py-2 px-2  rounded-lg shadow">
-                    <div class="relative">
-                      <div class="absolute top-2 right-4">
-                        <Icon icon="jam:padlock-open" class="text-blue-500" />
-                      </div>
-                    </div>
-                    <div class="flex items-center">
+                  <li @click.prevent="goToLink" class="py-4 mb-4 bg-white sm:py-2 px-2 rounded-lg border shadow">
+                    <div class="flex gap-4 p-3">
                       <div class="flex-shrink-0">
-                        <img class="w-16 h-16 rounded-lg object-cover" src="../assets/img/course-bg.jpg"
+                        <img class="w-28 h-28 rounded-lg object-cover" src="../assets/img/course-bg.jpg"
                           alt="Neil image" />
                       </div>
-                      <div class="flex-1 min-w-0 ms-2 mt-2">
-                        <p class="text-sm font-semibold text-gray-900 truncate dark:text-white">
+                      <div class="flex-1 min-w-0 ms-2">
+                        <div class="text-2xl flex justify-between font-semibold text-gray-900 truncate dark:text-white">
                           Introduction to Forex
-                        </p>
-                        <p class="text-xs text-gray-400 truncate dark:text-gray-400">
+                          <div class="flex items-center gap-1 top-2 right-4">
+                            <Icon icon="ep:collection-tag" />
+                            <Icon icon="charm:menu-kebab" />
+                          </div>
+                        </div>
+                        <p class="text-xs text-gray-400 line-clamp-2 dark:text-gray-400 mt-1">
                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nam modi
                           necessitatibus repellendus numquam!
                         </p>
                         <div class="duration pt-2">
                           <div class="flex h-auto items-center gap-1">
-
                             <Icon icon="ri:time-line" class="text-blue-400 text-xs" />
                             <p class="text-xs text-gray-500 font-medium">Duration: 30m</p>
                           </div>
                         </div>
-                      </div>
-                      <!-- <div
-                            class="inline-flex gap-1 items-center text-base font-medium text-white text-xs bg-blue-500 md:rounded rounded-full p-2 ml-4 text-gray-900 dark:text-white">
-                            <Icon icon="solar:play-bold" width="14px" height="14px" />
-                            <span class="hidden sm:block">Watch highlight</span>
-                          </div> -->
-                    </div>
-                  </li>
 
-                  <li @click.prevent="goToLink" class="py-4 mb-4  sm:py-2 bg-white px-2 shadow rounded-lg ">
-                    <div class="relative">
-                      <div class="absolute top-2 right-4">
-                        <Icon icon="jam:padlock-open" class="text-blue-500" />
-                      </div>
-                    </div>
-                    <div class="flex items-center">
-                      <div class="flex-shrink-0">
-                        <img class="w-16 h-16 rounded-lg object-cover" src="../assets/img/course-bg.jpg"
-                          alt="Neil image" />
-                      </div>
-                      <div class="flex-1 min-w-0 ms-2 mt-2">
-                        <p class="text-sm font-semibold text-gray-900 truncate dark:text-white">
-                          Introduction to Forex
-                        </p>
-                        <p class="text-xs text-gray-400 truncate dark:text-gray-400">
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nam modi
-                          necessitatibus repellendus numquam!
-                        </p>
-                        <div class="duration pt-2">
-                          <div class="flex h-auto items-center gap-1">
-
-                            <Icon icon="ri:time-line" class="text-blue-400 text-xs" />
-                            <p class="text-xs text-gray-500 font-medium">Duration: 30m</p>
-                          </div>
+                        <div class="mt-2">
+                          <span
+                            class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">Default</span>
+                          <span
+                            class="bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">Dark</span>
+                          <span
+                            class="bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">Red</span>
                         </div>
                       </div>
-                      <!-- <div
-                            class="inline-flex gap-1 items-center text-base font-medium text-white text-xs bg-blue-500 md:rounded rounded-full p-2 ml-4 text-gray-900 dark:text-white">
-                            <Icon icon="solar:play-bold" width="14px" height="14px" />
-                            <span class="hidden sm:block">Watch highlight</span>
-                          </div> -->
                     </div>
+
                   </li>
 
-                  <li @click.prevent="goToLink" class="py-4 sm:py-2 bg-white px-2 shadow rounded-lg ">
-                    <div class="relative">
-                      <div class="absolute top-2 right-4">
-                        <Icon icon="jam:padlock-open" class="text-blue-500" />
-                      </div>
-                    </div>
-                    <div class="flex items-center">
-                      <div class="flex-shrink-0">
-                        <img class="w-16 h-16 rounded-lg object-cover" src="../assets/img/course-bg.jpg"
-                          alt="Neil image" />
-                      </div>
-                      <div class="flex-1 min-w-0 ms-2 mt-2">
-                        <p class="text-sm font-semibold text-gray-900 truncate dark:text-white">
-                          Introduction to Forex
-                        </p>
-                        <p class="text-xs text-gray-400 truncate dark:text-gray-400">
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nam modi
-                          necessitatibus repellendus numquam!
-                        </p>
-                        <div class="duration pt-2">
-                          <div class="flex h-auto items-center gap-1">
 
-                            <Icon icon="ri:time-line" class="text-blue-400 text-xs" />
-                            <p class="text-xs text-gray-500 font-medium">Duration: 30m</p>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- <div
-                            class="inline-flex gap-1 items-center text-base font-medium text-white text-xs bg-blue-500 md:rounded rounded-full p-2 ml-4 text-gray-900 dark:text-white">
-                            <Icon icon="solar:play-bold" width="14px" height="14px" />
-                            <span class="hidden sm:block">Watch highlight</span>
-                          </div> -->
-                    </div>
-                  </li>
                 </ul>
               </div>
             </div>
           </div>
 
-          <div class="col border bg-white rounded-lg shadow p-4 px-6 md:mx-5 md:mt-0 mt-4">
-            <h1 class="text-md text-left text-black">Upcoming</h1>
-            <p class="text-gray-300 text-sm py-1 text-left">Get a peek into next week</p>
-
-
-            <ol class="relative border-s py-6 border-gray-200 dark:border-gray-700">
-              <li class="mb-10 ms-6">
-                <span
-                  class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
-                  <svg class="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                    <path
-                      d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
-                  </svg>
-                </span>
-                <h3 class="flex items-center mb-1 text-sm font-semibold text-gray-900 dark:text-white">Welcome to
-                  Technical Analysis<span
-                    class="bg-purple-100 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 ms-3">Latest</span>
-                </h3>
-                <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Coming on
-                  April 13th, 2024</time>
-                <p class="mb-4 text-base text-xs font-normal text-gray-500 dark:text-gray-400">Get access to over 20+
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Est suscipit beatae sunt asperiores</p>
-                <a href="#"
-                  class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"><svg
-                    class="w-3.5 h-3.5 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                    viewBox="0 0 20 20">
-                    <path
-                      d="M14.707 7.793a1 1 0 0 0-1.414 0L11 10.086V1.5a1 1 0 0 0-2 0v8.586L6.707 7.793a1 1 0 1 0-1.414 1.414l4 4a1 1 0 0 0 1.416 0l4-4a1 1 0 0 0-.002-1.414Z" />
-                    <path
-                      d="M18 12h-2.55l-2.975 2.975a3.5 3.5 0 0 1-4.95 0L4.55 12H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2Zm-3 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z" />
-                  </svg> Preview</a>
-              </li>
-
-
-            </ol>
-
-
+          <div class="col">
+            <h1 class="text-xl font-semibold">Upcoming.</h1>
           </div>
+
         </div>
       </div>
 
-
-
       <div class="bg-white border mb-48 bordere-gray-200 shadow">
-        <div class="grid grid-cols-1 md:grid-cols-2">
+        <!-- <div class="grid grid-cols-1 md:grid-cols-2">
           <div class="col">
             <div class="px-3">
               <TaskList />
@@ -349,7 +259,7 @@
           <div class="col mx-auto">
             <WidgetOne />
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
 
@@ -368,7 +278,6 @@ import ChartVue from '@/components/TradingViewWidgets/Chart.vue'
 import WidgetOne from '@/components/TradingViewWidgets/WidgetOne.vue'
 import TaskList from '../components/Task/TaskList.vue'
 export default {
-
   components: { sidebar, Icon, OverviewVue, bottomNavVue, ChartVue, WidgetOne, TaskList },
   methods: {
     goToLink() {
@@ -378,21 +287,22 @@ export default {
 
   computed: {
     user() {
-      return this.$store.state.user; // Access user state from Vuex store
+      return this.$store.state.user // Access user state from Vuex store
     }
   },
 
   mounted() {
     // Dispatch the fetchUserDetails action when the component is mounted
-    this.$store.dispatch('fetchUserDetails')
+    this.$store
+      .dispatch('fetchUserDetails')
       .then(() => {
         // Handle success if needed
-        console.log('User details fetched successfully');
+        console.log('User details fetched successfully')
       })
       .catch((error) => {
         // Handle error if needed
-        console.error('Error fetching user details:', error);
-      });
+        console.error('Error fetching user details:', error)
+      })
   }
 }
 </script>

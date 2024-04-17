@@ -7,16 +7,16 @@
         </div>
         <div class="flex items-center">
             <div class="flex-shrink-0">
-                <img class="md:w-22 md:h-22 h-20 w-20 rounded-md object-cover" src="@/assets/img/course-bg.jpg"
+                <img class="md:w-22 md:h-24 h-22 w-24 rounded-md object-cover" src="@/assets/img/course-bg.jpg"
                     alt="Neil image" />
             </div>
             <div class="flex-1 min-w-0 ms-4">
-                <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                <p class="text-sm font-semibold text-gray-900 truncate dark:text-white">
                     Introduction to Forex Trading - WK-2
                 </p>
-                <p class="text-xs w-28 text-gray-500 truncate dark:text-gray-400">
+                <p class="text-xs w-84 pr-20 text-gray-500  dark:text-gray-400">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nam
-                    modi necessitatibus repellendus numquam!
+                    
                 </p>
                 <div class="duration py-3 flex justify-between">
                     <div class="flex gap-1">

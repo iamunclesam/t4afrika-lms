@@ -15,7 +15,7 @@
                 </div>
             </div>
 
-            <h1 class="text-5xl text-extrabold pt-4 text-dark-700">Cohort 2.0</h1>
+            <h1 class="text-5xl text-extrabold pt-8 text-dark-700">Cohort 2.0</h1>
 
             <div class="md:grid md:grid-cols-3  gap-6">
                 <div class="md:col-span-2">

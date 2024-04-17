@@ -96,9 +96,9 @@
       <div class="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
         <ul class="space-y-2 font-medium">
           <h1 class="my-3 mx-2.5 text-sm text-gray-500">Home</h1>
-          <li>
+          <li class="">
             <router-link to="/"
-              class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-blue-700 hover:text-white dark:hover:bg-gray-700 group">
+              class="flex items-center p-2 text-purple-600 font-semibold rounded-lg dark:text-white hover:bg-blue-700 hover:text-white dark:hover:bg-gray-700 group">
               <Icon icon="majesticons:home" width="20" class="text-purple-700" />
               <span class="ms-3 text-sm">Dashboard</span>
             </router-link>
@@ -106,7 +106,7 @@
 
 
           <li>
-            <router-link to="/"
+            <router-link to="/forum"
               class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-blue-700 hover:text-white dark:hover:bg-gray-700 group">
               <Icon icon="heroicons:user-group-solid" width="20" class="text-purple-700"/>
               <span class="ms-3 text-sm">Forum</span>

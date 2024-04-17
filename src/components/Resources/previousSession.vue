@@ -4,6 +4,9 @@
             <li @click.prevent="goToLink" class="mb-5 py-3 sm:py-3 shadow-md bg-white rounded-md px-3">
                <previousSessionCardVue />
             </li>
+            <li @click.prevent="goToLink" class="mb-5 py-3 sm:py-3 shadow-md bg-white rounded-md px-3">
+               <previousSessionCardVue />
+            </li>
         </ul>
     </main>
 </template>
