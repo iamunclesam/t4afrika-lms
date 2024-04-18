@@ -1,6 +1,6 @@
 <template>
-  <main>
-    <div class="hidden md:block">
+  <main class="">
+    <div class="">
       <sidebar />
     </div>
 
@@ -23,12 +23,10 @@
 
 
 
-      <div class=" bg-gradient-to-b from-purple-700 to-pink-500">
-        <div class="md:hidden">
-          <sidebar />
-        </div>
-        <div class="md:flex justify-between h-64 items-center sm:p-10 sm:pb-16 p-5 rounded  dark:bg-gray-800">
-          <div class="">
+      <div class="relative">
+       
+        <div class="md:flex justify-between h-72 pb-10 items-center sm:p-10 sm:pb-16 p-5 rounded bg-gradient-to-b from-purple-700 to-pink-500 dark:bg-gray-800">
+          <div class="mt-16 pb-10">
             <h1 class="md:text-6xl flex gap-2 items-center pt-5 text-3xl text-white font-bold">
               <span class="">Hello,</span>
               <div v-if="user.username">{{ user.username }}!</div>
@@ -50,7 +48,7 @@
                   Ready to start your week with some new pitch desk?
                 </p> -->
 
-            <form class="flex items-center pb-10 md:pb-0 w-full mt-4 mx-auto">
+            <form class="flex items-center pb-20 md:pb-0 w-full mt-4 mx-auto">
               <label for="simple-search" class="sr-only">Search</label>
               <div class="relative w-full">
                 <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
@@ -79,7 +77,7 @@
       </div>
 
       <div
-        class="-mt-10 md:mt-10 bg-white md:bg-transparent relative my-10 rounded-t-3xl rounded-b-xl pb-8 md:pb-4 px-2">
+        class="-mt-5 md:mt-10 bg-white md:bg-transparent relative my-10 rounded-t-3xl rounded-b-xl pb-8 md:pb-4 px-2">
         <div class="md:hidden">
           <div class="flex gap-1 py-5 items-center">
             <Icon icon="fluent-mdl2:insights" class="text-xl font-bold" />
@@ -108,7 +106,8 @@
           </div>
 
           <div class="grid grid-cols-2">
-            <div class="md:flex mt-4 justify-between md:h-48 sm:p-10 p-5 rounded-l-3xl bg-gradient-to-b from-purple-700 to-pink-500 dark:bg-gray-800">
+            <div
+              class="md:flex mt-4 justify-between md:h-48 sm:p-10 p-5 rounded-l-3xl bg-gradient-to-b from-purple-700 to-pink-500 dark:bg-gray-800">
               <div class="">
                 <div class="flex justify-between h-auto">
                   <h1 class="md:text-6xl text-md text-white font-bold">Overdue Weeks</h1>

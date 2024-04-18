@@ -1,7 +1,7 @@
 <template>
     <main>
         <div
-            class="fixed md:hidden bottom-5 left-0 right-0 z-50 mx-3 rounded-full  py-3 bg-gray-700 border-t border-gray-200 dark:bg-gray-700 dark:border-gray-600">
+            class="fixed md:hidden bottom-0 left-0 right-0 z-30  py-3 bg-gray-700 border-t border-gray-200 dark:bg-gray-700 dark:border-gray-600">
             <div class="grid h-full max-w-lg grid-cols-4 mx-auto font-medium">
                 <button type="button"
                     class="inline-flex flex-col items-center justify-center px-5 hover:bg-purple-50 hover:rounded-l-full dark:hover:bg-gray-800 group">
