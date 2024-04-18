@@ -1,12 +1,10 @@
 <template>
     <main>
-
-
         <div
-            class="fixed md:hidden bottom-0 left-0 z-50 w-full h-20 bg-white border-t border-gray-200 dark:bg-gray-700 dark:border-gray-600">
+            class="fixed md:hidden bottom-5 left-0 right-0 z-50 mx-5 rounded-full  py-3 bg-gray-50 border-t border-gray-200 dark:bg-gray-700 dark:border-gray-600">
             <div class="grid h-full max-w-lg grid-cols-4 mx-auto font-medium">
                 <button type="button"
-                    class="inline-flex flex-col items-center justify-center px-5 hover:bg-purple-50 dark:hover:bg-gray-800 group">
+                    class="inline-flex flex-col items-center justify-center px-5 hover:bg-purple-50 hover:rounded-l-full dark:hover:bg-gray-800 group">
                     <svg class="w-5 h-5 mb-2 text-gray-500 dark:text-gray-400 group-hover:text-purple-600 dark:group-hover:text-blue-500"
                         aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                         <path
@@ -46,7 +44,7 @@
                         class="text-sm text-gray-500 dark:text-gray-400 group-hover:text-purple-600 dark:group-hover:text-blue-500">Wallet</span>
                 </button>
                 <button type="button"
-                    class="inline-flex flex-col items-center justify-center px-5 hover:bg-purple-50 dark:hover:bg-gray-800 group">
+                    class="inline-flex flex-col items-center justify-center px-5 hover:bg-purple-50 hover:rounded-r-full  dark:hover:bg-gray-800 group">
                     <svg class="w-5 h-5 mb-2 text-gray-500 dark:text-gray-400 group-hover:text-purple-600 dark:group-hover:text-blue-500"
                         aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                         <path

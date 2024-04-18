@@ -61,7 +61,7 @@
                   placeholder="Search course..." required />
               </div>
               <button type="submit"
-                class="p-3.5 ms-2 text-sm font-medium text-white bg-purple-900 rounded-lg border border-purple-900 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                class="p-3.5 ms-2 text-sm font-medium text-white bg-pink-600 rounded-lg border border-pink-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                 <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                   viewBox="0 0 20 20">
                   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -201,9 +201,9 @@
               <div class="flow-root">
                 <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
                   <li @click.prevent="goToLink" class="py-4 mb-4 bg-white sm:py-2 px-2 rounded-lg border shadow">
-                    <div class="flex md:gap-4 md:p-3">
+                    <div class="flex items-center md:gap-4 md:p-3">
                       <div class="flex-shrink-0">
-                        <img class="md:w-28 md:h-28 h-16 w-16 rounded-lg object-cover" src="../assets/img/course-bg.jpg"
+                        <img class="md:w-28 md:h-28 h-20 w-20 rounded-lg object-cover" src="../assets/img/course-bg.jpg"
                           alt="Neil image" />
                       </div>
                       <div class="flex-1 min-w-0 ms-2">
@@ -240,9 +240,9 @@
                   </li>
 
                   <li @click.prevent="goToLink" class="py-4 mb-4 bg-white sm:py-2 px-2 rounded-lg border shadow">
-                    <div class="flex md:gap-4 md:p-3">
+                    <div class="flex items-center md:gap-4 md:p-3">
                       <div class="flex-shrink-0">
-                        <img class="md:w-28 md:h-28 h-16 w-16 rounded-lg object-cover" src="../assets/img/course-bg.jpg"
+                        <img class="md:w-28 md:h-28 h-20 w-20 rounded-lg object-cover" src="../assets/img/course-bg.jpg"
                           alt="Neil image" />
                       </div>
                       <div class="flex-1 min-w-0 ms-2">
