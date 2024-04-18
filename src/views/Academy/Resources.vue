@@ -2,8 +2,8 @@
     <main>
 
         <!--    Sidebar  -->
-        <div class="sidebar">
-            <sidebar />
+        <div class="sidebar" style="background-color: #6C2BD9 !important;">
+            <sidebar class="bg-purple-600 z-30"/>
         </div>
 
         <!--  Content  -->
@@ -46,7 +46,7 @@
 
                 <div class="col md:block hidden fixed right-10">
 
-                    <div class="border h-48 rounded-lg shadow bg-purple-700 p-4 mt-4">
+                    <div class="border h-48 rounded-lg shadow bg-gradient-to-b from-purple-700 to-pink-500 p-4 mt-4">
                         <!--Live Session-->
                         <div class="flex h-auto items-center gap-2">
                             <Icon icon="ri:live-fill" width="20px" height="20px" class=" text-white" />
@@ -66,6 +66,8 @@
                 </div>
             </div>
         </div>
+
+        <BottomNav  />
     </main>
 </template>
 
@@ -75,10 +77,12 @@ import { Icon } from '@iconify/vue'
 import breadcrumb from '@/components/Layout/breadcrumb.vue'
 import upcomingSession from '@/components/Resources/upcomingSession.vue'
 import previousSessionVue from '@/components/Resources/previousSession.vue'
+import BottomNav from '@/components/Layout/bottomNav.vue'
+
 
 
 export default {
-    components: { sidebar, Icon, breadcrumb, upcomingSession, previousSessionVue },
+    components: { sidebar, Icon, breadcrumb, upcomingSession, previousSessionVue, BottomNav },
     methods: {
     goToLink() {
       this.$router.push('/session-details')

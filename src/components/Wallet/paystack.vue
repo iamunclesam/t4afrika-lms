@@ -73,10 +73,10 @@ export default {
             return this.amount * 100
         },
 
-        getEmail() {
-            const userEmail = auth.currentUser;
-            return userEmail.email
-        },
+        // getEmail() {
+        //     const userEmail = auth.currentUser;
+        //     return userEmail.email
+        // },
 
 
     },

@@ -41,10 +41,10 @@
                             <div
                                 class="sm:flex gap-4 sm:gap-1 md:gap-4 p-5 justify-start items-center sm:h-24 rounded-lg shadow bg-white dark:bg-gray-800">
 
-                                <Icon icon="ic:baseline-paid" class="text-purple-700  hidden sm:block mx-auto md:mx-0"
+                                <Icon icon="ic:baseline-paid" class="text-pink-700  hidden sm:block mx-auto md:mx-0"
                                     width="70px" height="70px" />
                                 <div class="text-center md:text-left">
-                                    <h1 class="text-purple-700 sm:text-4xl text-6xl">0</h1>
+                                    <h1 class="text-pink-700 sm:text-4xl text-6xl">0</h1>
                                     <p class="md:text-lg text-sm text-gray-700 dark:text-gray-500">WEEKS PAID</p>
                                 </div>
                             </div>
@@ -52,10 +52,9 @@
                                 class="relative sm:flex gap-4 p-5 justify-start items-center  sm:h-24 rounded-lg shadow bg-white dark:bg-gray-800">
 
                                 <Icon icon="mdi:receipt-text-pending"
-                                    class="text-purple-700 hidden sm:block mx-auto md:mx-0" width="70px"
-                                    height="70px" />
+                                    class="text-pink-700 hidden sm:block mx-auto md:mx-0" width="70px" height="70px" />
                                 <div class="text-center md:text-left">
-                                    <h1 class="text-purple-700  sm:text-4xl text-6xl">&#8358;0</h1>
+                                    <h1 class="text-pink-700  sm:text-4xl text-6xl">0</h1>
                                     <p class="md:text-lg text-sm text-gray-700  dark:text-gray-500">PENDING FEE</p>
                                 </div>
                             </div>
@@ -172,7 +171,7 @@
                                     from wallet
                                     balance, fund wallet balance to renew</p>
 
-                                    <p class="py-4 text-xs text-purple-600">Subscription plan for Trade4frika Cohort 1.0</p>
+                                <p class="py-4 text-xs text-purple-600">Subscription plan for Trade4frika Cohort 1.0</p>
 
 
                             </div>
@@ -202,7 +201,7 @@ import { initFlowbite } from 'flowbite';
 import history from '@/components/Wallet/history.vue'
 import { auth, db } from '@/firebase';
 import { collection, getDocs } from 'firebase/firestore';
-
+import { onAuthStateChanged } from 'firebase/auth';
 
 export default {
     components: { sidebar, Icon, breadcrumb, bottomNavVue, indexVue, paystack, history },
@@ -239,31 +238,33 @@ export default {
     methods: {
 
         async getCurrentUserData() {
-            try {
-                // Introduce a delay of 1 second before fetching user data
-                await new Promise(resolve => setTimeout(resolve, 2000));
-
-                const user = auth.currentUser;
-
+            onAuthStateChanged(auth, async (user) => {
                 if (user) {
-                    const querySnapshot = await getDocs(collection(db, 'Users'));
-                    const userDoc = querySnapshot.docs.find(doc => doc.data().email === user.email);
+                    try {
+                        // Introduce a delay of 2 seconds before fetching user data
+                        await new Promise(resolve => setTimeout(resolve, 2000));
 
-                    if (userDoc.exists()) {
-                        const userData = userDoc.data();
-                        this.currentPlan = userData.subscriptionPlan
-                        this.email = userData.email;
-                        this.startDate = userData.subscriptionPlan.startDate;
-                        this.endDate = userData.subscriptionPlan.endDate;
-                    } else {
-                        console.error('User document not found');
+                        // Fetch user document from Firestore
+                        const querySnapshot = await getDocs(collection(db, 'Users'));
+                        const userDoc = querySnapshot.docs.find(doc => doc.data().email === user.email);
+
+                        if (userDoc.exists()) {
+                            const userData = userDoc.data();
+                            this.currentPlan = userData.subscriptionPlan;
+                            this.email = userData.email;
+                            this.startDate = userData.subscriptionPlan.startDate;
+                            this.endDate = userData.subscriptionPlan.endDate;
+                        } else {
+                            console.error('User document not found');
+                        }
+                    } catch (error) {
+                        console.error('Error fetching user data:', error);
                     }
                 } else {
+                    // User is not authenticated
                     console.error('User not authenticated');
                 }
-            } catch (error) {
-                console.error('Error fetching user data:', error);
-            }
+            });
         },
 
 

@@ -2,7 +2,7 @@
 <template>
     <main>
         <div
-            class="sm:flex sm:justify-between items-center sm:py-5 sm:p-10 p-5 sm:px-5 rounded bg-purple-700 dark:bg-gray-800">
+            class="sm:flex sm:justify-between items-center bg-gradient-to-b from-purple-700 to-pink-500 sm:py-5 sm:p-10 p-5 sm:px-5 rounded bg-purple-700 dark:bg-gray-800">
             <div class="">
                 <h1 class="text-md text-white font-medium flex h-auto items-center gap-2">Your Wallet Balance
                     <Icon icon="icon-park-outline:eyes" width="20px" v-if="showBal" height="20px"
