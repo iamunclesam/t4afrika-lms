@@ -81,9 +81,9 @@
       <div
         class="-mt-10 md:mt-10 bg-white md:bg-transparent relative my-10 rounded-t-3xl rounded-b-xl pb-8 md:pb-4 px-2">
         <div class="md:hidden">
-          <div class="flex gap-1 py-5 h-auto items-center">
+          <div class="flex gap-1 py-5 items-center">
             <Icon icon="fluent-mdl2:insights" class="text-xl font-bold" />
-            <h1 class="text-gray-500 font-semibold text-md">Cohort Overview</h1>
+            <h1 class="text-gray-500 font-medium text-md">Cohort Overview</h1>
           </div>
 
           <div class="sm:p-10 p-5 rounded-3xl bg-white ">
