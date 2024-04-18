@@ -108,7 +108,7 @@
           </div>
 
           <div class="grid grid-cols-2">
-            <div class="md:flex mt-4 justify-between md:h-48 sm:p-10 p-5 rounded-l-3xl bg-purple-600 dark:bg-gray-800">
+            <div class="md:flex mt-4 justify-between md:h-48 sm:p-10 p-5 rounded-l-3xl bg-gradient-to-b from-purple-700 to-pink-500 dark:bg-gray-800">
               <div class="">
                 <div class="flex justify-between h-auto">
                   <h1 class="md:text-6xl text-md text-white font-bold">Overdue Weeks</h1>
