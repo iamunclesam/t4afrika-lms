@@ -5,7 +5,7 @@
     </div>
 
     <div class="md:p-4 sm:ml-72 md:mt-24 md:mt-16">
-      <nav class="hidden md:flex mb-10" aria-label="Breadcrumb">
+      <nav  class="hidden md:flex mb-10" aria-label="Breadcrumb">
         <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
           <li class="inline-flex items-center">
             <a href="#"
@@ -25,7 +25,7 @@
 
       <div class="relative">
        
-        <div class="md:flex justify-between h-78 pb-10 items-center sm:p-10 sm:pb-16 p-5 rounded bg-gradient-to-b from-purple-700 to-pink-500 dark:bg-gray-800">
+        <div class="md:flex justify-between h-78 md:h-64 pb-10 items-center sm:p-10 sm:pb-16 p-5 rounded bg-gradient-to-b from-purple-700 to-pink-500 dark:bg-gray-800">
           <div class="mt-16 pb-10">
             <h1 class="md:text-6xl flex gap-2 items-center pt-5 text-3xl text-white font-bold">
               <span class="">Hello,</span>
@@ -349,6 +349,7 @@ import WidgetOne from '@/components/TradingViewWidgets/WidgetOne.vue'
 import TaskList from '../components/Task/TaskList.vue'
 export default {
   components: { sidebar, Icon, OverviewVue, bottomNavVue, ChartVue, WidgetOne, TaskList },
+  
   methods: {
     goToLink() {
       this.$router.push('/session-details')

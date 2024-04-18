@@ -1,7 +1,7 @@
 <template>
   <main>
     <div class="">
-      <nav class="fixed top-0 z-50 w-full md:bg-white  md:border-b md:border-gray-200 dark:bg-gray-800 dark:border-gray-700 py-2">
+      <nav :class="{ 'bg-purple-600': isScrolled }" class="fixed top-0 z-50 w-full md:bg-white  md:border-b md:border-gray-200 dark:bg-gray-800 dark:border-gray-700 py-2">
         <div class="px-1 py-3 lg:px-5 lg:pl-3">
           <div class="flex items-center justify-between gap-8">
             <div class="flex md:flex-shrink-0 items-center justify-start rtl:justify-end">
@@ -295,9 +295,19 @@ import { initFlowbite } from 'flowbite';
 
 export default {
   components: { Icon },
+  data() {
+    return {
+      isScrolled: false
+    };
+  },
 
   mounted() {
-    initFlowbite()
+    initFlowbite(),
+    window.addEventListener('scroll', this.handleScroll);
+  },
+
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll);
   },
 
   methods: {
@@ -310,6 +320,14 @@ export default {
       catch(error) {
         console.error('Error Logging out:', error)
 
+      }
+    },
+
+    handleScroll() {
+      if (window.scrollY > 0) {
+        this.isScrolled = true;
+      } else {
+        this.isScrolled = false;
       }
     }
   }
