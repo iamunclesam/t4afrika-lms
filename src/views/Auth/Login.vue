@@ -11,17 +11,17 @@
                             <a href="#"
                                 class="flex items-center mb-6 text-2xl mt-4 font-medium text-gray-900 dark:text-white">
 
-                                Trade<span class="text-blue-600">4afrika</span>
+                                Trade<span class="text-yellow-300">4afrika</span>
                             </a>
                             <div
                                 class="w-full bg-white rounded-lg dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
                                 <div class="space-y-4 md:space-y-6 sm:p-8">
                                     <h1
-                                        class="text-3xl text-center font-bold leading-tight tracking-tight text-gray-900 md:text-4xl dark:text-white">
+                                        class="text-3xl text-center mb-4 font-bold leading-tight tracking-tight text-gray-900 md:text-4xl dark:text-white">
                                         Welcome Back
                                     </h1>
                                     <form class=" md:space-y-6" action="#">
-                                        <div class="mb-3">
+                                        <div class="mb-4">
                                             <label for="email"
                                                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your
                                                 email</label>
@@ -29,7 +29,7 @@
                                                 class=" border border-gray-300 text-gray-900 sm:text-sm rounded-md focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                                 placeholder="name@company.com" required="true" v-model="email">
                                         </div>
-                                        <div class="mb-3">
+                                        <div class="mb-4">
                                             <label for="password"
                                                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
                                             <input type="password" name="password" id="password" placeholder="••••••••"
@@ -45,7 +45,7 @@
                                                 class=" border border-gray-300 text-gray-900 sm:text-sm rounded-md focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                                 required="true">
                                         </div> -->
-                                        <div class="flex items-start">
+                                        <div class="flex items-start mb-4">
                                             <div class="flex items-center h-5">
                                                 <input id="terms" aria-describedby="terms" type="checkbox"
                                                     class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800">
@@ -57,7 +57,7 @@
                                             </div>
                                         </div>
                                         <button @click.prevent="login" type="submit"
-                                            class="w-full text-white bg-purple-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+                                            class="w-full mb-3 text-white bg-purple-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
 
                                             <span v-if="!loading">Login</span>
                                             <span v-else class="flex h-auto items-center gap-1 justify-center">
@@ -80,7 +80,7 @@
                                         </button>
                                         <p class="text-sm font-light text-gray-500 dark:text-gray-400">
                                             Don't have an account? <router-link to="/register"
-                                                class="font-medium text-blue-600 hover:underline dark:text-primary-500">Sign
+                                                class="font-medium text-purple-600 hover:underline dark:text-primary-500">Sign
                                                 Up
                                             </router-link>
                                         </p>
