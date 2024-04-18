@@ -25,7 +25,7 @@
 
       <div class="relative">
        
-        <div class="md:flex justify-between h-72 pb-10 items-center sm:p-10 sm:pb-16 p-5 rounded bg-gradient-to-b from-purple-700 to-pink-500 dark:bg-gray-800">
+        <div class="md:flex justify-between h-78 pb-10 items-center sm:p-10 sm:pb-16 p-5 rounded bg-gradient-to-b from-purple-700 to-pink-500 dark:bg-gray-800">
           <div class="mt-16 pb-10">
             <h1 class="md:text-6xl flex gap-2 items-center pt-5 text-3xl text-white font-bold">
               <span class="">Hello,</span>
@@ -77,7 +77,7 @@
       </div>
 
       <div
-        class="-mt-5 md:mt-10 bg-white md:bg-transparent relative my-10 rounded-t-3xl rounded-b-xl pb-8 md:pb-4 px-2">
+        class="-mt-28 md:mt-10 bg-white md:bg-transparent relative my-10 rounded-t-3xl rounded-b-xl pb-8 md:pb-4 px-2">
         <div class="md:hidden">
           <div class="flex gap-1 py-5 items-center">
             <Icon icon="fluent-mdl2:insights" class="text-xl font-bold" />
