@@ -1,8 +1,10 @@
 <template>
   <main>
-    <sidebar />
+    <div class="hidden md:block">
+      <sidebar />
+    </div>
 
-    <div class="md:p-4 sm:ml-72 md:mt-24 mt-16">
+    <div class="md:p-4 sm:ml-72 md:mt-24 md:mt-16">
       <nav class="hidden md:flex mb-10" aria-label="Breadcrumb">
         <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
           <li class="inline-flex items-center">
@@ -19,9 +21,13 @@
         </ol>
       </nav>
 
-      <div class="grid grid-cols-1 gap-4 mb-4">
-        <div
-          class="md:flex justify-between h-64 items-center sm:p-10 sm:pb-16 p-5 rounded bg-purple-700 dark:bg-gray-800">
+
+
+      <div class=" bg-gradient-to-b from-purple-700 to-pink-500">
+        <div class="md:hidden">
+          <sidebar />
+        </div>
+        <div class="md:flex justify-between h-64 items-center sm:p-10 sm:pb-16 p-5 rounded  dark:bg-gray-800">
           <div class="">
             <h1 class="md:text-6xl flex gap-2 items-center pt-5 text-3xl text-white font-bold">
               <span class="">Hello,</span>
@@ -48,7 +54,7 @@
               <label for="simple-search" class="sr-only">Search</label>
               <div class="relative w-full">
                 <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                 
+
                 </div>
                 <input type="text" id="simple-search"
                   class="bg-gray-50 py-3 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full  p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -137,7 +143,7 @@
         </div>
 
         <div class="md:flex hidden gap-1 py-5 h-auto items-center">
-          
+
           <Icon icon="fluent-mdl2:insights" class="text-xl font-bold" />
           <h1 class="text-gray-900 font-medium text-md mt-1">Cohort Overview</h1>
         </div>
@@ -145,25 +151,25 @@
         <div class="hidden md:grid grid-cols-3 gap-4 mb-4 md:mb-0 mt-0">
           <div
             class="flex gap-4 p-5 justify-center items-center h-24 rounded-lg shadow border border-purple-100 bg-white dark:bg-gray-800">
-            <Icon icon="vaadin:academy-cap" class="text-purple-700" width="50px" height="50px" />
+            <Icon icon="vaadin:academy-cap" class="text-pink-700" width="50px" height="50px" />
             <div class="">
-              <h1 class="text-purple-700 text-3xl">10</h1>
+              <h1 class="text-pink-700 text-3xl">10</h1>
               <p class="text-lg text-gray-700 dark:text-gray-500">WEEKS COMPLETED</p>
             </div>
           </div>
           <div
             class="flex gap-4 p-5 justify-center items-center h-24 rounded-lg shadow bg-white border border-purple-100 dark:bg-gray-800">
-            <Icon icon="f7:timer-fill" class="text-purple-700" width="50px" height="50px" />
+            <Icon icon="f7:timer-fill" class="text-pink-700" width="50px" height="50px" />
             <div class="">
-              <h1 class="text-purple-700 text-3xl">0</h1>
+              <h1 class="text-pink-700 text-3xl">0</h1>
               <p class="text-lg text-gray-700 dark:text-gray-500">OVERDUE WEEKS</p>
             </div>
           </div>
           <div
             class="flex gap-4 p-5 justify-center items-center h-24 rounded-lg shadow bg-white border border-purple-100 dark:bg-gray-800">
-            <Icon icon="fluent:cloud-sync-complete-32-filled" class="text-purple-700" width="50px" height="50px" />
+            <Icon icon="fluent:cloud-sync-complete-32-filled" class="text-pink-700" width="50px" height="50px" />
             <div class="">
-              <h1 class="text-purple-700 text-3xl">0</h1>
+              <h1 class="text-pink-700 text-3xl">0</h1>
               <p class="text-lg text-gray-700 dark:text-gray-500">TASKS COMPLETED</p>
             </div>
           </div>

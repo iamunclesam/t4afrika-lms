@@ -1,7 +1,7 @@
 <template>
   <main>
     <div class="">
-      <nav class="fixed top-0 z-50 w-full bg-purple-700 md:border-b md:border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+      <nav class="md:fixed md:top-0 z-50 w-full md:bg-white md:border-b md:border-gray-200 dark:bg-gray-800 dark:border-gray-700 py-2">
         <div class="px-1 py-3 lg:px-5 lg:pl-3">
           <div class="flex items-center justify-between gap-8">
             <div class="flex md:flex-shrink-0 items-center justify-start rtl:justify-end">
@@ -17,27 +17,27 @@
                 </svg>
               </button>
               <a href="/" class="flex ms-2 md:me-24">
-                <h1 class="text-white font-medium text-2xl">Trade<span class="text-yellow-300">4Afrika</span></h1>
+                <h1 class="text-white sm:text-gray-900 font-medium text-2xl">Trade<span class="text-yellow-300">4Afrika</span></h1>
                </a>
             </div>
 
             <!-- Search bar -->
             <div class="hidden md:block relative md:flex-shrink-0">
-              <h1 class="text-md text-white">Dashboard</h1>
-              <p class="date text-xs text-gray-200"><span class="text-yellow-200">Monday</span> 08 February 2024</p>
+              <h1 class="text-md text-gray-600">Dashboard</h1>
+              <p class="date text-xs text-gray-300"><span class="text-blue-500">Monday</span> 08 February 2024</p>
             </div>
 
             <div class="flex w-100 items-center ml-auto mr-4 md:mr-10">
               <div class="hidden md:flex items-center ms-3 md:gap-7">
                 <div class="relative">
-                  <Icon icon="ion:mail"  width="26" class="text-white" />
+                  <Icon icon="material-symbols-light:mail-outline" width="26" class="text-gray-700" />
                   <div
                     class="absolute inline-flex items-center justify-center w-3 h-3 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-0.5 -end-0 dark:border-gray-900">
                   </div>
                 </div>
 
                 <div class="relative">
-                  <Icon icon="ph:bell-fill" width="24" class=" text-white" />
+                  <Icon icon="ph:bell-light" width="24" class=" text-gray-700" />
                   <div
                     class="absolute inline-flex items-center justify-center w-3 h-3 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-1 -end-0 dark:border-gray-900">
                   </div>
@@ -53,8 +53,8 @@
 
                   </button>
                   <div class="leading-none h-10 hidden md:block">
-                    <h1 class="text-sm text-white">{{ user.firstName }} {{ user.lastName }}</h1>
-                    <span class="text-xs text-yellow-200 -pt-1">@unclesam</span>
+                    <h1 class="text-sm ">Adeyemi Samuel</h1>
+                    <span class="text-xs text-gray-500 -pt-1">@unclesam</span>
                   </div>
                 </div>
 
@@ -91,17 +91,16 @@
 
 
     <aside id="logo-sidebar"
-      class="fixed top-16 shadow-lg bg-blue-500 left-0 z-40 w-64 h-screen pt-5 transition-transform -translate-x-full bg-white border mb-20 border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
+      class="fixed top-20 shadow-lg bg-blue-500 left-0 z-40 w-64 h-screen pt-5 transition-transform -translate-x-full bg-white border mb-20 border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
       aria-label="Sidebar">
       <div class="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
-       
         <ul class="space-y-2 font-medium">
           <h1 class="my-3 mx-2.5 text-sm text-gray-500">Home</h1>
           <li class="">
             <router-link to="/"
               class="flex items-center p-2 text-purple-600 font-semibold rounded-lg dark:text-white hover:bg-blue-700 hover:text-white dark:hover:bg-gray-700 group">
               <Icon icon="majesticons:home" width="20" class="text-purple-700" />
-              <span class="ms-3 text-sm ">Dashboard</span>
+              <span class="ms-3 text-sm">Dashboard</span>
             </router-link>
           </li>
 
@@ -296,28 +295,9 @@ import { initFlowbite } from 'flowbite';
 
 export default {
   components: { Icon },
-   
-
-  computed: {
-    user() {
-      return this.$store.state.user // Access user state from Vuex store
-    }
-  },
 
   mounted() {
     initFlowbite()
-  
-    // Dispatch the fetchUserDetails action when the component is mounted
-    this.$store
-      .dispatch('fetchUserDetails')
-      .then(() => {
-        // Handle success if needed
-        console.log('User details fetched successfully')
-      })
-      .catch((error) => {
-        // Handle error if needed
-        console.error('Error fetching user details:', error)
-      })
   },
 
   methods: {

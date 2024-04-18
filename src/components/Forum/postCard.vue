@@ -21,7 +21,7 @@
                 </div>
             </div>
 
-            <div class="card-footer border-t p-3 bg-gray-50">
+            <div class="card-footer border-t p-3 bg-white">
                 <div class="icons flex items-center gap-3">
                     <div class="like-button flex items-center gap-1">
                         <Icon icon="ph:heart-light" />
