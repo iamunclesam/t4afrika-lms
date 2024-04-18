@@ -5,7 +5,7 @@
     </div>
 
     <div class="md:p-4 sm:ml-72 md:mt-24 md:mt-16">
-      <nav  class="hidden md:flex mb-10" aria-label="Breadcrumb">
+      <nav class="hidden md:flex mb-10" aria-label="Breadcrumb">
         <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
           <li class="inline-flex items-center">
             <a href="#"
@@ -24,8 +24,9 @@
 
 
       <div class="relative">
-       
-        <div class="md:flex justify-between h-78 md:h-64 pb-10 items-center sm:p-10 sm:pb-16 p-5 rounded bg-gradient-to-b from-purple-700 to-pink-500 dark:bg-gray-800">
+
+        <div
+          class="md:flex justify-between h-78 md:h-64 pb-10 items-center sm:p-10 sm:pb-16 p-5 rounded bg-gradient-to-b from-purple-700 to-pink-500 dark:bg-gray-800">
           <div class="mt-16 pb-10">
             <h1 class="md:text-6xl flex gap-2 items-center pt-5 text-3xl text-white font-bold">
               <span class="">Hello,</span>
@@ -199,7 +200,7 @@
               </div>
               <div class="flow-root">
                 <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
-                  <li @click.prevent="goToLink" class="py-4 mb-4 bg-white sm:py-2 px-2 rounded-lg border shadow">
+                  <li @click.prevent="goToLink" class="py-4 mb-4 bg-white sm:py-2 px-2 rounded-lg border border-gray-100 shadow-sm">
                     <div class="flex items-center md:gap-4 md:p-3">
                       <div class="flex-shrink-0">
                         <img class="md:w-28 md:h-28 h-20 w-20 rounded-lg object-cover" src="../assets/img/course-bg.jpg"
@@ -238,7 +239,46 @@
 
                   </li>
 
-                  <li @click.prevent="goToLink" class="py-4 mb-4 bg-white sm:py-2 px-2 rounded-lg border shadow">
+                  <li @click.prevent="goToLink" class="py-4 mb-4 bg-white sm:py-2 px-2 rounded-lg border border-gray-100 shadow-sm">
+                    <div class="flex items-center md:gap-4 md:p-3">
+                      <div class="flex-shrink-0">
+                        <img class="md:w-28 md:h-28 h-20 w-20 rounded-lg object-cover" src="../assets/img/course-bg.jpg"
+                          alt="Neil image" />
+                      </div>
+                      <div class="flex-1 min-w-0 ms-2">
+                        <div
+                          class="md:text-2xl text-md truncate flex justify-between font-semibold text-gray-900 truncate dark:text-white">
+                          Introduction to Forex
+                          <div class="flex items-center gap-1 top-2 right-4">
+                            <Icon icon="ep:collection-tag" />
+                            <Icon icon="charm:menu-kebab" />
+                          </div>
+                        </div>
+                        <p class="text-xs text-gray-400 truncate md:line-clamp-2 dark:text-gray-400 mt-1">
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nam modi
+                          necessitatibus repellendus numquam!
+                        </p>
+                        <div class="duration pt-2">
+                          <div class="flex h-auto items-center gap-1">
+                            <Icon icon="ri:time-line" class="text-blue-400 text-xs" />
+                            <p class="text-xs text-gray-500 font-medium">Duration: 30m</p>
+                          </div>
+                        </div>
+
+                        <div class="mt-2 hidden md:flex">
+                          <span
+                            class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">Default</span>
+                          <span
+                            class="bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">Dark</span>
+                          <span
+                            class="bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">Red</span>
+                        </div>
+                      </div>
+                    </div>
+
+                  </li>
+
+                  <li @click.prevent="goToLink" class="py-4 mb-4 bg-white sm:py-2 px-2 rounded-lg border border-gray-100 shadow-sm">
                     <div class="flex items-center md:gap-4 md:p-3">
                       <div class="flex-shrink-0">
                         <img class="md:w-28 md:h-28 h-20 w-20 rounded-lg object-cover" src="../assets/img/course-bg.jpg"
@@ -282,36 +322,38 @@
             </div>
           </div>
 
-          <div class="col">
-            <h1 class="text-xl font-semibold">Upcoming.</h1>
+          <div class="col scroll-smooth">
+            <h1 class="text-xl font-semibold">Coming Soon.</h1>
 
 
-            <div
-              class="max-w-sm my-4 p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
 
-              <a href="#">
-                <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">Synthetic Trading
-                  (Volatility 75 Index)</h5>
-              </a>
-              <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">Go to this step by step guideline process on
-                how to certify for your weekly benefits:</p>
-              <div class="mt-2 flex py-2">
-                <span
-                  class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">Default</span>
-                <span
-                  class="bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">Dark</span>
-                <span
-                  class="bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">Red</span>
-              </div>
-              <a href="#" class="inline-flex font-medium items-center text-blue-600 hover:underline">
-                See course guideline
-                <svg class="w-3 h-3 ms-2.5 rtl:rotate-[270deg]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                  fill="none" viewBox="0 0 18 18">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M15 11v4.833A1.166 1.166 0 0 1 13.833 17H2.167A1.167 1.167 0 0 1 1 15.833V4.167A1.166 1.166 0 0 1 2.167 3h4.618m4.447-2H17v5.768M9.111 8.889l7.778-7.778" />
-                </svg>
-              </a>
-            </div>
+            <ol class="mt-10 relative border-s border-purple-200 dark:border-gray-700">
+              <li class="mb-10 ms-4">
+                <div
+                  class="absolute w-3 h-3 bg-purple-600 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                </div>
+                <time class="flex gap-1 items-center mb-1 text-xs font-normal leading-none text-gray-400 dark:text-gray-500"> <Icon icon="mdi:weather-date" class="text-xl text-purple-300" />20th February
+                  2022</time>
+                <h3 class="text-md font-semibold text-purple-600 dark:text-white">Getting Into Technical Analysis</h3>
+                <p class="mb-2 text-base text-xs mt-2 font-normal text-gray-500 dark:text-gray-400 line-clamp-2">Get access to over 20+ pages
+                  including a dashboard layout, charts, kanban board, calendar.</p>
+                <a href="" class="flex gap-2 items-center text-purple-600 text-xs">See what next <Icon icon="mingcute:right-fill" /></a>
+              </li>
+
+              <li class="mb-10 ms-4">
+                <div
+                  class="absolute w-3 h-3 bg-gray-300 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+                </div>
+                <time class="flex gap-1 items-center mb-1 text-xs font-normal leading-none text-gray-400 dark:text-gray-500"> <Icon icon="mdi:weather-date" class="text-xl text-gray-300" />20th February
+                  2022</time>
+                <h3 class="text-md font-semibold text-gray-600 dark:text-white">Application UI code in Tailwind CSS</h3>
+                <p class="mb-4 text-base text-xs font-normal text-gray-500 dark:text-gray-400 line-clamp-2">Get access to over 20+ pages
+                  including a dashboard layout, charts, kanban board, calendar.</p>
+                
+              </li>
+            
+            </ol>
+
 
           </div>
 
@@ -349,7 +391,7 @@ import WidgetOne from '@/components/TradingViewWidgets/WidgetOne.vue'
 import TaskList from '../components/Task/TaskList.vue'
 export default {
   components: { sidebar, Icon, OverviewVue, bottomNavVue, ChartVue, WidgetOne, TaskList },
-  
+
   methods: {
     goToLink() {
       this.$router.push('/session-details')

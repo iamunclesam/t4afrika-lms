@@ -133,6 +133,7 @@
                 </div>
             </div>
         </div>
+        <bottomNavVue />
     </main>
 </template>
 
@@ -144,11 +145,13 @@ import TaskList from '@/components/Task/TaskList.vue'
 import { defineComponent } from 'vue'
 import { Carousel, Navigation, Slide } from 'vue3-carousel'
 import 'vue3-carousel/dist/carousel.css'
+import bottomNavVue from '@/components/Layout/bottomNav.vue'
 
 
 export default defineComponent({
     components: {
         sidebar, Icon, breadcrumb, TaskList, Carousel,
+        bottomNavVue,
         Slide,
         Navigation,
     }

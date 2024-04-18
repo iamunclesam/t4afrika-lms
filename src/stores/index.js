@@ -277,28 +277,28 @@ export default createStore({
 
     async fetchWalletData({ commit }) {
       try {
-        const user = auth.currentUser
+        onAuthStateChanged(auth, async (user) => {
+          if (!user) {
+            throw new Error('User not authenticated');
+          }
 
-        if (!user) {
-          throw new Error('User not authenticated')
-        }
+          const userEmail = user.email;
+          const userQuery = query(collection(db, 'Users'), where('email', '==', userEmail));
+          const querySnapshot = await getDocs(userQuery);
 
-        const userEmail = user.email
-        const userQuery = query(collection(db, 'Users'), where('email', '==', userEmail))
-        const querySnapshot = await getDocs(userQuery)
+          if (querySnapshot.empty) {
+            throw new Error('User document not found');
+          }
 
-        if (querySnapshot.empty) {
-          throw new Error('User document not found')
-        }
+          const userData = querySnapshot.docs[0].data();
+          const walletData = userData.wallet || [];
 
-        const userData = querySnapshot.docs[0].data()
-        const walletData = userData.wallet || []
-
-        commit('SET_WALLET_DATA', walletData)
-        return walletData
+          commit('SET_WALLET_DATA', walletData);
+          return walletData;
+        });
       } catch (error) {
-        console.error('Error fetching wallet data:', error)
-        return null
+        console.error('Error fetching wallet data:', error);
+        return null;
       }
     },
 
@@ -325,7 +325,9 @@ export default createStore({
         let userWalletBalance = userData.walletBalance || 0
 
         if (userWalletBalance < amount) {
+          alert(`Insufficient Balance`)
           throw new Error('Insufficient wallet balance')
+         
         }
 
         const planChange = {
@@ -375,7 +377,8 @@ export default createStore({
         }
 
         console.log('Subscription plan updated successfully')
-        useToast().success({ body: 'Hello world', canTimeout: true })
+      alert(`${amount} Plan Updated`)
+      router.push('/academy-billing')
 
         commit('CHANGE_PLAN', { planId, amount }) // Commit the mutation
 
