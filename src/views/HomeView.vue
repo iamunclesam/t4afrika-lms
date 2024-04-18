@@ -2,7 +2,7 @@
   <main>
     <sidebar />
 
-    <div class="md:p-4 sm:ml-72 md:mt-24 mt-20">
+    <div class="md:p-4 sm:ml-72 md:mt-24 mt-16">
       <nav class="hidden md:flex mb-10" aria-label="Breadcrumb">
         <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
           <li class="inline-flex items-center">
@@ -80,11 +80,11 @@
         class="-mt-10 md:mt-10 bg-white md:bg-transparent relative my-10 rounded-t-3xl rounded-b-xl pb-8 md:pb-4 px-2">
         <div class="md:hidden">
           <div class="flex gap-1 py-5 h-auto items-center">
-            <Icon icon="formkit:group" class="text-xl" />
+            <Icon icon="fluent-mdl2:insights" class="text-xl font-bold" />
             <h1 class="text-gray-500 font-semibold text-md">Cohort Overview</h1>
           </div>
 
-          <div class="sm:p-10 p-5 rounded-3xl bg-white border border-gray-200 shadow">
+          <div class="sm:p-10 p-5 rounded-3xl bg-white ">
             <div class="flex justify-between items-center h-auto">
               <h1 class="md:text-6xl text-lg text-gray-900 font-bold">Weeks completed</h1>
               <Icon icon="vaadin:academy-cap" class="text-gray-400" width="30px" height="30px" />
@@ -99,7 +99,7 @@
               </div>
 
               <div class="flex w-full justify-center items-center img">
-                <img src="@/assets/img/hero-2.png" class="mt-0 w-64 object-contain" alt="" />
+                <img src="@/assets/img/hero-2.png" class="mt-0 w-96" alt="" />
                 <!-- <Icon icon="fluent-emoji:sad-but-relieved-face" class="text-8xl"/> -->
               </div>
             </div>
@@ -141,7 +141,8 @@
         </div>
 
         <div class="md:flex hidden gap-1 py-5 h-auto items-center">
-          <Icon icon="fluent-mdl2:insights" class="text-xl font-bold"/>
+          
+          <Icon icon="fluent-mdl2:insights" class="text-xl font-bold" />
           <h1 class="text-gray-900 font-medium text-md mt-1">Cohort Overview</h1>
         </div>
 
@@ -180,7 +181,7 @@
         <h1 class="text-gray-900 font-medium text-md">Week Overview</h1>
       </div> -->
       <div class=" ">
-        <div class="grid grid-cols-1 md:grid-cols-3 px-3 py-2 pb-8 gap-8">
+        <div class="sm:grid grid-cols-1 md:grid-cols-3 px-3 py-2 pb-8 gap-8">
           <div class="review p-0 pb-2 col-span-2">
             <div class="w-full py-0 sm:p-0 dark:bg-gray-800 dark:border-gray-700">
               <div class="flex items-center justify-between mb-4">
@@ -204,7 +205,8 @@
                           alt="Neil image" />
                       </div>
                       <div class="flex-1 min-w-0 ms-2">
-                        <div class="md:text-2xl text-md truncate flex justify-between font-semibold text-gray-900 truncate dark:text-white">
+                        <div
+                          class="md:text-2xl text-md truncate flex justify-between font-semibold text-gray-900 truncate dark:text-white">
                           Introduction to Forex
                           <div class="flex items-center gap-1 top-2 right-4">
                             <Icon icon="ep:collection-tag" />
@@ -235,6 +237,44 @@
 
                   </li>
 
+                  <li @click.prevent="goToLink" class="py-4 mb-4 bg-white sm:py-2 px-2 rounded-lg border shadow">
+                    <div class="flex md:gap-4 md:p-3">
+                      <div class="flex-shrink-0">
+                        <img class="md:w-28 md:h-28 h-16 w-16 rounded-lg object-cover" src="../assets/img/course-bg.jpg"
+                          alt="Neil image" />
+                      </div>
+                      <div class="flex-1 min-w-0 ms-2">
+                        <div
+                          class="md:text-2xl text-md truncate flex justify-between font-semibold text-gray-900 truncate dark:text-white">
+                          Introduction to Forex
+                          <div class="flex items-center gap-1 top-2 right-4">
+                            <Icon icon="ep:collection-tag" />
+                            <Icon icon="charm:menu-kebab" />
+                          </div>
+                        </div>
+                        <p class="text-xs text-gray-400 truncate md:line-clamp-2 dark:text-gray-400 mt-1">
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nam modi
+                          necessitatibus repellendus numquam!
+                        </p>
+                        <div class="duration pt-2">
+                          <div class="flex h-auto items-center gap-1">
+                            <Icon icon="ri:time-line" class="text-blue-400 text-xs" />
+                            <p class="text-xs text-gray-500 font-medium">Duration: 30m</p>
+                          </div>
+                        </div>
+
+                        <div class="mt-2 hidden md:flex">
+                          <span
+                            class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">Default</span>
+                          <span
+                            class="bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">Dark</span>
+                          <span
+                            class="bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">Red</span>
+                        </div>
+                      </div>
+                    </div>
+
+                  </li>
 
                 </ul>
               </div>
@@ -243,6 +283,35 @@
 
           <div class="col">
             <h1 class="text-xl font-semibold">Upcoming.</h1>
+
+
+            <div
+              class="max-w-sm my-4 p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+
+              <a href="#">
+                <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">Synthetic Trading
+                  (Volatility 75 Index)</h5>
+              </a>
+              <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">Go to this step by step guideline process on
+                how to certify for your weekly benefits:</p>
+              <div class="mt-2 flex py-2">
+                <span
+                  class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">Default</span>
+                <span
+                  class="bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">Dark</span>
+                <span
+                  class="bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">Red</span>
+              </div>
+              <a href="#" class="inline-flex font-medium items-center text-blue-600 hover:underline">
+                See course guideline
+                <svg class="w-3 h-3 ms-2.5 rtl:rotate-[270deg]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                  fill="none" viewBox="0 0 18 18">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M15 11v4.833A1.166 1.166 0 0 1 13.833 17H2.167A1.167 1.167 0 0 1 1 15.833V4.167A1.166 1.166 0 0 1 2.167 3h4.618m4.447-2H17v5.768M9.111 8.889l7.778-7.778" />
+                </svg>
+              </a>
+            </div>
+
           </div>
 
         </div>

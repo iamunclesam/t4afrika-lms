@@ -16,7 +16,7 @@
             <div class="grid md:grid-cols-3  gap-6">
 
                 <div class="md:col-span-2">
-                    <div class="content md:px-8 px-4 rounded-md bg-white py-4">
+                    <div class="content rounded-md bg-white py-4">
 
 
                         <div class="about mt-8">
